@@ -1,0 +1,60 @@
+debconf: delaying package configuration, since apt-utils is not installed
+Launching splash2x.barnes...
+[PARSEC] Benchmarks to run:  splash2x.barnes
+
+[PARSEC] [========== Running benchmark splash2x.barnes [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+input.template
+[PARSEC] Running 'time /parsec/ext/splash2x/apps/barnes/inst/amd64-linux.gcc/bin/run.sh 4 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file input_4...
+Running /parsec/ext/splash2x/apps/barnes/inst/amd64-linux.gcc/bin/barnes 4 < input_4:
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+   4194304   0.02500    0.0500      1.00     0.250     0.075      2.00         4
+
+COMPUTESTART  = 1776152152928889
+COMPUTEEND    = 1776152182005147
+COMPUTETIME   =     29076258
+TRACKTIME     =     13779725
+PARTITIONTIME =       143547	 0.01
+TREEBUILDTIME =       881254	 0.06
+FORCECALCTIME =     12504559	 0.91
+RESTTIME      =       250365	 0.02
+
+real	0m29.950s
+user	1m53.814s
+sys	0m0.680s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Woo et al. The SPLASH-2 Programs: Characterization and Methodological Considerations. ISCA, 1995.
+[PARSEC]
+[PARSEC] Done.
+	Command being timed: "./run -a run -S splash2x -p barnes -i native -n 4"
+	User time (seconds): 113.97
+	System time (seconds): 1.17
+	Percent of CPU this job got: 376%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:30.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1055616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 327222
+	Voluntary context switches: 2267
+	Involuntary context switches: 307
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

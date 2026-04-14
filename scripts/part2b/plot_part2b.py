@@ -1,6 +1,7 @@
 import os
 import re
 import matplotlib.pyplot as plt
+import numpy as np
 
 JOBS = [
     "parsec-barnes",
@@ -38,8 +39,12 @@ def parse_time(filepath):
 def main():
     plt.figure(figsize=(10, 6))
     
+    table_data = {}
+    
     for job in JOBS:
+        table_data[job] = {}
         speedups = []
+        errors = []
         base_time = None
         
         for threads in THREADS:
@@ -53,25 +58,33 @@ def main():
             if not times:
                 print(f"Warning: No valid data found for {job} with {threads} threads.")
                 speedups.append(None)
+                errors.append(None)
                 continue
                 
             avg_time = sum(times) / len(times)
+            table_data[job][threads] = avg_time
             
             if threads == 1:
                 base_time = avg_time
-                speedups.append(1.0) # Speedup for 1 thread is always 1
+                speeds = [base_time / t for t in times]
+                speedups.append(np.mean(speeds))
+                errors.append(np.std(speeds))
             else:
                 if base_time is not None:
-                    speedups.append(base_time / avg_time)
+                    speeds = [base_time / t for t in times]
+                    speedups.append(np.mean(speeds))
+                    errors.append(np.std(speeds))
                 else:
                     speedups.append(None)
+                    errors.append(None)
                     
         # Plot only valid data points
         valid_threads = [t for t, s in zip(THREADS, speedups) if s is not None]
         valid_speedups = [s for s in speedups if s is not None]
+        valid_errors = [e for e in errors if e is not None]
         
         if valid_threads:
-            plt.plot(valid_threads, valid_speedups, marker='o', label=job.replace("parsec-", ""))
+            plt.errorbar(valid_threads, valid_speedups, yerr=valid_errors, marker='o', capsize=5, label=job.replace("parsec-", ""))
             
     # Add theoretical linear speedup
     plt.plot(THREADS, THREADS, 'k--', linewidth=1, alpha=0.7, label='Ideal (Linear) Speedup')
@@ -90,7 +103,31 @@ def main():
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     plt.savefig(output_path, dpi=300)
     plt.savefig(output_path.replace('.png', '.pdf'))
-    print(f"Plots saved to {output_path} and .pdf")
+    print(f"Plots saved to {output_path} and .pdf\n")
     
+    # Generate LaTeX table
+    print(r"\begin{table}[h]")
+    print(r"\centering")
+    print(r"\renewcommand{\arraystretch}{1.2}")
+    print(r"\begin{tabular}{|l|c|c|c|c|}")
+    print(r"\hline")
+    print(r"\textbf{Benchmark} & \textbf{1 Thread (s)} & \textbf{2 Threads (s)} & \textbf{4 Threads (s)} & \textbf{8 Threads (s)} \\")
+    print(r"\hline\hline")
+
+    for job in JOBS:
+        short_job = job.replace("parsec-", "")
+        row = [rf"\coloredcell{{{short_job}}}"]
+        for t in THREADS:
+            if t in table_data[job]:
+                row.append(f"{table_data[job][t]:.2f}")
+            else:
+                row.append("N/A")
+        print(" & ".join(row) + r" \\ \hline")
+
+    print(r"\end{tabular}")
+    print(r"\caption{Mean execution time (seconds) for each benchmark and thread count.}")
+    print(r"\label{tab:mean_execution_times}")
+    print(r"\end{table}")
+
 if __name__ == "__main__":
     main()
