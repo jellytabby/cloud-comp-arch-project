@@ -27,38 +27,44 @@ echo "==============================================================="
 # setup memcached pod
 echo "==============================================================="
 echo "Setting up memcached pod with 1 thread and cpuset to core 0"
-kubectl create -f "parsec-benchmarks/part3/part3_memcache-t1-cpuset.yaml"
-kubectl wait --for=condition=ready pod/memcached --timeout=300s
-kubectl expose pod memcached --name memcached-11211 --type LoadBalancer --port 11211 --protocol TCP
-kubectl wait --for=condition=available --timeout=300s service/memcached-11211
+# kubectl create -f "parsec-benchmarks/part3/part3_memcache-t1-cpuset.yaml"
+# kubectl wait --for=condition=ready pod/memcached --timeout=300s
+# kubectl expose pod memcached --name memcached-11211 --type LoadBalancer --port 11211 --protocol TCP
+# echo "Waiting for LoadBalancer IP to be assigned..."
+# while [ -z "$(kubectl get service memcached-11211 -o jsonpath='{.status.loadBalancer.ingress[0].ip}' 2>/dev/null)" ]; do
+#     sleep 2
+# done
 MEMCACHED_IP=$(kubectl get service memcached-11211 -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
 echo "Memcached is available at IP: $MEMCACHED_IP"
 echo "==============================================================="
 
 #setup client agents and measure
-CLIENT_A_CMD="./mcperf -T 2 -A"
-CLIENT_B_CMD="./mcperf -T 4 -A"
-CLIENT_MEASURE_CMD="./mcperf -s ${MEMCACHED_IP} --loadonly && ./mcperf -s ${MEMCACHED_IP} -a ${CLIENT_A_INT_IP} -a ${CLIENT_B_INT_IP} --noload -T 6 -C 4 -D 4 -Q 1000 -c 4 -t 10 --scan 30000:30500:5 > ~/measurements.txt"
+CLIENT_A_CMD="cd memcache-perf-dynamic && ./mcperf -T 2 -A"
+CLIENT_B_CMD="cd memcache-perf-dynamic && ./mcperf -T 4 -A"
+CLIENT_MEASURE_CMD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} --loadonly && ./mcperf -s ${MEMCACHED_IP} -a ${CLIENT_A_INT_IP} -a ${CLIENT_B_INT_IP} --noload -T 6 -C 4 -D 4 -Q 1000 -c 4 -t 10 --scan 30000:30500:5 > ~/measurements.txt"
 
 # for some reason needs the gcloud ssh before normal ssh works, so we use gcloud here
-rsync -avz -e "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b --" "./scripts/part3/build_mcperf.sh" "ubuntu@${CLIENT_A_NODE}:~/build_mcperf.sh"
-gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_A_NODE}" -- "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh && nohup ${CLIENT_A_CMD} > /dev/null 2>&1 &"
+# gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "ubuntu@${CLIENT_A_NODE}:~/build_mcperf.sh"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_A_NODE}" -- "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_A_NODE}" -- "tmux new-session -d \"bash -c '${CLIENT_A_CMD}'\""
 
-echo "sshed into client agent A"
+# echo "sshed into client agent A"
 
-rsync -avz -e "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b --" "./scripts/part3/build_mcperf.sh" "ubuntu@${CLIENT_B_NODE}:~/build_mcperf.sh"
-gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_B_NODE}" -- "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh && nohup ${CLIENT_B_CMD} > /dev/null 2>&1 &"
+# gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "ubuntu@${CLIENT_B_NODE}:~/build_mcperf.sh"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_B_NODE}" -- "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_B_NODE}" -- "tmux new-session -d \"bash -c '${CLIENT_B_CMD}'\""
 
-echo "sshed into client agent B"
+# echo "sshed into client agent B"
 
-rsync -avz -e "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b --" "./scripts/part3/build_mcperf.sh" "ubuntu@${CLIENT_MEASURE_NODE}:~/build_mcperf.sh"
-gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_MEASURE_NODE}" -- "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh && nohup bash -c '${CLIENT_MEASURE_CMD}' > /dev/null 2>&1 &"
+gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "ubuntu@${CLIENT_MEASURE_NODE}:~/build_mcperf.sh"
+gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_MEASURE_NODE}" -- "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
+gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_MEASURE_NODE}" -- "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_MEASURE_CMD}'\""
 
 echo "sshed into client measure node and started measurement client"
 sleep 10
 echo "==============================================================="
 echo "Client agents and measurement client are set up and running benchmarks against memcached"
-echo "$(gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b -- "ubuntu@${CLIENT_MEASURE_NODE}" -- cat measurements.txt)"
+echo "$(gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b -- "ubuntu@${CLIENT_MEASURE_NODE}" -- "cat measurements.txt")"
 echo "==============================================================="
 
 ALL_JOBS=(
@@ -127,6 +133,6 @@ for i in {1..3}; do
     sleep 5
 done
 
-rsync -avz -e "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b --" "ubuntu@${CLIENT_MEASURE_NODE}:~/measurements.txt ./results/part3/version_${VERSION}_measurements.txt" 
+gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version_${VERSION}_measurements.txt" 
 
 
