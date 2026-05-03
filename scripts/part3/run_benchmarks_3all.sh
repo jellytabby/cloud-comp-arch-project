@@ -33,6 +33,15 @@ echo "==============================================================="
 # setup memcached pod
 echo "==============================================================="
 echo "Setting up memcached pod with 1 thread and cpuset to core 0"
+if kubectl get pod memcached &> /dev/null; then
+    echo "Memcached pod already exists, deleting it first..."
+    kubectl delete pod memcached
+    kubectl delete service memcached-11211
+    while kubectl get pod memcached &> /dev/null && kubectl get service memcached-11211 &> /dev/null; do
+        echo "Waiting for memcached pod and service to be deleted..."
+        sleep 5
+    done
+fi
 kubectl create -f "parsec-benchmarks/part3/part3_memcache-t1-cpuset.yaml"
 kubectl wait --for=condition=ready pod/memcached --timeout=600s
 kubectl expose pod memcached --name memcached-11211 --type LoadBalancer --port 11211 --protocol TCP
@@ -56,7 +65,7 @@ CLIENT_MEASURE_CMD_RUN="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} 
 
 # for some reason needs the gcloud ssh before normal ssh works, so we use gcloud here
 gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "${CLIENT_A_NODE}:~/build_mcperf.sh"
-gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_A_CMD}'\""
 
 echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_A_NODE}"
@@ -77,7 +86,7 @@ gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "${CLIENT_MEASURE_CMD_LOAD}"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_MEASURE_CMD_RUN}'\""
-echo  "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_MEASURE_NODE} --command \"TERM=xterm-256color tmux new-session -d \\\"bash -c '${CLIENT_MEASURE_CMD_RUN}'\\\"\""
+echo  "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_MEASURE_NODE} --command \"TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_MEASURE_CMD_RUN}'\""
 
 echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_MEASURE_NODE}" 
 # read -p "Press Enter after verifying that client measure node is running its benchmark..."
@@ -100,15 +109,17 @@ ALL_JOBS=(
 )
 
 run_vips() {
-    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s
-    echo "canneal completed, starting vips"
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
+    echo "blackscholes completed, starting vips"
     kubectl create -f "parsec-benchmarks/part3/parsec-vips.yaml" # 4 threads, colocated on node-a-8core
     kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s
 }
 
 run_barnes() {
-    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s
-    echo "freqmine completed, starting barnes"
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
+    sleep 1 # so that we dont crash on missing job
+    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s
+    echo "vips completed, starting barnes"
     kubectl create -f "parsec-benchmarks/part3/parsec-barnes.yaml" # 4 threads, colocated on node-a-8core
     kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s
 }
@@ -125,33 +136,52 @@ run_radix() {
     kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s
 }
 
+run_blackscholes() {
+    kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s
+    echo "barnes completed, starting blackscholes"
+    kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # 4 threads
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
+}
+
+run_canneal() {
+    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s
+    echo "freqmine completed, starting canneal"
+    kubectl create -f "parsec-benchmarks/part3/parsec-canneal.yaml" # 4 threads
+    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s
+}
 
 
 
-VERSION=2 
+VERSION=3
 mkdir -p results/part3/version${VERSION}
 sleep 10 # just to be safe that everything is up and running before we start the benchmarks, especially the measurement client
 for i in {1..3}; do
     #static schedule based on info from part 1,2 results, no kubectl affinity or resource requests/limits
 
     # colocated with memcached on node-b-4core
-    kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # one thread
-    kubectl create -f "parsec-benchmarks/part3/parsec-streamcluster.yaml" # two threads
-    echo "created blackscholes and streamcluster"
-    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
-    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+    kubectl create -f "parsec-benchmarks/part3/parsec-streamcluster.yaml" # 4 threads 
+    # kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # one thread
+    echo "created streamcluster"
+    # kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
 
     # colocated on node-a-8core
-    kubectl create -f "parsec-benchmarks/part3/parsec-canneal.yaml" # 4 threads
-    kubectl create -f "parsec-benchmarks/part3/parsec-freqmine.yaml" # 4 threads
-    echo "created canneal and freqmine, waiting for them to complete before starting the next jobs"
+    # kubectl create -f "parsec-benchmarks/part3/parsec-canneal.yaml" # 4 threads
+    kubectl create -f "parsec-benchmarks/part3/parsec-freqmine.yaml" # 4 threads [4-7]
+    kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # 3 threads [0-2]
+    kubectl create -f "parsec-benchmarks/part3/parsec-radix.yaml" # 1 thread [3]
+    echo "created freqmine, blackscholes and radix"
 
-    run_vips &
-    run_barnes &
-    run_radix &
+    run_canneal & # 4 threads, [4-7]
+    run_vips & # 4 threads, [0-3]
+    run_barnes & # 4 threads, [0-3]
+    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+    kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+    # run_radix &  # 4 threads, colocated on node-a-8core, after vips
+    # run_blackscholes & # 4 threads, colocated on node-a-8core, after freqmine
 
     wait
     kubectl get pods -o json > "results/part3/version${VERSION}/run${i}.json"
+    gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version${VERSION}/measurements.txt"
     echo "All jobs completed for version ${VERSION} run ${i}, collecting logs and cleaning up"
 
     for job in "${ALL_JOBS[@]}"; do
@@ -159,10 +189,7 @@ for i in {1..3}; do
     done
     kubectl delete jobs --all --ignore-not-found
     sleep 5
-
-    # always resulted in radix having OOM? at least kept failing with 137 error, so will put on different node in next version 
 done
 
-gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version${VERSION}/measurements.txt"
 
 

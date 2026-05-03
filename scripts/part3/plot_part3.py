@@ -346,7 +346,7 @@ def main():
                         help="Directory containing run1.json, run2.json, run3.json")
     parser.add_argument("--measurements", required=True,
                         help="Single mcperf measurement file covering all runs")
-    parser.add_argument("--output", default="plots/part3/",
+    parser.add_argument("--output", default="plots/part3/version3/",
                         help="Output directory (default: plots/part3/)")
     args = parser.parse_args()
  
