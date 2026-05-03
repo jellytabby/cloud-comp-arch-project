@@ -42,11 +42,12 @@ while [ -z "$MEMCACHED_IP" ]; do
     MEMCACHED_IP=$(kubectl get service memcached-11211 -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
     sleep 5
 done
-MEMCACHED_IP=$(kubectl get service memcached-11211 -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
+# MEMCACHED_IP=$(kubectl get service memcached-11211 -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
+MEMCACHED_IP=$(kubectl get pod memcached -o jsonpath="{.status.podIP}")
 echo "Memcached is available at IP: $MEMCACHED_IP"
 echo "==============================================================="
 
-#setup client agents and measure
+# #setup client agents and measure
 CLIENT_A_CMD="cd memcache-perf-dynamic && ./mcperf -T 2 -A"
 CLIENT_B_CMD="cd memcache-perf-dynamic && ./mcperf -T 4 -A"
 CLIENT_MEASURE_CMD_LOAD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} --loadonly"
@@ -113,9 +114,13 @@ run_barnes() {
 }
 
 run_radix() {
-    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
-    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s
-    echo "blackscholes and streamcluster completed, starting radix"
+    # kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
+    # kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s
+    
+    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s
+    sleep 2 # so that we dont crash on missing job
+    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s
+    # echo "blackscholes and streamcluster completed, starting radix"
     kubectl create -f "parsec-benchmarks/part3/parsec-radix.yaml" # 1 thread
     kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s
 }
@@ -123,15 +128,18 @@ run_radix() {
 
 
 
+VERSION=2 
+mkdir -p results/part3/version${VERSION}
+sleep 10 # just to be safe that everything is up and running before we start the benchmarks, especially the measurement client
 for i in {1..3}; do
     #static schedule based on info from part 1,2 results, no kubectl affinity or resource requests/limits
-    VERSION=1 
 
     # colocated with memcached on node-b-4core
     kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # one thread
     kubectl create -f "parsec-benchmarks/part3/parsec-streamcluster.yaml" # two threads
-    echo "created blackscholes and streamcluster, waiting for them to complete before starting the next jobs"
-
+    echo "created blackscholes and streamcluster"
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
 
     # colocated on node-a-8core
     kubectl create -f "parsec-benchmarks/part3/parsec-canneal.yaml" # 4 threads
@@ -142,13 +150,12 @@ for i in {1..3}; do
     run_barnes &
     run_radix &
 
-
     wait
-    kubectl get pods -o json > "results/part3/version_${VERSION}run${i}.json"
+    kubectl get pods -o json > "results/part3/version${VERSION}/run${i}.json"
     echo "All jobs completed for version ${VERSION} run ${i}, collecting logs and cleaning up"
 
     for job in "${ALL_JOBS[@]}"; do
-            kubectl logs job/"$job" > "results/part3/version_${VERSION}_${job}_${i}.txt"
+            kubectl logs job/"$job" > "results/part3/version${VERSION}/${job}_${i}.txt"
     done
     kubectl delete jobs --all --ignore-not-found
     sleep 5
@@ -156,6 +163,6 @@ for i in {1..3}; do
     # always resulted in radix having OOM? at least kept failing with 137 error, so will put on different node in next version 
 done
 
-gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "ubuntu@${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version_${VERSION}_measurements.txt" 
+gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version${VERSION}/measurements.txt"
 
 
