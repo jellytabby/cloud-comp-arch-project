@@ -65,7 +65,7 @@ CLIENT_MEASURE_CMD_RUN="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} 
 
 # for some reason needs the gcloud ssh before normal ssh works, so we use gcloud here
 gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "${CLIENT_A_NODE}:~/build_mcperf.sh"
-# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
+gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_A_CMD}'\""
 
 echo "===========================client A================================="

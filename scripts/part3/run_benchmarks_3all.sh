@@ -39,47 +39,18 @@ ALL_JOBS=(
 )
 
 
-# run_vips() {
-#     kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
-#     echo "blackscholes completed, starting vips"
-#     kubectl create -f "parsec-benchmarks/part3/parsec-vips.yaml" # 4 threads, colocated on node-a-8core
-#     kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s
-# }
-
-# run_barnes() {
-#     kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
-#     sleep 1 # so that we dont crash on missing job
-#     kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s
-#     echo "vips completed, starting barnes"
-#     kubectl create -f "parsec-benchmarks/part3/parsec-barnes.yaml" # 4 threads, colocated on node-a-8core
-#     kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s
-# }
-
-# run_radix() {
-#     # kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
-#     # kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s
-    
-#     kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s
-#     sleep 2 # so that we dont crash on missing job
-#     kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s
-#     # echo "blackscholes and streamcluster completed, starting radix"
-#     kubectl create -f "parsec-benchmarks/part3/parsec-radix.yaml" # 1 thread
-#     kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s
-# }
-
-# run_blackscholes() {
-#     kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s
-#     echo "barnes completed, starting blackscholes"
-#     kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # 4 threads
-#     kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
-# }
-
-# run_canneal() {
-#     kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s
-#     echo "freqmine completed, starting canneal"
-#     kubectl create -f "parsec-benchmarks/part3/parsec-canneal.yaml" # 4 threads
-#     kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s
-# }
+run_after() {
+    local first_job="$1"
+    local second_job="$2"
+    while [ -z "$(kubectl get job/"$first_job" 2>/dev/null)" ]; do
+        # echo "Waiting for $first_job to be ready..."
+        sleep 0.2
+    done
+    kubectl wait --for=condition=complete job/"$first_job" --timeout=6000s
+    echo "$first_job completed, starting $second_job"
+    kubectl create -f "parsec-benchmarks/part3/parsec-${second_job}.yaml"
+    kubectl wait --for=condition=complete job/parsec-"${second_job}" --timeout=6000s
+}
 
 substitute_job() {
     local job="$1"
@@ -96,66 +67,54 @@ substitute_job() {
       "parsec-benchmarks/part3/parsec-${job}.yaml" 
 }
 
-declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
+declare -A barnes_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-3")
 declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-declare -A freqmine_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-declare -A radix_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-declare -A streamcluster_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
+declare -A canneal_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-7")
+declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-7")
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-7")
+declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="1-3")
 
-VERSION=4_test
+VERSION=4
 mkdir -p results/part3/version${VERSION}
-for i in {1..1}; do
+for i in {1..3}; do
     #static schedule based on info from part 1,2 results, no kubectl affinity or resource requests/limits
 
-    # # colocated with memcached on node-b-4core
-    # kubectl create -f "parsec-benchmarks/part3/parsec-streamcluster.yaml" # 4 threads 
-    # # kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # one thread
-    # echo "created streamcluster"
-    # # kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    substitute_job "blackscholes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    run_after "parsec-blackscholes" "vips" &
+    # run_after "parsec-vips" "canneal" &
 
-    # # colocated on node-a-8core
-    # # kubectl create -f "parsec-benchmarks/part3/parsec-canneal.yaml" # 4 threads
-    # kubectl create -f "parsec-benchmarks/part3/parsec-freqmine.yaml" # 4 threads [4-7]
-    # kubectl create -f "parsec-benchmarks/part3/parsec-blackscholes.yaml" # 3 threads [0-2]
-    # kubectl create -f "parsec-benchmarks/part3/parsec-radix.yaml" # 1 thread [3]
-    # echo "created freqmine, blackscholes and radix"
 
-    # run_canneal & # 4 threads, [4-7]
-    # run_vips & # 4 threads, [0-3]
+    substitute_job "streamcluster" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+
+    # substitute_job "freqmine" | kubectl create -f -
+    # kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+
+    substitute_job "barnes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+    substitute_job "radix" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+    substitute_job "canneal" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
+    substitute_job "freqmine" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+    # run_after "parsec-streamcluster" "freqmine" &
+    # run_after "parsec-streamcluster" "barnes" &
+    # run_after "parsec-barnes" "radix" &
+
     # run_barnes & # 4 threads, [0-3]
     # kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
     # kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
     # # run_radix &  # 4 threads, colocated on node-a-8core, after vips
     # # run_blackscholes & # 4 threads, colocated on node-a-8core, after freqmine
 
-    # wait
-    # kubectl get pods -o json > "results/part3/version${VERSION}/run${i}.json"
-    # gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version${VERSION}/measurements.txt"
-    # echo "All jobs completed for version ${VERSION} run ${i}, collecting logs and cleaning up"
-
-    # for job in "${ALL_JOBS[@]}"; do
-    #         kubectl logs job/"$job" > "results/part3/version${VERSION}/${job}_${i}.txt"
-    # done
-    # kubectl delete jobs --all --ignore-not-found
-    # sleep 5
-    substitute_job "barnes" | kubectl create -f -
-    kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s
-    substitute_job "blackscholes" | kubectl create -f -
-    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s
-    substitute_job "streamcluster" | kubectl create -f -
-    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s
-    # substitute_job "radix" | kubectl create -f -
-    # kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s
-    substitute_job "canneal" | kubectl create -f -
-    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s
-    substitute_job "freqmine" | kubectl create -f -
-    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s
-    substitute_job "vips" | kubectl create -f -
-    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s
+    wait
     kubectl get pods -o json > "results/part3/version${VERSION}/run${i}.json"
     gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version${VERSION}/measurements.txt"
+    kubectl delete job --all
+    sleep 5
 done
 
 
