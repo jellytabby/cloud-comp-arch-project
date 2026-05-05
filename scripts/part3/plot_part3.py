@@ -342,11 +342,11 @@ def latex_table(all_durations, all_makespans, all_slo_ratios):
  
 def main():
     parser = argparse.ArgumentParser(description="Part 3 analysis script")
-    parser.add_argument("--dir", required=True,
+    parser.add_argument("--dir", default="./results/part3/version4_memcached4node2/",
                         help="Directory containing run1.json, run2.json, run3.json")
-    parser.add_argument("--measurements", required=True,
+    parser.add_argument("--measurements", default="./results/part3/version4_memcached4node2/measurements.txt",
                         help="Single mcperf measurement file covering all runs")
-    parser.add_argument("--output", default="plots/part3/version4/",
+    parser.add_argument("--output", default="plots/part3/version4_memcached4node/",
                         help="Output directory (default: plots/part3/)")
     args = parser.parse_args()
  
