@@ -67,13 +67,13 @@ substitute_job() {
       "parsec-benchmarks/part3/parsec-${job}.yaml" 
 }
 
-declare -A barnes_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-3")
-declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-declare -A canneal_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-7")
-declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-7")
-declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-7")
+declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
+declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
+declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
+declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
 declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="1-3")
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 
 VERSION=4
 mkdir -p results/part3/version${VERSION}
@@ -82,7 +82,7 @@ for i in {1..3}; do
 
     substitute_job "blackscholes" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
-    run_after "parsec-blackscholes" "vips" &
+    # run_after "parsec-blackscholes" "vips" &
     # run_after "parsec-vips" "canneal" &
 
 
@@ -100,6 +100,8 @@ for i in {1..3}; do
     kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
     substitute_job "freqmine" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+    substitute_job "vips" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
     # run_after "parsec-streamcluster" "freqmine" &
     # run_after "parsec-streamcluster" "barnes" &
     # run_after "parsec-barnes" "radix" &

@@ -63,37 +63,50 @@ CLIENT_MEASURE_CMD_LOAD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP}
 CLIENT_MEASURE_CMD_RUN="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} -a ${CLIENT_A_INT_IP} -a ${CLIENT_B_INT_IP} --noload -T 6 -C 4 -D 4 -Q 1000 -c 4 -t 10 --scan 30000:30500:5 |& tee ~/measurements.txt"
 # echo "$CLIENT_MEASURE_CMD"
 
+echo "===========================client A================================="
+echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_A_NODE}"
+echo "TERM=xterm-256color tmux attach"
+echo "===================================================================="
 # for some reason needs the gcloud ssh before normal ssh works, so we use gcloud here
 gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "${CLIENT_A_NODE}:~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_A_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_A_CMD}'\""
-
 echo "===========================client A================================="
 echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_A_NODE}"
+echo "TERM=xterm-256color tmux attach"
 echo "===================================================================="
+
 # read -p "Press Enter after verifying that client agent A is running its benchmark..." 
 
 # # echo "sshed into client agent A"
-
+echo "===========================client B================================="
+echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_B_NODE}"
+echo "TERM=xterm-256color tmux attach"
+echo "===================================================================="
 gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "${CLIENT_B_NODE}:~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_B_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_B_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_B_CMD}'\""
-
 echo "===========================client B================================="
 echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_B_NODE}"
+echo "TERM=xterm-256color tmux attach"
 echo "===================================================================="
+
 # read -p "Press Enter after verifying that client agent B is running its benchmark..."
 
 # echo "sshed into client agent B"
 
+echo "===========================client measure================================="
+echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_MEASURE_NODE}" 
+echo "TERM=xterm-256color tmux attach"
+echo "=========================================================================="
 gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part3/build_mcperf.sh" "${CLIENT_MEASURE_NODE}:~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "chmod +x ~/build_mcperf.sh && ~/build_mcperf.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "${CLIENT_MEASURE_CMD_LOAD}"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_MEASURE_CMD_RUN}'\""
 echo  "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_MEASURE_NODE} --command \"TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_MEASURE_CMD_RUN}'\""
-
 echo "===========================client measure================================="
 echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${CLIENT_MEASURE_NODE}" 
+echo "TERM=xterm-256color tmux attach"
 echo "=========================================================================="
 # read -p "Press Enter after verifying that client measure node is running its benchmark..."
 
