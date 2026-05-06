@@ -74,26 +74,26 @@ declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-
 declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
 declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
 declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-3")
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
 
-VERSION=4_memcached4node2
+VERSION=5
 mkdir -p results/part3/version${VERSION}
 for i in {1..3}; do
     #static schedule based on info from part 1,2 results, no kubectl affinity or resource requests/limits
 
     substitute_job "streamcluster" | kubectl create -f -
-    substitute_job "freqmine" | kubectl create -f -
-    substitute_job "blackscholes" | kubectl create -f -
-    substitute_job "canneal" | kubectl create -f -
-    substitute_job "barnes" | kubectl create -f -
-    substitute_job "vips" | kubectl create -f -
-    substitute_job "radix" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+    substitute_job "freqmine" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+    substitute_job "blackscholes" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    substitute_job "canneal" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
+    substitute_job "barnes" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+    substitute_job "vips" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
+    substitute_job "radix" | kubectl create -f -
     kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
     # run_after "parsec-blackscholes" "vips" &
     # run_after "parsec-vips" "canneal" &
