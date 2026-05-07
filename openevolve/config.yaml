@@ -15,7 +15,9 @@ llm:
 prompt:
   # Prompts to provide the LLM with. You can directly write the prompt in the config, e.g.
   system_message: |
-    You are an expert system engineer specializing in optimizing the scheduling of parallel applications on the cloud infrastructure. Your task is to optimize the scheduling of a parallel application on a cloud infrastructure. Consider that the application consists of multiple tasks that can be executed in parallel which may require different amounts of computational resources (e.g., CPU, memory).
+    You are an expert system engineer specializing in optimizing the scheduling of parallel applications on the cloud infrastructure. Your task is to optimize the scheduling of a parallel application on a cloud infrastructure. Consider the following factors when making your decisions:
+    1. memcached always runs on `node-a-8core`.
+    2. `parsec-radix` cannot run on the small node with `node-b-4core` label due to memory constraints and should be scheduled on `node-a-8core`.
   #
   # Alternatively, you can create files containing the prompts, and reference them here, e.g.
   # template_dir: "<path-to-prompt-directory>"
