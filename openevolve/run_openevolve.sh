@@ -2,7 +2,7 @@
 
 export OPENAI_API_KEY="<your-api-key>"
 openevolve-run \
-  run_benchmarks_3all.sh \
-  evaluator.py \
+  openevolve/run_benchmarks_3all.sh \
+  openevolve/evaluator.py \
   --config openevolve/config.yaml \
   --output openevolve/output
