@@ -209,7 +209,7 @@ def evaluate(program_path: str) -> EvaluationResult:
 
     program_text = program_file.read_text()
     version = _extract_version(program_text)
-    results_root = project_root / "results" / "part3"
+    results_root = project_root / "openevolve" / "results" / "part3"
     results_dir = (
         results_root / f"version{version}"
         if version
@@ -235,8 +235,8 @@ def evaluate(program_path: str) -> EvaluationResult:
 
     metrics = {
         "combined_score": combined_score,
-        "avg_makespan": avg_makespan or 0.0,
-        "avg_slo_ratio": avg_slo_ratio or 0.0,
+        "avg_makespan": avg_makespan or 1e6,
+        "avg_slo_ratio": avg_slo_ratio or 1e6,
         "runs": float(eval_summary["runs"]),
     }
 
