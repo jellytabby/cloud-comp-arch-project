@@ -25,6 +25,8 @@ echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-wes
 echo "==============================================================="
 gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part4/install_memcached.sh" "${MEMCACHED_SERVER_NODE}:~/install_memcached.sh"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${MEMCACHED_SERVER_NODE}" --command "chmod +x ~/install_memcached.sh && ~/install_memcached.sh ${MEMCACHED_SERVER_INT_IP}"
+gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part4/install_docker.sh" "${MEMCACHED_SERVER_NODE}:~/install_docker.sh"
+gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${MEMCACHED_SERVER_NODE}" --command "chmod +x ~/install_docker.sh && sudo ~/install_docker.sh"
 echo "=============================memcached==============================="
 echo "gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b ${MEMCACHED_SERVER_NODE}"
 echo "==============================================================="

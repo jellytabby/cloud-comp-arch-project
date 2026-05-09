@@ -1,7 +1,7 @@
 MEMCACHED_INT_IP=$1
 echo "Memcached Server Internal IP: ${MEMCACHED_INT_IP}"
 sudo apt update
-sudo apt install -y memcached libmemcached-tools
+sudo apt install -y memcached libmemcached-tools python3-pip
 sudo systemctl status memcached
 
 # replace default memory

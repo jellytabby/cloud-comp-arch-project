@@ -1,0 +1,2021 @@
+2026-05-09T21:31:41.395392 start scheduler
+pid 561020's current affinity list: 0,1
+pid 561020's new affinity list: 0,1
+pid 561022's current affinity list: 0,1
+pid 561022's new affinity list: 0,1
+pid 561023's current affinity list: 0,1
+pid 561023's new affinity list: 0,1
+pid 561024's current affinity list: 0,1
+pid 561024's new affinity list: 0,1
+pid 561025's current affinity list: 0,1
+pid 561025's new affinity list: 0,1
+pid 561026's current affinity list: 0,1
+pid 561026's new affinity list: 0,1
+pid 561027's current affinity list: 0,1
+pid 561027's new affinity list: 0,1
+pid 561028's current affinity list: 0,1
+pid 561028's new affinity list: 0,1
+2026-05-09T21:31:43.424448 start memcached [0,1] 2
+2026-05-09T21:31:48.641641 start barnes [2,3] 2
+2026-05-09T21:31:48.843215 start blackscholes [2,3] 2
+2026-05-09T21:31:49.069505 start canneal [2,3] 2
+2026-05-09T21:31:49.323015 start freqmine [2,3] 2
+2026-05-09T21:31:49.627212 start radix [2,3] 2
+2026-05-09T21:31:49.917589 start streamcluster [2,3] 2
+2026-05-09T21:31:52.993840 start vips [2,3] 2
+CPU utilization: 55.0%
+2026-05-09T21:31:53.994393 custom scheduler Moderate+CPU+utilization+detected%3A+55.0%25
+2026-05-09T21:31:54.021492 update_cores barnes [2,3]
+2026-05-09T21:31:54.065241 update_cores blackscholes [2,3]
+2026-05-09T21:31:54.128623 update_cores canneal [2,3]
+2026-05-09T21:31:54.189402 update_cores freqmine [2,3]
+2026-05-09T21:31:54.259686 update_cores radix [2,3]
+2026-05-09T21:31:54.319211 update_cores streamcluster [2,3]
+2026-05-09T21:31:54.352204 update_cores vips [2,3]
+CPU utilization: 76.8%
+2026-05-09T21:31:55.391769 custom scheduler High+CPU+utilization+detected%3A+76.8%25
+2026-05-09T21:31:55.429870 update_cores barnes [3]
+2026-05-09T21:31:55.470624 update_cores blackscholes [3]
+2026-05-09T21:31:55.514840 update_cores canneal [3]
+2026-05-09T21:31:55.553133 update_cores freqmine [2]
+2026-05-09T21:31:55.625588 update_cores radix [2]
+2026-05-09T21:31:55.665415 update_cores streamcluster [2]
+2026-05-09T21:31:55.701127 update_cores vips [2]
+CPU utilization: 79.0%
+CPU utilization: 79.5%
+CPU utilization: 77.6%
+CPU utilization: 79.9%
+CPU utilization: 77.5%
+CPU utilization: 79.7%
+CPU utilization: 80.8%
+CPU utilization: 79.8%
+CPU utilization: 77.4%
+CPU utilization: 81.4%
+CPU utilization: 81.2%
+CPU utilization: 80.9%
+CPU utilization: 78.3%
+CPU utilization: 96.7%
+CPU utilization: 98.0%
+CPU utilization: 99.8%
+CPU utilization: 97.0%
+CPU utilization: 96.7%
+CPU utilization: 94.3%
+CPU utilization: 96.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 99.0%
+CPU utilization: 99.3%
+CPU utilization: 100.0%
+CPU utilization: 86.1%
+CPU utilization: 82.0%
+CPU utilization: 82.5%
+CPU utilization: 84.0%
+CPU utilization: 81.9%
+CPU utilization: 82.7%
+CPU utilization: 80.8%
+CPU utilization: 82.9%
+CPU utilization: 81.2%
+CPU utilization: 83.4%
+CPU utilization: 81.3%
+CPU utilization: 82.3%
+CPU utilization: 81.3%
+CPU utilization: 82.5%
+CPU utilization: 72.7%
+CPU utilization: 73.8%
+CPU utilization: 71.7%
+CPU utilization: 72.8%
+CPU utilization: 71.1%
+CPU utilization: 72.3%
+CPU utilization: 71.3%
+CPU utilization: 72.6%
+CPU utilization: 72.0%
+CPU utilization: 73.7%
+CPU utilization: 70.4%
+CPU utilization: 72.2%
+CPU utilization: 71.1%
+CPU utilization: 72.5%
+CPU utilization: 75.0%
+CPU utilization: 79.4%
+CPU utilization: 77.7%
+CPU utilization: 77.8%
+CPU utilization: 78.5%
+CPU utilization: 78.0%
+CPU utilization: 77.3%
+CPU utilization: 80.3%
+CPU utilization: 76.7%
+CPU utilization: 79.8%
+CPU utilization: 78.5%
+CPU utilization: 79.4%
+CPU utilization: 77.0%
+CPU utilization: 78.0%
+CPU utilization: 73.8%
+CPU utilization: 71.2%
+CPU utilization: 69.5%
+CPU utilization: 70.7%
+CPU utilization: 69.9%
+CPU utilization: 71.6%
+CPU utilization: 69.6%
+CPU utilization: 70.5%
+CPU utilization: 69.8%
+CPU utilization: 73.2%
+CPU utilization: 70.7%
+CPU utilization: 71.0%
+CPU utilization: 69.6%
+CPU utilization: 72.4%
+CPU utilization: 71.3%
+CPU utilization: 99.3%
+CPU utilization: 99.5%
+CPU utilization: 94.8%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 98.5%
+CPU utilization: 98.5%
+CPU utilization: 99.2%
+CPU utilization: 100.0%
+CPU utilization: 98.0%
+CPU utilization: 97.0%
+CPU utilization: 99.2%
+CPU utilization: 99.3%
+CPU utilization: 96.7%
+CPU utilization: 99.5%
+CPU utilization: 95.8%
+CPU utilization: 98.5%
+CPU utilization: 98.7%
+CPU utilization: 99.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 97.7%
+CPU utilization: 100.0%
+CPU utilization: 99.8%
+CPU utilization: 97.2%
+CPU utilization: 99.0%
+CPU utilization: 94.8%
+CPU utilization: 99.2%
+CPU utilization: 99.0%
+CPU utilization: 99.2%
+CPU utilization: 98.2%
+CPU utilization: 96.7%
+CPU utilization: 98.2%
+CPU utilization: 95.2%
+CPU utilization: 95.9%
+CPU utilization: 96.7%
+CPU utilization: 97.2%
+CPU utilization: 96.7%
+CPU utilization: 95.2%
+CPU utilization: 96.2%
+CPU utilization: 93.7%
+CPU utilization: 94.9%
+CPU utilization: 73.2%
+CPU utilization: 71.5%
+CPU utilization: 68.5%
+CPU utilization: 70.5%
+CPU utilization: 70.0%
+CPU utilization: 71.4%
+CPU utilization: 69.9%
+CPU utilization: 72.0%
+CPU utilization: 70.4%
+CPU utilization: 74.4%
+CPU utilization: 71.8%
+CPU utilization: 71.9%
+CPU utilization: 70.4%
+CPU utilization: 71.2%
+CPU utilization: 62.3%
+CPU utilization: 60.2%
+CPU utilization: 57.8%
+2026-05-09T21:34:27.139223 custom scheduler Moderate+CPU+utilization+detected%3A+57.8%25
+2026-05-09T21:34:27.164469 update_cores barnes [2,3]
+2026-05-09T21:34:27.187942 update_cores blackscholes [2,3]
+2026-05-09T21:34:27.212174 update_cores canneal [2,3]
+2026-05-09T21:34:27.236563 update_cores freqmine [2,3]
+2026-05-09T21:34:27.262576 update_cores radix [2,3]
+2026-05-09T21:34:27.286523 update_cores streamcluster [2,3]
+2026-05-09T21:34:27.309936 update_cores vips [2,3]
+CPU utilization: 59.9%
+CPU utilization: 58.2%
+CPU utilization: 60.2%
+2026-05-09T21:34:30.427545 custom scheduler High+CPU+utilization+detected%3A+60.2%25
+2026-05-09T21:34:30.452838 update_cores barnes [3]
+2026-05-09T21:34:30.478036 update_cores blackscholes [3]
+2026-05-09T21:34:30.503952 update_cores canneal [3]
+2026-05-09T21:34:30.529262 update_cores freqmine [2]
+2026-05-09T21:34:30.554841 update_cores radix [2]
+2026-05-09T21:34:30.579398 update_cores streamcluster [2]
+2026-05-09T21:34:30.611466 update_cores vips [2]
+CPU utilization: 60.8%
+CPU utilization: 58.5%
+2026-05-09T21:34:32.705265 custom scheduler Moderate+CPU+utilization+detected%3A+58.5%25
+2026-05-09T21:34:32.731827 update_cores barnes [2,3]
+2026-05-09T21:34:32.759636 update_cores blackscholes [2,3]
+2026-05-09T21:34:32.785163 update_cores canneal [2,3]
+2026-05-09T21:34:32.810858 update_cores freqmine [2,3]
+2026-05-09T21:34:32.836145 update_cores radix [2,3]
+2026-05-09T21:34:32.860487 update_cores streamcluster [2,3]
+2026-05-09T21:34:32.884077 update_cores vips [2,3]
+CPU utilization: 59.8%
+CPU utilization: 58.2%
+CPU utilization: 60.1%
+2026-05-09T21:34:35.989724 custom scheduler High+CPU+utilization+detected%3A+60.1%25
+2026-05-09T21:34:36.015294 update_cores barnes [3]
+2026-05-09T21:34:36.039689 update_cores blackscholes [3]
+2026-05-09T21:34:36.064959 update_cores canneal [3]
+2026-05-09T21:34:36.089796 update_cores freqmine [2]
+2026-05-09T21:34:36.115433 update_cores radix [2]
+2026-05-09T21:34:36.140442 update_cores streamcluster [2]
+2026-05-09T21:34:36.164142 update_cores vips [2]
+CPU utilization: 58.5%
+2026-05-09T21:34:37.209109 custom scheduler Moderate+CPU+utilization+detected%3A+58.5%25
+2026-05-09T21:34:37.233822 update_cores barnes [2,3]
+2026-05-09T21:34:37.257677 update_cores blackscholes [2,3]
+2026-05-09T21:34:37.283260 update_cores canneal [2,3]
+2026-05-09T21:34:37.308532 update_cores freqmine [2,3]
+2026-05-09T21:34:37.336005 update_cores radix [2,3]
+2026-05-09T21:34:37.361085 update_cores streamcluster [2,3]
+2026-05-09T21:34:37.387284 update_cores vips [2,3]
+CPU utilization: 59.5%
+CPU utilization: 58.0%
+CPU utilization: 83.9%
+2026-05-09T21:34:40.540875 custom scheduler High+CPU+utilization+detected%3A+83.9%25
+2026-05-09T21:34:40.576457 update_cores barnes [3]
+2026-05-09T21:34:40.618362 update_cores blackscholes [3]
+2026-05-09T21:34:40.664755 update_cores canneal [3]
+2026-05-09T21:34:40.708134 update_cores freqmine [2]
+2026-05-09T21:34:40.746163 update_cores radix [2]
+2026-05-09T21:34:40.785208 update_cores streamcluster [2]
+2026-05-09T21:34:40.821444 update_cores vips [2]
+CPU utilization: 86.7%
+CPU utilization: 90.1%
+2026-05-09T21:34:43.189668 end radix
+CPU utilization: 86.0%
+CPU utilization: 87.0%
+CPU utilization: 85.8%
+CPU utilization: 86.2%
+CPU utilization: 84.2%
+CPU utilization: 85.7%
+CPU utilization: 87.3%
+CPU utilization: 83.8%
+CPU utilization: 87.3%
+CPU utilization: 84.5%
+CPU utilization: 79.8%
+CPU utilization: 59.3%
+2026-05-09T21:34:55.790842 custom scheduler Moderate+CPU+utilization+detected%3A+59.3%25
+2026-05-09T21:34:55.816464 update_cores barnes [2,3]
+2026-05-09T21:34:55.841940 update_cores blackscholes [2,3]
+2026-05-09T21:34:55.866935 update_cores canneal [2,3]
+2026-05-09T21:34:55.891638 update_cores freqmine [2,3]
+2026-05-09T21:34:55.922394 update_cores streamcluster [2,3]
+2026-05-09T21:34:55.949528 update_cores vips [2,3]
+CPU utilization: 60.2%
+2026-05-09T21:34:56.980880 custom scheduler High+CPU+utilization+detected%3A+60.2%25
+2026-05-09T21:34:57.006991 update_cores barnes [3]
+2026-05-09T21:34:57.033714 update_cores blackscholes [3]
+2026-05-09T21:34:57.057966 update_cores canneal [3]
+2026-05-09T21:34:57.083506 update_cores freqmine [2]
+2026-05-09T21:34:57.107689 update_cores streamcluster [2]
+2026-05-09T21:34:57.134522 update_cores vips [2]
+CPU utilization: 59.1%
+2026-05-09T21:34:58.175664 custom scheduler Moderate+CPU+utilization+detected%3A+59.1%25
+2026-05-09T21:34:58.201241 update_cores barnes [2,3]
+2026-05-09T21:34:58.225903 update_cores blackscholes [2,3]
+2026-05-09T21:34:58.250835 update_cores canneal [2,3]
+2026-05-09T21:34:58.274666 update_cores freqmine [2,3]
+2026-05-09T21:34:58.299317 update_cores streamcluster [2,3]
+2026-05-09T21:34:58.323205 update_cores vips [2,3]
+CPU utilization: 60.6%
+2026-05-09T21:34:59.359293 custom scheduler High+CPU+utilization+detected%3A+60.6%25
+2026-05-09T21:34:59.385461 update_cores barnes [3]
+2026-05-09T21:34:59.410264 update_cores blackscholes [3]
+2026-05-09T21:34:59.433745 update_cores canneal [3]
+2026-05-09T21:34:59.458340 update_cores freqmine [2]
+2026-05-09T21:34:59.483450 update_cores streamcluster [2]
+2026-05-09T21:34:59.508950 update_cores vips [2]
+CPU utilization: 58.9%
+2026-05-09T21:35:00.540805 custom scheduler Moderate+CPU+utilization+detected%3A+58.9%25
+2026-05-09T21:35:00.566560 update_cores barnes [2,3]
+2026-05-09T21:35:00.598898 update_cores blackscholes [2,3]
+2026-05-09T21:35:00.633875 update_cores canneal [2,3]
+2026-05-09T21:35:00.662201 update_cores freqmine [2,3]
+2026-05-09T21:35:00.688817 update_cores streamcluster [2,3]
+2026-05-09T21:35:00.746548 update_cores vips [2,3]
+CPU utilization: 59.2%
+CPU utilization: 59.9%
+CPU utilization: 58.8%
+CPU utilization: 60.4%
+2026-05-09T21:35:04.914343 custom scheduler High+CPU+utilization+detected%3A+60.4%25
+2026-05-09T21:35:04.945965 update_cores barnes [3]
+2026-05-09T21:35:04.971419 update_cores blackscholes [3]
+2026-05-09T21:35:04.997093 update_cores canneal [3]
+2026-05-09T21:35:05.023440 update_cores freqmine [2]
+2026-05-09T21:35:05.047605 update_cores streamcluster [2]
+2026-05-09T21:35:05.072152 update_cores vips [2]
+CPU utilization: 59.1%
+2026-05-09T21:35:06.105610 custom scheduler Moderate+CPU+utilization+detected%3A+59.1%25
+2026-05-09T21:35:06.129172 update_cores barnes [2,3]
+2026-05-09T21:35:06.154388 update_cores blackscholes [2,3]
+2026-05-09T21:35:06.179142 update_cores canneal [2,3]
+2026-05-09T21:35:06.203393 update_cores freqmine [2,3]
+2026-05-09T21:35:06.227530 update_cores streamcluster [2,3]
+2026-05-09T21:35:06.252134 update_cores vips [2,3]
+CPU utilization: 60.3%
+2026-05-09T21:35:07.291894 custom scheduler High+CPU+utilization+detected%3A+60.3%25
+2026-05-09T21:35:07.317280 update_cores barnes [3]
+2026-05-09T21:35:07.341497 update_cores blackscholes [3]
+2026-05-09T21:35:07.366629 update_cores canneal [3]
+2026-05-09T21:35:07.392569 update_cores freqmine [2]
+2026-05-09T21:35:07.420345 update_cores streamcluster [2]
+2026-05-09T21:35:07.445418 update_cores vips [2]
+CPU utilization: 58.7%
+2026-05-09T21:35:08.487097 custom scheduler Moderate+CPU+utilization+detected%3A+58.7%25
+2026-05-09T21:35:08.512139 update_cores barnes [2,3]
+2026-05-09T21:35:08.537413 update_cores blackscholes [2,3]
+2026-05-09T21:35:08.563455 update_cores canneal [2,3]
+2026-05-09T21:35:08.590609 update_cores freqmine [2,3]
+2026-05-09T21:35:08.626887 update_cores streamcluster [2,3]
+2026-05-09T21:35:08.660765 update_cores vips [2,3]
+CPU utilization: 63.4%
+2026-05-09T21:35:09.693718 custom scheduler High+CPU+utilization+detected%3A+63.4%25
+2026-05-09T21:35:09.725831 update_cores barnes [3]
+2026-05-09T21:35:09.758996 update_cores blackscholes [3]
+2026-05-09T21:35:09.795290 update_cores canneal [3]
+2026-05-09T21:35:09.835403 update_cores freqmine [2]
+2026-05-09T21:35:09.866731 update_cores streamcluster [2]
+2026-05-09T21:35:09.897854 update_cores vips [2]
+CPU utilization: 72.8%
+CPU utilization: 73.3%
+CPU utilization: 72.5%
+CPU utilization: 73.5%
+CPU utilization: 73.7%
+CPU utilization: 72.3%
+CPU utilization: 72.4%
+CPU utilization: 72.6%
+CPU utilization: 73.2%
+CPU utilization: 72.0%
+CPU utilization: 73.6%
+CPU utilization: 74.6%
+CPU utilization: 73.6%
+CPU utilization: 68.6%
+CPU utilization: 63.0%
+CPU utilization: 61.6%
+CPU utilization: 63.2%
+CPU utilization: 61.7%
+CPU utilization: 63.7%
+CPU utilization: 61.4%
+CPU utilization: 63.7%
+CPU utilization: 61.2%
+CPU utilization: 64.2%
+CPU utilization: 62.8%
+CPU utilization: 63.4%
+CPU utilization: 61.4%
+CPU utilization: 63.4%
+CPU utilization: 61.0%
+CPU utilization: 92.3%
+CPU utilization: 93.9%
+CPU utilization: 94.9%
+CPU utilization: 96.0%
+CPU utilization: 95.5%
+CPU utilization: 96.2%
+CPU utilization: 91.5%
+CPU utilization: 97.7%
+CPU utilization: 94.9%
+CPU utilization: 94.5%
+CPU utilization: 94.7%
+CPU utilization: 95.9%
+CPU utilization: 93.9%
+CPU utilization: 94.7%
+CPU utilization: 68.0%
+CPU utilization: 57.7%
+2026-05-09T21:35:56.268892 custom scheduler Moderate+CPU+utilization+detected%3A+57.7%25
+2026-05-09T21:35:56.293848 update_cores barnes [2,3]
+2026-05-09T21:35:56.316643 update_cores blackscholes [2,3]
+2026-05-09T21:35:56.339557 update_cores canneal [2,3]
+2026-05-09T21:35:56.362573 update_cores freqmine [2,3]
+2026-05-09T21:35:56.386917 update_cores streamcluster [2,3]
+2026-05-09T21:35:56.410342 update_cores vips [2,3]
+CPU utilization: 60.4%
+2026-05-09T21:35:57.442428 custom scheduler High+CPU+utilization+detected%3A+60.4%25
+2026-05-09T21:35:57.467539 update_cores barnes [3]
+2026-05-09T21:35:57.490974 update_cores blackscholes [3]
+2026-05-09T21:35:57.516697 update_cores canneal [3]
+2026-05-09T21:35:57.541726 update_cores freqmine [2]
+2026-05-09T21:35:57.565474 update_cores streamcluster [2]
+2026-05-09T21:35:57.589415 update_cores vips [2]
+CPU utilization: 58.9%
+2026-05-09T21:35:58.643388 custom scheduler Moderate+CPU+utilization+detected%3A+58.9%25
+2026-05-09T21:35:58.669111 update_cores barnes [2,3]
+2026-05-09T21:35:58.693552 update_cores blackscholes [2,3]
+2026-05-09T21:35:58.716472 update_cores canneal [2,3]
+2026-05-09T21:35:58.743088 update_cores freqmine [2,3]
+2026-05-09T21:35:58.768580 update_cores streamcluster [2,3]
+2026-05-09T21:35:58.797892 update_cores vips [2,3]
+CPU utilization: 58.7%
+CPU utilization: 59.7%
+CPU utilization: 59.5%
+CPU utilization: 61.0%
+2026-05-09T21:36:03.005460 custom scheduler High+CPU+utilization+detected%3A+61.0%25
+2026-05-09T21:36:03.029170 update_cores barnes [3]
+2026-05-09T21:36:03.053958 update_cores blackscholes [3]
+2026-05-09T21:36:03.078773 update_cores canneal [3]
+2026-05-09T21:36:03.101676 update_cores freqmine [2]
+2026-05-09T21:36:03.126396 update_cores streamcluster [2]
+2026-05-09T21:36:03.149122 update_cores vips [2]
+CPU utilization: 58.6%
+2026-05-09T21:36:04.183298 custom scheduler Moderate+CPU+utilization+detected%3A+58.6%25
+2026-05-09T21:36:04.208219 update_cores barnes [2,3]
+2026-05-09T21:36:04.232129 update_cores blackscholes [2,3]
+2026-05-09T21:36:04.256585 update_cores canneal [2,3]
+2026-05-09T21:36:04.281106 update_cores freqmine [2,3]
+2026-05-09T21:36:04.307577 update_cores streamcluster [2,3]
+2026-05-09T21:36:04.331825 update_cores vips [2,3]
+CPU utilization: 61.0%
+2026-05-09T21:36:05.368437 custom scheduler High+CPU+utilization+detected%3A+61.0%25
+2026-05-09T21:36:05.395683 update_cores barnes [3]
+2026-05-09T21:36:05.422043 update_cores blackscholes [3]
+2026-05-09T21:36:05.449929 update_cores canneal [3]
+2026-05-09T21:36:05.477592 update_cores freqmine [2]
+2026-05-09T21:36:05.504752 update_cores streamcluster [2]
+2026-05-09T21:36:05.533544 update_cores vips [2]
+CPU utilization: 59.2%
+2026-05-09T21:36:06.584823 custom scheduler Moderate+CPU+utilization+detected%3A+59.2%25
+2026-05-09T21:36:06.615551 update_cores barnes [2,3]
+2026-05-09T21:36:06.646298 update_cores blackscholes [2,3]
+2026-05-09T21:36:06.673878 update_cores canneal [2,3]
+2026-05-09T21:36:06.698238 update_cores freqmine [2,3]
+2026-05-09T21:36:06.723080 update_cores streamcluster [2,3]
+2026-05-09T21:36:06.747913 update_cores vips [2,3]
+CPU utilization: 60.6%
+2026-05-09T21:36:07.781741 custom scheduler High+CPU+utilization+detected%3A+60.6%25
+2026-05-09T21:36:07.806951 update_cores barnes [3]
+2026-05-09T21:36:07.832189 update_cores blackscholes [3]
+2026-05-09T21:36:07.857168 update_cores canneal [3]
+2026-05-09T21:36:07.883896 update_cores freqmine [2]
+2026-05-09T21:36:07.910244 update_cores streamcluster [2]
+2026-05-09T21:36:07.936315 update_cores vips [2]
+CPU utilization: 59.0%
+2026-05-09T21:36:08.978742 custom scheduler Moderate+CPU+utilization+detected%3A+59.0%25
+2026-05-09T21:36:09.005837 update_cores barnes [2,3]
+2026-05-09T21:36:09.030790 update_cores blackscholes [2,3]
+2026-05-09T21:36:09.059660 update_cores canneal [2,3]
+2026-05-09T21:36:09.087256 update_cores freqmine [2,3]
+2026-05-09T21:36:09.112703 update_cores streamcluster [2,3]
+2026-05-09T21:36:09.146442 update_cores vips [2,3]
+CPU utilization: 60.7%
+2026-05-09T21:36:10.211062 custom scheduler High+CPU+utilization+detected%3A+60.7%25
+2026-05-09T21:36:10.237861 update_cores barnes [3]
+2026-05-09T21:36:10.262868 update_cores blackscholes [3]
+2026-05-09T21:36:10.290226 update_cores canneal [3]
+2026-05-09T21:36:10.317277 update_cores freqmine [2]
+2026-05-09T21:36:10.344327 update_cores streamcluster [2]
+2026-05-09T21:36:10.371315 update_cores vips [2]
+CPU utilization: 61.4%
+CPU utilization: 60.1%
+CPU utilization: 61.8%
+CPU utilization: 59.8%
+2026-05-09T21:36:14.546685 custom scheduler Moderate+CPU+utilization+detected%3A+59.8%25
+2026-05-09T21:36:14.572850 update_cores barnes [2,3]
+2026-05-09T21:36:14.602301 update_cores blackscholes [2,3]
+2026-05-09T21:36:14.636338 update_cores canneal [2,3]
+2026-05-09T21:36:14.665715 update_cores freqmine [2,3]
+2026-05-09T21:36:14.691162 update_cores streamcluster [2,3]
+2026-05-09T21:36:14.715551 update_cores vips [2,3]
+CPU utilization: 62.1%
+2026-05-09T21:36:15.757666 custom scheduler High+CPU+utilization+detected%3A+62.1%25
+2026-05-09T21:36:15.783367 update_cores barnes [3]
+2026-05-09T21:36:15.807814 update_cores blackscholes [3]
+2026-05-09T21:36:15.833900 update_cores canneal [3]
+2026-05-09T21:36:15.862925 update_cores freqmine [2]
+2026-05-09T21:36:15.890848 update_cores streamcluster [2]
+2026-05-09T21:36:15.917191 update_cores vips [2]
+CPU utilization: 60.2%
+CPU utilization: 61.7%
+CPU utilization: 60.4%
+CPU utilization: 62.3%
+CPU utilization: 62.2%
+CPU utilization: 62.4%
+CPU utilization: 61.5%
+CPU utilization: 62.2%
+CPU utilization: 86.0%
+CPU utilization: 90.8%
+CPU utilization: 89.7%
+CPU utilization: 90.6%
+CPU utilization: 90.2%
+CPU utilization: 91.8%
+CPU utilization: 90.9%
+CPU utilization: 91.5%
+CPU utilization: 90.7%
+CPU utilization: 91.3%
+CPU utilization: 91.8%
+CPU utilization: 91.5%
+CPU utilization: 90.0%
+CPU utilization: 93.4%
+CPU utilization: 66.8%
+CPU utilization: 58.5%
+2026-05-09T21:36:41.187847 custom scheduler Moderate+CPU+utilization+detected%3A+58.5%25
+2026-05-09T21:36:41.215253 update_cores barnes [2,3]
+2026-05-09T21:36:41.240473 update_cores blackscholes [2,3]
+2026-05-09T21:36:41.264186 update_cores canneal [2,3]
+2026-05-09T21:36:41.288368 update_cores freqmine [2,3]
+2026-05-09T21:36:41.312920 update_cores streamcluster [2,3]
+2026-05-09T21:36:41.337688 update_cores vips [2,3]
+CPU utilization: 57.5%
+CPU utilization: 57.2%
+CPU utilization: 58.0%
+CPU utilization: 57.9%
+CPU utilization: 58.9%
+CPU utilization: 56.8%
+CPU utilization: 59.5%
+CPU utilization: 57.5%
+CPU utilization: 59.6%
+CPU utilization: 57.5%
+CPU utilization: 62.7%
+2026-05-09T21:36:52.826911 custom scheduler High+CPU+utilization+detected%3A+62.7%25
+2026-05-09T21:36:53.369082 update_cores barnes [3]
+2026-05-09T21:36:53.393107 update_cores blackscholes [3]
+2026-05-09T21:36:53.415779 update_cores canneal [3]
+2026-05-09T21:36:53.442537 update_cores freqmine [2]
+2026-05-09T21:36:53.467800 update_cores streamcluster [2]
+2026-05-09T21:36:53.496444 update_cores vips [2]
+CPU utilization: 59.9%
+2026-05-09T21:36:54.537355 custom scheduler Moderate+CPU+utilization+detected%3A+59.9%25
+2026-05-09T21:36:54.934489 update_cores barnes [2,3]
+2026-05-09T21:36:55.029363 update_cores blackscholes [2,3]
+2026-05-09T21:36:55.079427 update_cores canneal [2,3]
+2026-05-09T21:36:55.124336 update_cores freqmine [2,3]
+2026-05-09T21:36:55.175301 update_cores streamcluster [2,3]
+2026-05-09T21:36:55.210688 update_cores vips [2,3]
+2026-05-09T21:36:55.273623 end blackscholes
+CPU utilization: 80.9%
+2026-05-09T21:36:56.274803 custom scheduler High+CPU+utilization+detected%3A+80.9%25
+2026-05-09T21:36:56.313212 update_cores barnes [3]
+2026-05-09T21:36:56.354904 update_cores canneal [3]
+2026-05-09T21:36:56.397835 update_cores freqmine [3]
+2026-05-09T21:36:56.436060 update_cores streamcluster [2]
+2026-05-09T21:36:56.471310 update_cores vips [2]
+CPU utilization: 79.7%
+CPU utilization: 77.8%
+CPU utilization: 80.3%
+CPU utilization: 78.5%
+CPU utilization: 78.9%
+CPU utilization: 77.7%
+CPU utilization: 80.2%
+CPU utilization: 78.8%
+CPU utilization: 79.8%
+CPU utilization: 77.4%
+CPU utilization: 79.2%
+CPU utilization: 79.1%
+CPU utilization: 67.9%
+CPU utilization: 61.1%
+CPU utilization: 63.0%
+CPU utilization: 61.7%
+CPU utilization: 63.7%
+CPU utilization: 61.6%
+CPU utilization: 63.1%
+CPU utilization: 62.1%
+CPU utilization: 63.2%
+CPU utilization: 62.3%
+CPU utilization: 63.5%
+CPU utilization: 62.3%
+CPU utilization: 64.5%
+CPU utilization: 67.5%
+2026-05-09T21:37:24.699360 end vips
+CPU utilization: 95.7%
+CPU utilization: 97.2%
+CPU utilization: 99.0%
+CPU utilization: 97.0%
+CPU utilization: 95.0%
+CPU utilization: 91.0%
+CPU utilization: 100.0%
+CPU utilization: 99.5%
+CPU utilization: 99.0%
+CPU utilization: 99.7%
+CPU utilization: 99.5%
+CPU utilization: 99.5%
+CPU utilization: 99.5%
+CPU utilization: 96.2%
+CPU utilization: 67.7%
+CPU utilization: 68.0%
+CPU utilization: 67.5%
+CPU utilization: 67.0%
+CPU utilization: 68.4%
+CPU utilization: 67.6%
+CPU utilization: 70.9%
+CPU utilization: 67.4%
+CPU utilization: 69.3%
+CPU utilization: 67.9%
+CPU utilization: 69.2%
+CPU utilization: 67.6%
+CPU utilization: 68.5%
+CPU utilization: 66.7%
+CPU utilization: 83.0%
+CPU utilization: 84.9%
+CPU utilization: 88.2%
+CPU utilization: 85.6%
+CPU utilization: 86.5%
+CPU utilization: 86.0%
+CPU utilization: 87.9%
+CPU utilization: 88.0%
+CPU utilization: 84.9%
+CPU utilization: 88.1%
+CPU utilization: 86.9%
+CPU utilization: 85.8%
+CPU utilization: 89.9%
+CPU utilization: 88.8%
+CPU utilization: 87.9%
+CPU utilization: 86.9%
+CPU utilization: 87.7%
+CPU utilization: 85.9%
+CPU utilization: 85.8%
+CPU utilization: 87.2%
+CPU utilization: 88.0%
+CPU utilization: 88.0%
+CPU utilization: 86.8%
+CPU utilization: 90.9%
+CPU utilization: 87.5%
+CPU utilization: 84.6%
+CPU utilization: 88.9%
+CPU utilization: 86.1%
+CPU utilization: 80.8%
+CPU utilization: 75.8%
+CPU utilization: 77.1%
+CPU utilization: 75.9%
+CPU utilization: 76.8%
+CPU utilization: 76.5%
+CPU utilization: 77.5%
+CPU utilization: 76.5%
+CPU utilization: 77.1%
+CPU utilization: 75.5%
+CPU utilization: 77.8%
+CPU utilization: 75.7%
+CPU utilization: 78.3%
+CPU utilization: 77.0%
+CPU utilization: 79.3%
+CPU utilization: 79.8%
+CPU utilization: 82.2%
+CPU utilization: 81.4%
+CPU utilization: 81.8%
+CPU utilization: 80.6%
+CPU utilization: 83.2%
+CPU utilization: 79.8%
+CPU utilization: 81.2%
+CPU utilization: 82.4%
+CPU utilization: 82.7%
+CPU utilization: 84.0%
+CPU utilization: 82.3%
+CPU utilization: 81.5%
+CPU utilization: 76.0%
+CPU utilization: 70.3%
+CPU utilization: 70.0%
+CPU utilization: 69.7%
+CPU utilization: 68.1%
+CPU utilization: 69.8%
+CPU utilization: 68.4%
+CPU utilization: 70.2%
+CPU utilization: 68.2%
+CPU utilization: 70.1%
+CPU utilization: 69.3%
+CPU utilization: 70.4%
+CPU utilization: 68.4%
+CPU utilization: 70.3%
+CPU utilization: 69.3%
+CPU utilization: 88.9%
+CPU utilization: 88.3%
+CPU utilization: 90.2%
+CPU utilization: 85.9%
+CPU utilization: 88.6%
+CPU utilization: 88.1%
+CPU utilization: 88.2%
+CPU utilization: 89.4%
+CPU utilization: 89.8%
+CPU utilization: 85.9%
+CPU utilization: 88.0%
+CPU utilization: 88.9%
+CPU utilization: 90.8%
+CPU utilization: 87.4%
+CPU utilization: 74.7%
+CPU utilization: 71.7%
+CPU utilization: 72.4%
+CPU utilization: 71.4%
+CPU utilization: 73.2%
+CPU utilization: 72.6%
+CPU utilization: 73.5%
+CPU utilization: 71.5%
+CPU utilization: 73.5%
+CPU utilization: 71.1%
+CPU utilization: 74.3%
+CPU utilization: 72.6%
+CPU utilization: 74.0%
+CPU utilization: 71.5%
+CPU utilization: 77.1%
+CPU utilization: 78.0%
+CPU utilization: 78.2%
+CPU utilization: 76.4%
+CPU utilization: 79.9%
+CPU utilization: 76.8%
+CPU utilization: 78.1%
+CPU utilization: 77.2%
+CPU utilization: 79.1%
+CPU utilization: 76.6%
+CPU utilization: 77.6%
+CPU utilization: 76.3%
+CPU utilization: 78.2%
+CPU utilization: 77.2%
+CPU utilization: 71.9%
+CPU utilization: 71.2%
+CPU utilization: 68.6%
+CPU utilization: 72.4%
+CPU utilization: 68.7%
+CPU utilization: 71.7%
+CPU utilization: 69.5%
+CPU utilization: 70.9%
+CPU utilization: 70.0%
+CPU utilization: 71.9%
+CPU utilization: 69.1%
+CPU utilization: 71.5%
+CPU utilization: 68.6%
+CPU utilization: 70.7%
+CPU utilization: 66.1%
+CPU utilization: 61.8%
+CPU utilization: 60.0%
+CPU utilization: 62.2%
+CPU utilization: 60.1%
+CPU utilization: 61.7%
+CPU utilization: 60.8%
+CPU utilization: 61.8%
+CPU utilization: 60.8%
+CPU utilization: 62.0%
+CPU utilization: 61.1%
+CPU utilization: 62.0%
+CPU utilization: 60.5%
+CPU utilization: 62.5%
+CPU utilization: 60.4%
+CPU utilization: 85.1%
+CPU utilization: 90.2%
+CPU utilization: 89.0%
+CPU utilization: 88.8%
+CPU utilization: 89.7%
+CPU utilization: 89.2%
+CPU utilization: 87.8%
+CPU utilization: 90.7%
+CPU utilization: 89.2%
+CPU utilization: 87.6%
+CPU utilization: 87.2%
+CPU utilization: 89.1%
+CPU utilization: 90.2%
+CPU utilization: 86.6%
+CPU utilization: 84.4%
+CPU utilization: 81.3%
+CPU utilization: 82.7%
+CPU utilization: 82.1%
+CPU utilization: 82.5%
+CPU utilization: 82.6%
+CPU utilization: 83.6%
+CPU utilization: 80.6%
+CPU utilization: 82.9%
+CPU utilization: 81.5%
+CPU utilization: 82.7%
+CPU utilization: 81.1%
+CPU utilization: 83.9%
+CPU utilization: 82.6%
+CPU utilization: 87.3%
+CPU utilization: 89.7%
+CPU utilization: 86.5%
+CPU utilization: 97.0%
+CPU utilization: 94.4%
+CPU utilization: 91.6%
+CPU utilization: 93.6%
+CPU utilization: 91.0%
+2026-05-09T21:41:02.652576 end barnes
+CPU utilization: 93.6%
+CPU utilization: 92.7%
+CPU utilization: 93.7%
+CPU utilization: 96.0%
+CPU utilization: 91.2%
+CPU utilization: 93.1%
+CPU utilization: 97.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 99.7%
+CPU utilization: 99.2%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 98.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 99.0%
+CPU utilization: 89.0%
+CPU utilization: 100.0%
+CPU utilization: 100.0%
+CPU utilization: 96.2%
+CPU utilization: 88.5%
+CPU utilization: 88.1%
+CPU utilization: 88.9%
+CPU utilization: 91.8%
+CPU utilization: 91.0%
+CPU utilization: 91.2%
+CPU utilization: 90.2%
+CPU utilization: 90.7%
+CPU utilization: 91.2%
+CPU utilization: 89.8%
+CPU utilization: 88.4%
+CPU utilization: 85.3%
+CPU utilization: 70.6%
+CPU utilization: 68.8%
+CPU utilization: 71.8%
+CPU utilization: 69.8%
+CPU utilization: 70.7%
+CPU utilization: 70.8%
+CPU utilization: 71.2%
+CPU utilization: 69.2%
+CPU utilization: 71.3%
+CPU utilization: 69.1%
+CPU utilization: 70.4%
+CPU utilization: 69.4%
+CPU utilization: 72.1%
+CPU utilization: 68.8%
+CPU utilization: 61.2%
+CPU utilization: 60.4%
+CPU utilization: 60.8%
+CPU utilization: 59.2%
+2026-05-09T21:41:58.605234 custom scheduler Moderate+CPU+utilization+detected%3A+59.2%25
+2026-05-09T21:41:58.631584 update_cores canneal [2,3]
+2026-05-09T21:41:58.665633 update_cores freqmine [2,3]
+2026-05-09T21:41:58.698483 update_cores streamcluster [2,3]
+CPU utilization: 60.6%
+2026-05-09T21:41:59.744271 custom scheduler High+CPU+utilization+detected%3A+60.6%25
+2026-05-09T21:41:59.771836 update_cores canneal [3]
+2026-05-09T21:41:59.798668 update_cores freqmine [3]
+2026-05-09T21:41:59.823249 update_cores streamcluster [3]
+CPU utilization: 33.2%
+2026-05-09T21:42:00.854146 custom scheduler Moderate+CPU+utilization+detected%3A+33.2%25
+2026-05-09T21:42:00.878050 update_cores canneal [2,3]
+2026-05-09T21:42:00.902436 update_cores freqmine [2,3]
+2026-05-09T21:42:00.928736 update_cores streamcluster [2,3]
+CPU utilization: 61.4%
+2026-05-09T21:42:01.963428 custom scheduler High+CPU+utilization+detected%3A+61.4%25
+2026-05-09T21:42:01.989679 update_cores canneal [3]
+2026-05-09T21:42:02.014506 update_cores freqmine [3]
+2026-05-09T21:42:02.039404 update_cores streamcluster [3]
+CPU utilization: 32.6%
+2026-05-09T21:42:03.066601 custom scheduler Moderate+CPU+utilization+detected%3A+32.6%25
+2026-05-09T21:42:03.092265 update_cores canneal [2,3]
+2026-05-09T21:42:03.127988 update_cores freqmine [2,3]
+2026-05-09T21:42:03.167794 update_cores streamcluster [2,3]
+CPU utilization: 59.8%
+CPU utilization: 61.3%
+2026-05-09T21:42:05.250203 custom scheduler High+CPU+utilization+detected%3A+61.3%25
+2026-05-09T21:42:05.279868 update_cores canneal [3]
+2026-05-09T21:42:05.309900 update_cores freqmine [3]
+2026-05-09T21:42:05.335888 update_cores streamcluster [3]
+CPU utilization: 33.2%
+2026-05-09T21:42:06.365362 custom scheduler Moderate+CPU+utilization+detected%3A+33.2%25
+2026-05-09T21:42:06.389891 update_cores canneal [2,3]
+2026-05-09T21:42:06.416184 update_cores freqmine [2,3]
+2026-05-09T21:42:06.440900 update_cores streamcluster [2,3]
+CPU utilization: 61.3%
+2026-05-09T21:42:07.478484 custom scheduler High+CPU+utilization+detected%3A+61.3%25
+2026-05-09T21:42:07.504425 update_cores canneal [3]
+2026-05-09T21:42:07.530176 update_cores freqmine [3]
+2026-05-09T21:42:07.555493 update_cores streamcluster [3]
+CPU utilization: 33.2%
+2026-05-09T21:42:08.584448 custom scheduler Moderate+CPU+utilization+detected%3A+33.2%25
+2026-05-09T21:42:08.609160 update_cores canneal [2,3]
+2026-05-09T21:42:08.635723 update_cores freqmine [2,3]
+2026-05-09T21:42:08.668212 update_cores streamcluster [2,3]
+CPU utilization: 67.4%
+2026-05-09T21:42:09.717943 custom scheduler High+CPU+utilization+detected%3A+67.4%25
+2026-05-09T21:42:09.772911 update_cores canneal [3]
+2026-05-09T21:42:09.818227 update_cores freqmine [3]
+2026-05-09T21:42:09.862476 update_cores streamcluster [3]
+CPU utilization: 62.1%
+CPU utilization: 64.6%
+CPU utilization: 62.2%
+CPU utilization: 64.6%
+CPU utilization: 62.0%
+CPU utilization: 64.6%
+CPU utilization: 62.4%
+CPU utilization: 63.4%
+CPU utilization: 61.4%
+CPU utilization: 64.0%
+CPU utilization: 62.3%
+CPU utilization: 63.6%
+CPU utilization: 61.5%
+CPU utilization: 64.5%
+CPU utilization: 60.4%
+CPU utilization: 66.6%
+CPU utilization: 60.6%
+CPU utilization: 63.4%
+CPU utilization: 59.9%
+2026-05-09T21:42:29.761929 custom scheduler Moderate+CPU+utilization+detected%3A+59.9%25
+2026-05-09T21:42:29.798906 update_cores canneal [2,3]
+2026-05-09T21:42:29.838823 update_cores freqmine [2,3]
+2026-05-09T21:42:29.882090 update_cores streamcluster [2,3]
+CPU utilization: 86.1%
+2026-05-09T21:42:30.931675 custom scheduler High+CPU+utilization+detected%3A+86.1%25
+2026-05-09T21:42:30.977846 update_cores canneal [3]
+2026-05-09T21:42:31.010955 update_cores freqmine [3]
+2026-05-09T21:42:31.053176 update_cores streamcluster [3]
+CPU utilization: 63.1%
+CPU utilization: 60.9%
+CPU utilization: 62.7%
+CPU utilization: 61.0%
+CPU utilization: 64.1%
+CPU utilization: 60.9%
+CPU utilization: 62.5%
+CPU utilization: 60.2%
+CPU utilization: 75.0%
+CPU utilization: 71.1%
+CPU utilization: 73.6%
+CPU utilization: 71.5%
+CPU utilization: 74.9%
+CPU utilization: 72.8%
+CPU utilization: 73.3%
+CPU utilization: 72.0%
+CPU utilization: 73.1%
+CPU utilization: 72.9%
+CPU utilization: 73.8%
+CPU utilization: 72.9%
+CPU utilization: 74.7%
+CPU utilization: 71.8%
+CPU utilization: 56.3%
+2026-05-09T21:42:55.239550 custom scheduler Moderate+CPU+utilization+detected%3A+56.3%25
+2026-05-09T21:42:55.266964 update_cores canneal [2,3]
+2026-05-09T21:42:55.297429 update_cores freqmine [2,3]
+2026-05-09T21:42:55.332295 update_cores streamcluster [2,3]
+CPU utilization: 77.5%
+2026-05-09T21:42:56.396708 custom scheduler High+CPU+utilization+detected%3A+77.5%25
+2026-05-09T21:42:56.438186 update_cores canneal [3]
+2026-05-09T21:42:56.485772 update_cores freqmine [3]
+2026-05-09T21:42:56.521397 update_cores streamcluster [3]
+CPU utilization: 50.1%
+2026-05-09T21:42:57.562883 custom scheduler Moderate+CPU+utilization+detected%3A+50.1%25
+2026-05-09T21:42:57.591505 update_cores canneal [2,3]
+2026-05-09T21:42:57.630637 update_cores freqmine [2,3]
+2026-05-09T21:42:57.668374 update_cores streamcluster [2,3]
+CPU utilization: 75.7%
+2026-05-09T21:42:58.734593 custom scheduler High+CPU+utilization+detected%3A+75.7%25
+2026-05-09T21:42:58.768580 update_cores canneal [3]
+2026-05-09T21:42:58.805518 update_cores freqmine [3]
+2026-05-09T21:42:58.840885 update_cores streamcluster [3]
+CPU utilization: 51.4%
+2026-05-09T21:42:59.880265 custom scheduler Moderate+CPU+utilization+detected%3A+51.4%25
+2026-05-09T21:42:59.909491 update_cores canneal [2,3]
+2026-05-09T21:42:59.947722 update_cores freqmine [2,3]
+2026-05-09T21:42:59.976600 update_cores streamcluster [2,3]
+CPU utilization: 78.1%
+2026-05-09T21:43:01.030606 custom scheduler High+CPU+utilization+detected%3A+78.1%25
+2026-05-09T21:43:01.095480 update_cores canneal [3]
+2026-05-09T21:43:01.128795 update_cores freqmine [3]
+2026-05-09T21:43:01.166328 update_cores streamcluster [3]
+CPU utilization: 48.8%
+2026-05-09T21:43:02.202673 custom scheduler Moderate+CPU+utilization+detected%3A+48.8%25
+2026-05-09T21:43:02.230309 update_cores canneal [2,3]
+2026-05-09T21:43:02.275674 update_cores freqmine [2,3]
+2026-05-09T21:43:02.314357 update_cores streamcluster [2,3]
+CPU utilization: 77.3%
+2026-05-09T21:43:03.365125 custom scheduler High+CPU+utilization+detected%3A+77.3%25
+2026-05-09T21:43:03.405283 update_cores canneal [3]
+2026-05-09T21:43:03.442432 update_cores freqmine [3]
+2026-05-09T21:43:03.475231 update_cores streamcluster [3]
+CPU utilization: 49.7%
+2026-05-09T21:43:04.514487 custom scheduler Moderate+CPU+utilization+detected%3A+49.7%25
+2026-05-09T21:43:04.542905 update_cores canneal [2,3]
+2026-05-09T21:43:04.575914 update_cores freqmine [2,3]
+2026-05-09T21:43:04.616623 update_cores streamcluster [2,3]
+CPU utilization: 78.3%
+2026-05-09T21:43:05.689121 custom scheduler High+CPU+utilization+detected%3A+78.3%25
+2026-05-09T21:43:05.724720 update_cores canneal [3]
+2026-05-09T21:43:05.756959 update_cores freqmine [3]
+2026-05-09T21:43:05.789629 update_cores streamcluster [3]
+CPU utilization: 49.7%
+2026-05-09T21:43:06.824201 custom scheduler Moderate+CPU+utilization+detected%3A+49.7%25
+2026-05-09T21:43:06.851137 update_cores canneal [2,3]
+2026-05-09T21:43:06.883024 update_cores freqmine [2,3]
+2026-05-09T21:43:06.915894 update_cores streamcluster [2,3]
+CPU utilization: 78.0%
+2026-05-09T21:43:07.961280 custom scheduler High+CPU+utilization+detected%3A+78.0%25
+2026-05-09T21:43:08.009453 update_cores canneal [3]
+2026-05-09T21:43:08.047911 update_cores freqmine [3]
+2026-05-09T21:43:08.076691 update_cores streamcluster [3]
+CPU utilization: 50.1%
+2026-05-09T21:43:09.112131 custom scheduler Moderate+CPU+utilization+detected%3A+50.1%25
+2026-05-09T21:43:09.143221 update_cores canneal [2,3]
+2026-05-09T21:43:09.183194 update_cores freqmine [2,3]
+2026-05-09T21:43:09.220878 update_cores streamcluster [2,3]
+CPU utilization: 68.0%
+2026-05-09T21:43:10.283603 custom scheduler High+CPU+utilization+detected%3A+68.0%25
+2026-05-09T21:43:10.309443 update_cores canneal [3]
+2026-05-09T21:43:10.335145 update_cores freqmine [3]
+2026-05-09T21:43:10.362417 update_cores streamcluster [3]
+CPU utilization: 35.8%
+2026-05-09T21:43:11.396453 custom scheduler Moderate+CPU+utilization+detected%3A+35.8%25
+2026-05-09T21:43:11.424984 update_cores canneal [2,3]
+2026-05-09T21:43:11.472067 update_cores freqmine [2,3]
+2026-05-09T21:43:11.502387 update_cores streamcluster [2,3]
+CPU utilization: 63.0%
+2026-05-09T21:43:12.546907 custom scheduler High+CPU+utilization+detected%3A+63.0%25
+2026-05-09T21:43:12.574459 update_cores canneal [3]
+2026-05-09T21:43:12.600212 update_cores freqmine [3]
+2026-05-09T21:43:12.624398 update_cores streamcluster [3]
+CPU utilization: 37.0%
+2026-05-09T21:43:13.658869 custom scheduler Moderate+CPU+utilization+detected%3A+37.0%25
+2026-05-09T21:43:13.686618 update_cores canneal [2,3]
+2026-05-09T21:43:13.710853 update_cores freqmine [2,3]
+2026-05-09T21:43:13.738428 update_cores streamcluster [2,3]
+CPU utilization: 62.7%
+2026-05-09T21:43:14.787900 custom scheduler High+CPU+utilization+detected%3A+62.7%25
+2026-05-09T21:43:14.814137 update_cores canneal [3]
+2026-05-09T21:43:14.844119 update_cores freqmine [3]
+2026-05-09T21:43:14.871471 update_cores streamcluster [3]
+CPU utilization: 37.2%
+2026-05-09T21:43:15.902978 custom scheduler Moderate+CPU+utilization+detected%3A+37.2%25
+2026-05-09T21:43:15.927669 update_cores canneal [2,3]
+2026-05-09T21:43:15.962340 update_cores freqmine [2,3]
+2026-05-09T21:43:15.990149 update_cores streamcluster [2,3]
+CPU utilization: 62.9%
+2026-05-09T21:43:17.049191 custom scheduler High+CPU+utilization+detected%3A+62.9%25
+2026-05-09T21:43:17.084480 update_cores canneal [3]
+2026-05-09T21:43:17.110941 update_cores freqmine [3]
+2026-05-09T21:43:17.135066 update_cores streamcluster [3]
+CPU utilization: 37.3%
+2026-05-09T21:43:18.163206 custom scheduler Moderate+CPU+utilization+detected%3A+37.3%25
+2026-05-09T21:43:18.188081 update_cores canneal [2,3]
+2026-05-09T21:43:18.213891 update_cores freqmine [2,3]
+2026-05-09T21:43:18.242964 update_cores streamcluster [2,3]
+CPU utilization: 62.6%
+2026-05-09T21:43:19.284725 custom scheduler High+CPU+utilization+detected%3A+62.6%25
+2026-05-09T21:43:19.313554 update_cores canneal [3]
+2026-05-09T21:43:19.339971 update_cores freqmine [3]
+2026-05-09T21:43:19.365508 update_cores streamcluster [3]
+CPU utilization: 37.9%
+2026-05-09T21:43:20.394281 custom scheduler Moderate+CPU+utilization+detected%3A+37.9%25
+2026-05-09T21:43:20.419366 update_cores canneal [2,3]
+2026-05-09T21:43:20.444556 update_cores freqmine [2,3]
+2026-05-09T21:43:20.468643 update_cores streamcluster [2,3]
+CPU utilization: 63.7%
+2026-05-09T21:43:21.513847 custom scheduler High+CPU+utilization+detected%3A+63.7%25
+2026-05-09T21:43:21.542809 update_cores canneal [3]
+2026-05-09T21:43:21.568806 update_cores freqmine [3]
+2026-05-09T21:43:21.594175 update_cores streamcluster [3]
+CPU utilization: 38.1%
+2026-05-09T21:43:22.625946 custom scheduler Moderate+CPU+utilization+detected%3A+38.1%25
+2026-05-09T21:43:22.653200 update_cores canneal [2,3]
+2026-05-09T21:43:22.690937 update_cores freqmine [2,3]
+2026-05-09T21:43:22.721778 update_cores streamcluster [2,3]
+CPU utilization: 64.4%
+2026-05-09T21:43:23.764933 custom scheduler High+CPU+utilization+detected%3A+64.4%25
+2026-05-09T21:43:23.796979 update_cores canneal [3]
+2026-05-09T21:43:23.832997 update_cores freqmine [3]
+2026-05-09T21:43:23.860170 update_cores streamcluster [3]
+CPU utilization: 48.2%
+2026-05-09T21:43:24.891240 custom scheduler Moderate+CPU+utilization+detected%3A+48.2%25
+2026-05-09T21:43:24.923180 update_cores canneal [2,3]
+2026-05-09T21:43:24.970373 update_cores freqmine [2,3]
+2026-05-09T21:43:25.020947 update_cores streamcluster [2,3]
+CPU utilization: 86.2%
+2026-05-09T21:43:26.086185 custom scheduler High+CPU+utilization+detected%3A+86.2%25
+2026-05-09T21:43:26.120034 update_cores canneal [3]
+2026-05-09T21:43:26.158766 update_cores freqmine [3]
+2026-05-09T21:43:26.191072 update_cores streamcluster [3]
+CPU utilization: 63.3%
+CPU utilization: 64.7%
+CPU utilization: 62.4%
+CPU utilization: 64.0%
+CPU utilization: 63.7%
+CPU utilization: 64.7%
+CPU utilization: 61.8%
+CPU utilization: 63.7%
+CPU utilization: 61.9%
+CPU utilization: 63.9%
+CPU utilization: 63.2%
+CPU utilization: 64.9%
+CPU utilization: 59.2%
+2026-05-09T21:43:39.763763 custom scheduler Moderate+CPU+utilization+detected%3A+59.2%25
+2026-05-09T21:43:39.794089 update_cores canneal [2,3]
+2026-05-09T21:43:39.829571 update_cores freqmine [2,3]
+2026-05-09T21:43:39.865306 update_cores streamcluster [2,3]
+CPU utilization: 80.5%
+2026-05-09T21:43:40.917593 custom scheduler High+CPU+utilization+detected%3A+80.5%25
+2026-05-09T21:43:40.950332 update_cores canneal [3]
+2026-05-09T21:43:40.983458 update_cores freqmine [3]
+2026-05-09T21:43:41.013689 update_cores streamcluster [3]
+CPU utilization: 53.3%
+2026-05-09T21:43:42.052945 custom scheduler Moderate+CPU+utilization+detected%3A+53.3%25
+2026-05-09T21:43:42.084344 update_cores canneal [2,3]
+2026-05-09T21:43:42.117627 update_cores freqmine [2,3]
+2026-05-09T21:43:42.154541 update_cores streamcluster [2,3]
+CPU utilization: 79.9%
+2026-05-09T21:43:43.204805 custom scheduler High+CPU+utilization+detected%3A+79.9%25
+2026-05-09T21:43:43.235865 update_cores canneal [3]
+2026-05-09T21:43:43.273734 update_cores freqmine [3]
+2026-05-09T21:43:43.307443 update_cores streamcluster [3]
+CPU utilization: 52.6%
+2026-05-09T21:43:44.347816 custom scheduler Moderate+CPU+utilization+detected%3A+52.6%25
+2026-05-09T21:43:44.378578 update_cores canneal [2,3]
+2026-05-09T21:43:44.443636 update_cores freqmine [2,3]
+2026-05-09T21:43:44.503143 update_cores streamcluster [2,3]
+CPU utilization: 79.0%
+2026-05-09T21:43:45.560924 custom scheduler High+CPU+utilization+detected%3A+79.0%25
+2026-05-09T21:43:45.612284 update_cores canneal [3]
+2026-05-09T21:43:45.646567 update_cores freqmine [3]
+2026-05-09T21:43:45.698070 update_cores streamcluster [3]
+CPU utilization: 55.4%
+2026-05-09T21:43:46.744164 custom scheduler Moderate+CPU+utilization+detected%3A+55.4%25
+2026-05-09T21:43:46.773755 update_cores canneal [2,3]
+2026-05-09T21:43:46.805988 update_cores freqmine [2,3]
+2026-05-09T21:43:46.843233 update_cores streamcluster [2,3]
+CPU utilization: 78.8%
+2026-05-09T21:43:47.905123 custom scheduler High+CPU+utilization+detected%3A+78.8%25
+2026-05-09T21:43:47.943101 update_cores canneal [3]
+2026-05-09T21:43:47.974195 update_cores freqmine [3]
+2026-05-09T21:43:48.006123 update_cores streamcluster [3]
+CPU utilization: 55.1%
+2026-05-09T21:43:49.040408 custom scheduler Moderate+CPU+utilization+detected%3A+55.1%25
+2026-05-09T21:43:49.069529 update_cores canneal [2,3]
+2026-05-09T21:43:49.103904 update_cores freqmine [2,3]
+2026-05-09T21:43:49.138343 update_cores streamcluster [2,3]
+CPU utilization: 80.9%
+2026-05-09T21:43:50.191570 custom scheduler High+CPU+utilization+detected%3A+80.9%25
+2026-05-09T21:43:50.222418 update_cores canneal [3]
+2026-05-09T21:43:50.253609 update_cores freqmine [3]
+2026-05-09T21:43:50.287451 update_cores streamcluster [3]
+CPU utilization: 55.6%
+2026-05-09T21:43:51.322961 custom scheduler Moderate+CPU+utilization+detected%3A+55.6%25
+2026-05-09T21:43:51.351292 update_cores canneal [2,3]
+2026-05-09T21:43:51.387521 update_cores freqmine [2,3]
+2026-05-09T21:43:51.421537 update_cores streamcluster [2,3]
+CPU utilization: 80.8%
+2026-05-09T21:43:52.473315 custom scheduler High+CPU+utilization+detected%3A+80.8%25
+2026-05-09T21:43:52.504784 update_cores canneal [3]
+2026-05-09T21:43:52.540132 update_cores freqmine [3]
+2026-05-09T21:43:52.571366 update_cores streamcluster [3]
+CPU utilization: 54.2%
+2026-05-09T21:43:53.605773 custom scheduler Moderate+CPU+utilization+detected%3A+54.2%25
+2026-05-09T21:43:53.633067 update_cores canneal [2,3]
+2026-05-09T21:43:53.673234 update_cores freqmine [2,3]
+2026-05-09T21:43:53.719476 update_cores streamcluster [2,3]
+CPU utilization: 79.6%
+2026-05-09T21:43:54.779424 custom scheduler High+CPU+utilization+detected%3A+79.6%25
+2026-05-09T21:43:54.813599 update_cores canneal [3]
+2026-05-09T21:43:54.841477 update_cores freqmine [3]
+2026-05-09T21:43:54.869478 update_cores streamcluster [3]
+CPU utilization: 45.7%
+2026-05-09T21:43:55.906219 custom scheduler Moderate+CPU+utilization+detected%3A+45.7%25
+2026-05-09T21:43:55.935032 update_cores canneal [2,3]
+2026-05-09T21:43:55.969153 update_cores freqmine [2,3]
+2026-05-09T21:43:56.000807 update_cores streamcluster [2,3]
+CPU utilization: 74.3%
+2026-05-09T21:43:57.053591 custom scheduler High+CPU+utilization+detected%3A+74.3%25
+2026-05-09T21:43:57.084967 update_cores canneal [3]
+2026-05-09T21:43:57.113794 update_cores freqmine [3]
+2026-05-09T21:43:57.145930 update_cores streamcluster [3]
+CPU utilization: 44.0%
+2026-05-09T21:43:58.180329 custom scheduler Moderate+CPU+utilization+detected%3A+44.0%25
+2026-05-09T21:43:58.207289 update_cores canneal [2,3]
+2026-05-09T21:43:58.240419 update_cores freqmine [2,3]
+2026-05-09T21:43:58.271465 update_cores streamcluster [2,3]
+CPU utilization: 74.4%
+2026-05-09T21:43:59.322798 custom scheduler High+CPU+utilization+detected%3A+74.4%25
+2026-05-09T21:43:59.350715 update_cores canneal [3]
+2026-05-09T21:43:59.387407 update_cores freqmine [3]
+2026-05-09T21:43:59.416228 update_cores streamcluster [3]
+CPU utilization: 44.5%
+2026-05-09T21:44:00.448982 custom scheduler Moderate+CPU+utilization+detected%3A+44.5%25
+2026-05-09T21:44:00.475966 update_cores canneal [2,3]
+2026-05-09T21:44:00.503062 update_cores freqmine [2,3]
+2026-05-09T21:44:00.543366 update_cores streamcluster [2,3]
+CPU utilization: 74.3%
+2026-05-09T21:44:01.592677 custom scheduler High+CPU+utilization+detected%3A+74.3%25
+2026-05-09T21:44:01.624133 update_cores canneal [3]
+2026-05-09T21:44:01.665393 update_cores freqmine [3]
+2026-05-09T21:44:01.714378 update_cores streamcluster [3]
+CPU utilization: 45.3%
+2026-05-09T21:44:02.751487 custom scheduler Moderate+CPU+utilization+detected%3A+45.3%25
+2026-05-09T21:44:02.779121 update_cores canneal [2,3]
+2026-05-09T21:44:02.812894 update_cores freqmine [2,3]
+2026-05-09T21:44:02.842295 update_cores streamcluster [2,3]
+CPU utilization: 74.4%
+2026-05-09T21:44:03.897560 custom scheduler High+CPU+utilization+detected%3A+74.4%25
+2026-05-09T21:44:03.927978 update_cores canneal [3]
+2026-05-09T21:44:03.958847 update_cores freqmine [3]
+2026-05-09T21:44:03.992265 update_cores streamcluster [3]
+CPU utilization: 45.8%
+2026-05-09T21:44:05.027314 custom scheduler Moderate+CPU+utilization+detected%3A+45.8%25
+2026-05-09T21:44:05.053825 update_cores canneal [2,3]
+2026-05-09T21:44:05.092574 update_cores freqmine [2,3]
+2026-05-09T21:44:05.129378 update_cores streamcluster [2,3]
+CPU utilization: 74.0%
+2026-05-09T21:44:06.201241 custom scheduler High+CPU+utilization+detected%3A+74.0%25
+2026-05-09T21:44:06.231277 update_cores canneal [3]
+2026-05-09T21:44:06.263069 update_cores freqmine [3]
+2026-05-09T21:44:06.293411 update_cores streamcluster [3]
+CPU utilization: 47.5%
+2026-05-09T21:44:07.327861 custom scheduler Moderate+CPU+utilization+detected%3A+47.5%25
+2026-05-09T21:44:07.356353 update_cores canneal [2,3]
+2026-05-09T21:44:07.384138 update_cores freqmine [2,3]
+2026-05-09T21:44:07.414687 update_cores streamcluster [2,3]
+CPU utilization: 72.4%
+2026-05-09T21:44:08.464176 custom scheduler High+CPU+utilization+detected%3A+72.4%25
+2026-05-09T21:44:08.495328 update_cores canneal [3]
+2026-05-09T21:44:08.532056 update_cores freqmine [3]
+2026-05-09T21:44:08.575333 update_cores streamcluster [3]
+CPU utilization: 47.4%
+2026-05-09T21:44:09.613312 custom scheduler Moderate+CPU+utilization+detected%3A+47.4%25
+2026-05-09T21:44:09.640075 update_cores canneal [2,3]
+2026-05-09T21:44:09.686992 update_cores freqmine [2,3]
+2026-05-09T21:44:09.729499 update_cores streamcluster [2,3]
+CPU utilization: 77.3%
+2026-05-09T21:44:10.785206 custom scheduler High+CPU+utilization+detected%3A+77.3%25
+2026-05-09T21:44:10.817888 update_cores canneal [3]
+2026-05-09T21:44:10.848853 update_cores freqmine [3]
+2026-05-09T21:44:10.879826 update_cores streamcluster [3]
+CPU utilization: 50.3%
+2026-05-09T21:44:11.919869 custom scheduler Moderate+CPU+utilization+detected%3A+50.3%25
+2026-05-09T21:44:11.948711 update_cores canneal [2,3]
+2026-05-09T21:44:11.978237 update_cores freqmine [2,3]
+2026-05-09T21:44:12.008534 update_cores streamcluster [2,3]
+CPU utilization: 75.6%
+2026-05-09T21:44:13.055758 custom scheduler High+CPU+utilization+detected%3A+75.6%25
+2026-05-09T21:44:13.088586 update_cores canneal [3]
+2026-05-09T21:44:13.119157 update_cores freqmine [3]
+2026-05-09T21:44:13.149845 update_cores streamcluster [3]
+CPU utilization: 50.7%
+2026-05-09T21:44:14.187372 custom scheduler Moderate+CPU+utilization+detected%3A+50.7%25
+2026-05-09T21:44:14.217889 update_cores canneal [2,3]
+2026-05-09T21:44:14.251019 update_cores freqmine [2,3]
+2026-05-09T21:44:14.285431 update_cores streamcluster [2,3]
+CPU utilization: 75.3%
+2026-05-09T21:44:15.339865 custom scheduler High+CPU+utilization+detected%3A+75.3%25
+2026-05-09T21:44:15.372569 update_cores canneal [3]
+2026-05-09T21:44:15.408569 update_cores freqmine [3]
+2026-05-09T21:44:15.444852 update_cores streamcluster [3]
+CPU utilization: 48.4%
+2026-05-09T21:44:16.509215 custom scheduler Moderate+CPU+utilization+detected%3A+48.4%25
+2026-05-09T21:44:16.538796 update_cores canneal [2,3]
+2026-05-09T21:44:16.569997 update_cores freqmine [2,3]
+2026-05-09T21:44:16.604290 update_cores streamcluster [2,3]
+CPU utilization: 76.6%
+2026-05-09T21:44:17.670798 custom scheduler High+CPU+utilization+detected%3A+76.6%25
+2026-05-09T21:44:17.714273 update_cores canneal [3]
+2026-05-09T21:44:17.753325 update_cores freqmine [3]
+2026-05-09T21:44:17.784824 update_cores streamcluster [3]
+CPU utilization: 48.3%
+2026-05-09T21:44:18.822147 custom scheduler Moderate+CPU+utilization+detected%3A+48.3%25
+2026-05-09T21:44:18.856555 update_cores canneal [2,3]
+2026-05-09T21:44:18.885838 update_cores freqmine [2,3]
+2026-05-09T21:44:18.914253 update_cores streamcluster [2,3]
+CPU utilization: 77.2%
+2026-05-09T21:44:19.964875 custom scheduler High+CPU+utilization+detected%3A+77.2%25
+2026-05-09T21:44:19.998225 update_cores canneal [3]
+2026-05-09T21:44:20.029451 update_cores freqmine [3]
+2026-05-09T21:44:20.065487 update_cores streamcluster [3]
+CPU utilization: 47.1%
+2026-05-09T21:44:21.106459 custom scheduler Moderate+CPU+utilization+detected%3A+47.1%25
+2026-05-09T21:44:21.139348 update_cores canneal [2,3]
+2026-05-09T21:44:21.175093 update_cores freqmine [2,3]
+2026-05-09T21:44:21.206408 update_cores streamcluster [2,3]
+CPU utilization: 75.8%
+2026-05-09T21:44:22.266854 custom scheduler High+CPU+utilization+detected%3A+75.8%25
+2026-05-09T21:44:22.306277 update_cores canneal [3]
+2026-05-09T21:44:22.345033 update_cores freqmine [3]
+2026-05-09T21:44:22.376763 update_cores streamcluster [3]
+CPU utilization: 48.0%
+2026-05-09T21:44:23.413676 custom scheduler Moderate+CPU+utilization+detected%3A+48.0%25
+2026-05-09T21:44:23.441898 update_cores canneal [2,3]
+2026-05-09T21:44:23.472461 update_cores freqmine [2,3]
+2026-05-09T21:44:23.507089 update_cores streamcluster [2,3]
+CPU utilization: 76.3%
+2026-05-09T21:44:24.559021 custom scheduler High+CPU+utilization+detected%3A+76.3%25
+2026-05-09T21:44:24.588236 update_cores canneal [3]
+2026-05-09T21:44:24.627910 update_cores freqmine [3]
+2026-05-09T21:44:24.659351 update_cores streamcluster [3]
+CPU utilization: 37.8%
+2026-05-09T21:44:25.706559 custom scheduler Moderate+CPU+utilization+detected%3A+37.8%25
+2026-05-09T21:44:25.730839 update_cores canneal [2,3]
+2026-05-09T21:44:25.759639 update_cores freqmine [2,3]
+2026-05-09T21:44:25.785493 update_cores streamcluster [2,3]
+CPU utilization: 67.8%
+2026-05-09T21:44:26.879329 custom scheduler High+CPU+utilization+detected%3A+67.8%25
+2026-05-09T21:44:26.911887 update_cores canneal [3]
+2026-05-09T21:44:26.939421 update_cores freqmine [3]
+2026-05-09T21:44:26.969998 update_cores streamcluster [3]
+CPU utilization: 40.3%
+2026-05-09T21:44:28.001623 custom scheduler Moderate+CPU+utilization+detected%3A+40.3%25
+2026-05-09T21:44:28.026976 update_cores canneal [2,3]
+2026-05-09T21:44:28.055790 update_cores freqmine [2,3]
+2026-05-09T21:44:28.083567 update_cores streamcluster [2,3]
+CPU utilization: 67.3%
+2026-05-09T21:44:29.128892 custom scheduler High+CPU+utilization+detected%3A+67.3%25
+2026-05-09T21:44:29.157139 update_cores canneal [3]
+2026-05-09T21:44:29.188570 update_cores freqmine [3]
+2026-05-09T21:44:29.216156 update_cores streamcluster [3]
+CPU utilization: 41.7%
+2026-05-09T21:44:30.250060 custom scheduler Moderate+CPU+utilization+detected%3A+41.7%25
+2026-05-09T21:44:30.276381 update_cores canneal [2,3]
+2026-05-09T21:44:30.304828 update_cores freqmine [2,3]
+2026-05-09T21:44:30.332283 update_cores streamcluster [2,3]
+CPU utilization: 68.2%
+2026-05-09T21:44:31.389847 custom scheduler High+CPU+utilization+detected%3A+68.2%25
+2026-05-09T21:44:31.418310 update_cores canneal [3]
+2026-05-09T21:44:31.444921 update_cores freqmine [3]
+2026-05-09T21:44:31.472617 update_cores streamcluster [3]
+CPU utilization: 40.2%
+2026-05-09T21:44:32.508563 custom scheduler Moderate+CPU+utilization+detected%3A+40.2%25
+2026-05-09T21:44:32.533037 update_cores canneal [2,3]
+2026-05-09T21:44:32.561202 update_cores freqmine [2,3]
+2026-05-09T21:44:32.587754 update_cores streamcluster [2,3]
+CPU utilization: 67.3%
+2026-05-09T21:44:33.628038 custom scheduler High+CPU+utilization+detected%3A+67.3%25
+2026-05-09T21:44:33.666315 update_cores canneal [3]
+2026-05-09T21:44:33.709340 update_cores freqmine [3]
+2026-05-09T21:44:33.739122 update_cores streamcluster [3]
+CPU utilization: 40.6%
+2026-05-09T21:44:34.771296 custom scheduler Moderate+CPU+utilization+detected%3A+40.6%25
+2026-05-09T21:44:34.796972 update_cores canneal [2,3]
+2026-05-09T21:44:34.825294 update_cores freqmine [2,3]
+2026-05-09T21:44:34.860399 update_cores streamcluster [2,3]
+CPU utilization: 67.9%
+2026-05-09T21:44:35.921424 custom scheduler High+CPU+utilization+detected%3A+67.9%25
+2026-05-09T21:44:35.951756 update_cores canneal [3]
+2026-05-09T21:44:35.982345 update_cores freqmine [3]
+2026-05-09T21:44:36.010640 update_cores streamcluster [3]
+CPU utilization: 42.0%
+2026-05-09T21:44:37.044629 custom scheduler Moderate+CPU+utilization+detected%3A+42.0%25
+2026-05-09T21:44:37.071930 update_cores canneal [2,3]
+2026-05-09T21:44:37.104481 update_cores freqmine [2,3]
+2026-05-09T21:44:37.134505 update_cores streamcluster [2,3]
+CPU utilization: 69.9%
+2026-05-09T21:44:38.182344 custom scheduler High+CPU+utilization+detected%3A+69.9%25
+2026-05-09T21:44:38.228730 update_cores canneal [3]
+2026-05-09T21:44:38.280529 update_cores freqmine [3]
+2026-05-09T21:44:38.309480 update_cores streamcluster [3]
+CPU utilization: 40.7%
+2026-05-09T21:44:39.344523 custom scheduler Moderate+CPU+utilization+detected%3A+40.7%25
+2026-05-09T21:44:39.370472 update_cores canneal [2,3]
+2026-05-09T21:44:39.397336 update_cores freqmine [2,3]
+2026-05-09T21:44:39.430105 update_cores streamcluster [2,3]
+CPU utilization: 85.7%
+2026-05-09T21:44:40.475576 custom scheduler High+CPU+utilization+detected%3A+85.7%25
+2026-05-09T21:44:40.506956 update_cores canneal [3]
+2026-05-09T21:44:40.537003 update_cores freqmine [3]
+2026-05-09T21:44:40.578997 update_cores streamcluster [3]
+CPU utilization: 57.3%
+2026-05-09T21:44:41.626790 custom scheduler Moderate+CPU+utilization+detected%3A+57.3%25
+2026-05-09T21:44:41.661527 update_cores canneal [2,3]
+2026-05-09T21:44:41.720494 update_cores freqmine [2,3]
+2026-05-09T21:44:41.763064 update_cores streamcluster [2,3]
+CPU utilization: 84.9%
+2026-05-09T21:44:42.813918 custom scheduler High+CPU+utilization+detected%3A+84.9%25
+2026-05-09T21:44:42.854582 update_cores canneal [3]
+2026-05-09T21:44:42.887419 update_cores freqmine [3]
+2026-05-09T21:44:42.943230 update_cores streamcluster [3]
+CPU utilization: 57.8%
+2026-05-09T21:44:43.993570 custom scheduler Moderate+CPU+utilization+detected%3A+57.8%25
+2026-05-09T21:44:44.023612 update_cores canneal [2,3]
+2026-05-09T21:44:44.061774 update_cores freqmine [2,3]
+2026-05-09T21:44:44.094421 update_cores streamcluster [2,3]
+CPU utilization: 84.3%
+2026-05-09T21:44:45.146268 custom scheduler High+CPU+utilization+detected%3A+84.3%25
+2026-05-09T21:44:45.181638 update_cores canneal [3]
+2026-05-09T21:44:45.217685 update_cores freqmine [3]
+2026-05-09T21:44:45.252190 update_cores streamcluster [3]
+CPU utilization: 58.3%
+2026-05-09T21:44:46.291617 custom scheduler Moderate+CPU+utilization+detected%3A+58.3%25
+2026-05-09T21:44:46.324934 update_cores canneal [2,3]
+2026-05-09T21:44:46.357169 update_cores freqmine [2,3]
+2026-05-09T21:44:46.403363 update_cores streamcluster [2,3]
+CPU utilization: 83.5%
+2026-05-09T21:44:47.474162 custom scheduler High+CPU+utilization+detected%3A+83.5%25
+2026-05-09T21:44:47.506513 update_cores canneal [3]
+2026-05-09T21:44:47.540948 update_cores freqmine [3]
+2026-05-09T21:44:47.578132 update_cores streamcluster [3]
+CPU utilization: 58.6%
+2026-05-09T21:44:48.615346 custom scheduler Moderate+CPU+utilization+detected%3A+58.6%25
+2026-05-09T21:44:48.654540 update_cores canneal [2,3]
+2026-05-09T21:44:48.725059 update_cores freqmine [2,3]
+2026-05-09T21:44:48.773451 update_cores streamcluster [2,3]
+CPU utilization: 83.6%
+2026-05-09T21:44:49.836689 custom scheduler High+CPU+utilization+detected%3A+83.6%25
+2026-05-09T21:44:49.865266 update_cores canneal [3]
+2026-05-09T21:44:49.908270 update_cores freqmine [3]
+2026-05-09T21:44:49.949009 update_cores streamcluster [3]
+CPU utilization: 60.2%
+CPU utilization: 57.5%
+2026-05-09T21:44:52.044251 custom scheduler Moderate+CPU+utilization+detected%3A+57.5%25
+2026-05-09T21:44:52.073265 update_cores canneal [2,3]
+2026-05-09T21:44:52.112424 update_cores freqmine [2,3]
+2026-05-09T21:44:52.154841 update_cores streamcluster [2,3]
+CPU utilization: 83.7%
+2026-05-09T21:44:53.211875 custom scheduler High+CPU+utilization+detected%3A+83.7%25
+2026-05-09T21:44:53.260914 update_cores canneal [3]
+2026-05-09T21:44:53.305690 update_cores freqmine [3]
+2026-05-09T21:44:53.345225 update_cores streamcluster [3]
+CPU utilization: 57.3%
+2026-05-09T21:44:54.385671 custom scheduler Moderate+CPU+utilization+detected%3A+57.3%25
+2026-05-09T21:44:54.415725 update_cores canneal [2,3]
+2026-05-09T21:44:54.451771 update_cores freqmine [2,3]
+2026-05-09T21:44:54.501567 update_cores streamcluster [2,3]
+CPU utilization: 88.2%
+2026-05-09T21:44:55.564947 custom scheduler High+CPU+utilization+detected%3A+88.2%25
+2026-05-09T21:44:55.605156 update_cores canneal [3]
+2026-05-09T21:44:55.661953 update_cores freqmine [3]
+2026-05-09T21:44:55.703107 update_cores streamcluster [3]
+CPU utilization: 64.4%
+CPU utilization: 67.5%
+CPU utilization: 64.9%
+CPU utilization: 65.8%
+CPU utilization: 63.3%
+CPU utilization: 65.0%
+CPU utilization: 62.4%
+CPU utilization: 64.5%
+CPU utilization: 62.9%
+CPU utilization: 64.8%
+CPU utilization: 62.6%
+CPU utilization: 64.5%
+CPU utilization: 63.7%
+CPU utilization: 51.1%
+2026-05-09T21:45:10.446346 custom scheduler Moderate+CPU+utilization+detected%3A+51.1%25
+2026-05-09T21:45:10.479428 update_cores canneal [2,3]
+2026-05-09T21:45:10.509394 update_cores freqmine [2,3]
+2026-05-09T21:45:10.539550 update_cores streamcluster [2,3]
+CPU utilization: 78.9%
+2026-05-09T21:45:11.587672 custom scheduler High+CPU+utilization+detected%3A+78.9%25
+2026-05-09T21:45:11.621556 update_cores canneal [3]
+2026-05-09T21:45:11.661186 update_cores freqmine [3]
+2026-05-09T21:45:11.722277 update_cores streamcluster [3]
+CPU utilization: 50.6%
+2026-05-09T21:45:12.757826 custom scheduler Moderate+CPU+utilization+detected%3A+50.6%25
+2026-05-09T21:45:12.786989 update_cores canneal [2,3]
+2026-05-09T21:45:12.819150 update_cores freqmine [2,3]
+2026-05-09T21:45:12.851147 update_cores streamcluster [2,3]
+CPU utilization: 79.3%
+2026-05-09T21:45:13.921152 custom scheduler High+CPU+utilization+detected%3A+79.3%25
+2026-05-09T21:45:13.952915 update_cores canneal [3]
+2026-05-09T21:45:13.984439 update_cores freqmine [3]
+2026-05-09T21:45:14.014163 update_cores streamcluster [3]
+CPU utilization: 50.7%
+2026-05-09T21:45:15.058795 custom scheduler Moderate+CPU+utilization+detected%3A+50.7%25
+2026-05-09T21:45:15.085519 update_cores canneal [2,3]
+2026-05-09T21:45:15.117179 update_cores freqmine [2,3]
+2026-05-09T21:45:15.145107 update_cores streamcluster [2,3]
+CPU utilization: 79.5%
+2026-05-09T21:45:16.191872 custom scheduler High+CPU+utilization+detected%3A+79.5%25
+2026-05-09T21:45:16.230844 update_cores canneal [3]
+2026-05-09T21:45:16.275523 update_cores freqmine [3]
+2026-05-09T21:45:16.311747 update_cores streamcluster [3]
+CPU utilization: 50.6%
+2026-05-09T21:45:17.349554 custom scheduler Moderate+CPU+utilization+detected%3A+50.6%25
+2026-05-09T21:45:17.378586 update_cores canneal [2,3]
+2026-05-09T21:45:17.411152 update_cores freqmine [2,3]
+2026-05-09T21:45:17.448449 update_cores streamcluster [2,3]
+CPU utilization: 80.0%
+2026-05-09T21:45:18.509614 custom scheduler High+CPU+utilization+detected%3A+80.0%25
+2026-05-09T21:45:18.539441 update_cores canneal [3]
+2026-05-09T21:45:18.570866 update_cores freqmine [3]
+2026-05-09T21:45:18.600506 update_cores streamcluster [3]
+CPU utilization: 51.7%
+2026-05-09T21:45:19.638275 custom scheduler Moderate+CPU+utilization+detected%3A+51.7%25
+2026-05-09T21:45:19.678168 update_cores canneal [2,3]
+2026-05-09T21:45:19.723207 update_cores freqmine [2,3]
+2026-05-09T21:45:19.767417 update_cores streamcluster [2,3]
+CPU utilization: 78.7%
+2026-05-09T21:45:20.856348 custom scheduler High+CPU+utilization+detected%3A+78.7%25
+2026-05-09T21:45:20.890015 update_cores canneal [3]
+2026-05-09T21:45:20.928119 update_cores freqmine [3]
+2026-05-09T21:45:20.961885 update_cores streamcluster [3]
+CPU utilization: 54.0%
+2026-05-09T21:45:22.000340 custom scheduler Moderate+CPU+utilization+detected%3A+54.0%25
+2026-05-09T21:45:22.030129 update_cores canneal [2,3]
+2026-05-09T21:45:22.061252 update_cores freqmine [2,3]
+2026-05-09T21:45:22.092795 update_cores streamcluster [2,3]
+CPU utilization: 79.2%
+2026-05-09T21:45:23.137323 custom scheduler High+CPU+utilization+detected%3A+79.2%25
+2026-05-09T21:45:23.174059 update_cores canneal [3]
+2026-05-09T21:45:23.209556 update_cores freqmine [3]
+2026-05-09T21:45:23.242216 update_cores streamcluster [3]
+CPU utilization: 53.7%
+2026-05-09T21:45:24.279039 custom scheduler Moderate+CPU+utilization+detected%3A+53.7%25
+2026-05-09T21:45:24.307192 update_cores canneal [2,3]
+2026-05-09T21:45:24.336824 update_cores freqmine [2,3]
+2026-05-09T21:45:24.365951 update_cores streamcluster [2,3]
+CPU utilization: 79.4%
+2026-05-09T21:45:25.425771 custom scheduler High+CPU+utilization+detected%3A+79.4%25
+2026-05-09T21:45:25.461819 update_cores canneal [3]
+2026-05-09T21:45:25.494644 update_cores freqmine [3]
+2026-05-09T21:45:25.523849 update_cores streamcluster [3]
+CPU utilization: 54.3%
+2026-05-09T21:45:26.566676 custom scheduler Moderate+CPU+utilization+detected%3A+54.3%25
+2026-05-09T21:45:26.597196 update_cores canneal [2,3]
+2026-05-09T21:45:26.626688 update_cores freqmine [2,3]
+2026-05-09T21:45:26.659725 update_cores streamcluster [2,3]
+CPU utilization: 76.6%
+2026-05-09T21:45:27.727199 custom scheduler High+CPU+utilization+detected%3A+76.6%25
+2026-05-09T21:45:27.761995 update_cores canneal [3]
+2026-05-09T21:45:27.793828 update_cores freqmine [3]
+2026-05-09T21:45:27.826603 update_cores streamcluster [3]
+CPU utilization: 52.3%
+2026-05-09T21:45:28.867467 custom scheduler Moderate+CPU+utilization+detected%3A+52.3%25
+2026-05-09T21:45:28.899309 update_cores canneal [2,3]
+2026-05-09T21:45:28.935337 update_cores freqmine [2,3]
+2026-05-09T21:45:28.970438 update_cores streamcluster [2,3]
+CPU utilization: 81.2%
+2026-05-09T21:45:30.035560 custom scheduler High+CPU+utilization+detected%3A+81.2%25
+2026-05-09T21:45:30.045135 update_cores canneal [3]
+2026-05-09T21:45:30.078574 update_cores freqmine [3]
+2026-05-09T21:45:30.115287 update_cores streamcluster [3]
+2026-05-09T21:45:30.189257 end canneal
+CPU utilization: 51.0%
+2026-05-09T21:45:31.189868 custom scheduler Moderate+CPU+utilization+detected%3A+51.0%25
+2026-05-09T21:45:31.218838 update_cores freqmine [2,3]
+2026-05-09T21:45:31.251076 update_cores streamcluster [2,3]
+CPU utilization: 78.7%
+2026-05-09T21:45:32.302906 custom scheduler High+CPU+utilization+detected%3A+78.7%25
+2026-05-09T21:45:32.332788 update_cores freqmine [3]
+2026-05-09T21:45:32.362077 update_cores streamcluster [3]
+CPU utilization: 49.3%
+2026-05-09T21:45:33.399674 custom scheduler Moderate+CPU+utilization+detected%3A+49.3%25
+2026-05-09T21:45:33.427179 update_cores freqmine [2,3]
+2026-05-09T21:45:33.454418 update_cores streamcluster [2,3]
+CPU utilization: 78.4%
+2026-05-09T21:45:34.498683 custom scheduler High+CPU+utilization+detected%3A+78.4%25
+2026-05-09T21:45:34.529422 update_cores freqmine [3]
+2026-05-09T21:45:34.561324 update_cores streamcluster [3]
+CPU utilization: 50.1%
+2026-05-09T21:45:35.603847 custom scheduler Moderate+CPU+utilization+detected%3A+50.1%25
+2026-05-09T21:45:35.634998 update_cores freqmine [2,3]
+2026-05-09T21:45:35.687295 update_cores streamcluster [2,3]
+CPU utilization: 78.8%
+2026-05-09T21:45:36.749549 custom scheduler High+CPU+utilization+detected%3A+78.8%25
+2026-05-09T21:45:36.783906 update_cores freqmine [3]
+2026-05-09T21:45:36.814225 update_cores streamcluster [3]
+CPU utilization: 49.7%
+2026-05-09T21:45:37.850558 custom scheduler Moderate+CPU+utilization+detected%3A+49.7%25
+2026-05-09T21:45:37.876695 update_cores freqmine [2,3]
+2026-05-09T21:45:37.906419 update_cores streamcluster [2,3]
+CPU utilization: 77.8%
+2026-05-09T21:45:38.955257 custom scheduler High+CPU+utilization+detected%3A+77.8%25
+2026-05-09T21:45:38.985164 update_cores freqmine [3]
+2026-05-09T21:45:39.015416 update_cores streamcluster [3]
+CPU utilization: 67.5%
+CPU utilization: 76.9%
+CPU utilization: 75.4%
+CPU utilization: 78.9%
+CPU utilization: 75.9%
+CPU utilization: 76.3%
+CPU utilization: 76.3%
+CPU utilization: 76.1%
+CPU utilization: 74.6%
+CPU utilization: 76.3%
+CPU utilization: 77.5%
+CPU utilization: 78.9%
+CPU utilization: 76.5%
+CPU utilization: 76.7%
+CPU utilization: 56.3%
+2026-05-09T21:45:54.893556 custom scheduler Moderate+CPU+utilization+detected%3A+56.3%25
+2026-05-09T21:45:54.915836 update_cores freqmine [2,3]
+2026-05-09T21:45:54.940177 update_cores streamcluster [2,3]
+CPU utilization: 58.6%
+CPU utilization: 57.4%
+CPU utilization: 58.9%
+CPU utilization: 58.0%
+CPU utilization: 58.6%
+CPU utilization: 56.5%
+CPU utilization: 58.6%
+CPU utilization: 57.5%
+CPU utilization: 58.8%
+CPU utilization: 57.0%
+CPU utilization: 59.2%
+CPU utilization: 56.9%
+CPU utilization: 58.6%
+CPU utilization: 56.9%
+CPU utilization: 61.3%
+2026-05-09T21:46:10.470108 custom scheduler High+CPU+utilization+detected%3A+61.3%25
+2026-05-09T21:46:10.495896 update_cores freqmine [3]
+2026-05-09T21:46:10.520299 update_cores streamcluster [3]
+CPU utilization: 34.3%
+2026-05-09T21:46:11.551783 custom scheduler Moderate+CPU+utilization+detected%3A+34.3%25
+2026-05-09T21:46:11.575319 update_cores freqmine [2,3]
+2026-05-09T21:46:11.599737 update_cores streamcluster [2,3]
+CPU utilization: 59.7%
+CPU utilization: 61.5%
+2026-05-09T21:46:13.693906 custom scheduler High+CPU+utilization+detected%3A+61.5%25
+2026-05-09T21:46:13.722401 update_cores freqmine [3]
+2026-05-09T21:46:13.746827 update_cores streamcluster [3]
+CPU utilization: 33.1%
+2026-05-09T21:46:14.775505 custom scheduler Moderate+CPU+utilization+detected%3A+33.1%25
+2026-05-09T21:46:14.798775 update_cores freqmine [2,3]
+2026-05-09T21:46:14.823160 update_cores streamcluster [2,3]
+CPU utilization: 61.2%
+2026-05-09T21:46:15.858443 custom scheduler High+CPU+utilization+detected%3A+61.2%25
+2026-05-09T21:46:15.885412 update_cores freqmine [3]
+2026-05-09T21:46:15.909588 update_cores streamcluster [3]
+CPU utilization: 33.0%
+2026-05-09T21:46:16.942176 custom scheduler Moderate+CPU+utilization+detected%3A+33.0%25
+2026-05-09T21:46:16.966635 update_cores freqmine [2,3]
+2026-05-09T21:46:16.991011 update_cores streamcluster [2,3]
+CPU utilization: 61.3%
+2026-05-09T21:46:18.026624 custom scheduler High+CPU+utilization+detected%3A+61.3%25
+2026-05-09T21:46:18.053613 update_cores freqmine [3]
+2026-05-09T21:46:18.078396 update_cores streamcluster [3]
+CPU utilization: 33.5%
+2026-05-09T21:46:19.105468 custom scheduler Moderate+CPU+utilization+detected%3A+33.5%25
+2026-05-09T21:46:19.129776 update_cores freqmine [2,3]
+2026-05-09T21:46:19.156584 update_cores streamcluster [2,3]
+CPU utilization: 62.5%
+2026-05-09T21:46:20.194465 custom scheduler High+CPU+utilization+detected%3A+62.5%25
+2026-05-09T21:46:20.220596 update_cores freqmine [3]
+2026-05-09T21:46:20.244040 update_cores streamcluster [3]
+CPU utilization: 33.8%
+2026-05-09T21:46:21.271119 custom scheduler Moderate+CPU+utilization+detected%3A+33.8%25
+2026-05-09T21:46:21.295735 update_cores freqmine [2,3]
+2026-05-09T21:46:21.320927 update_cores streamcluster [2,3]
+CPU utilization: 62.1%
+2026-05-09T21:46:22.366449 custom scheduler High+CPU+utilization+detected%3A+62.1%25
+2026-05-09T21:46:22.392638 update_cores freqmine [3]
+2026-05-09T21:46:22.417750 update_cores streamcluster [3]
+CPU utilization: 33.6%
+2026-05-09T21:46:23.446187 custom scheduler Moderate+CPU+utilization+detected%3A+33.6%25
+2026-05-09T21:46:23.469017 update_cores freqmine [2,3]
+2026-05-09T21:46:23.497702 update_cores streamcluster [2,3]
+CPU utilization: 61.9%
+2026-05-09T21:46:24.546810 custom scheduler High+CPU+utilization+detected%3A+61.9%25
+2026-05-09T21:46:24.570767 update_cores freqmine [3]
+2026-05-09T21:46:24.593717 update_cores streamcluster [3]
+CPU utilization: 33.8%
+2026-05-09T21:46:25.620511 custom scheduler Moderate+CPU+utilization+detected%3A+33.8%25
+2026-05-09T21:46:25.643745 update_cores freqmine [2,3]
+2026-05-09T21:46:25.674620 update_cores streamcluster [2,3]
+CPU utilization: 60.7%
+2026-05-09T21:46:26.725605 custom scheduler High+CPU+utilization+detected%3A+60.7%25
+2026-05-09T21:46:26.751181 update_cores freqmine [3]
+2026-05-09T21:46:26.775210 update_cores streamcluster [3]
+CPU utilization: 33.1%
+2026-05-09T21:46:27.804027 custom scheduler Moderate+CPU+utilization+detected%3A+33.1%25
+2026-05-09T21:46:27.825485 update_cores freqmine [2,3]
+2026-05-09T21:46:27.848768 update_cores streamcluster [2,3]
+CPU utilization: 59.6%
+CPU utilization: 57.7%
+CPU utilization: 60.1%
+2026-05-09T21:46:30.955535 custom scheduler High+CPU+utilization+detected%3A+60.1%25
+2026-05-09T21:46:30.980932 update_cores freqmine [3]
+2026-05-09T21:46:31.004869 update_cores streamcluster [3]
+CPU utilization: 32.7%
+2026-05-09T21:46:32.031473 custom scheduler Moderate+CPU+utilization+detected%3A+32.7%25
+2026-05-09T21:46:32.053974 update_cores freqmine [2,3]
+2026-05-09T21:46:32.077848 update_cores streamcluster [2,3]
+CPU utilization: 58.2%
+CPU utilization: 59.8%
+CPU utilization: 58.0%
+CPU utilization: 58.7%
+CPU utilization: 58.5%
+CPU utilization: 59.7%
+CPU utilization: 57.5%
+CPU utilization: 74.2%
+2026-05-09T21:46:40.395303 custom scheduler High+CPU+utilization+detected%3A+74.2%25
+2026-05-09T21:46:40.424102 update_cores freqmine [3]
+2026-05-09T21:46:40.452772 update_cores streamcluster [3]
+CPU utilization: 46.4%
+2026-05-09T21:46:41.495046 custom scheduler Moderate+CPU+utilization+detected%3A+46.4%25
+2026-05-09T21:46:41.523962 update_cores freqmine [2,3]
+2026-05-09T21:46:41.554276 update_cores streamcluster [2,3]
+CPU utilization: 75.8%
+2026-05-09T21:46:42.605139 custom scheduler High+CPU+utilization+detected%3A+75.8%25
+2026-05-09T21:46:42.643907 update_cores freqmine [3]
+2026-05-09T21:46:42.690515 update_cores streamcluster [3]
+CPU utilization: 45.6%
+2026-05-09T21:46:43.739515 custom scheduler Moderate+CPU+utilization+detected%3A+45.6%25
+2026-05-09T21:46:43.766178 update_cores freqmine [2,3]
+2026-05-09T21:46:43.796927 update_cores streamcluster [2,3]
+CPU utilization: 76.4%
+2026-05-09T21:46:44.841693 custom scheduler High+CPU+utilization+detected%3A+76.4%25
+2026-05-09T21:46:44.875939 update_cores freqmine [3]
+2026-05-09T21:46:44.906943 update_cores streamcluster [3]
+CPU utilization: 46.1%
+2026-05-09T21:46:45.946706 custom scheduler Moderate+CPU+utilization+detected%3A+46.1%25
+2026-05-09T21:46:45.973599 update_cores freqmine [2,3]
+2026-05-09T21:46:46.003582 update_cores streamcluster [2,3]
+CPU utilization: 75.3%
+2026-05-09T21:46:47.059672 custom scheduler High+CPU+utilization+detected%3A+75.3%25
+2026-05-09T21:46:47.089662 update_cores freqmine [3]
+2026-05-09T21:46:47.119915 update_cores streamcluster [3]
+CPU utilization: 46.1%
+2026-05-09T21:46:48.153210 custom scheduler Moderate+CPU+utilization+detected%3A+46.1%25
+2026-05-09T21:46:48.181570 update_cores freqmine [2,3]
+2026-05-09T21:46:48.214446 update_cores streamcluster [2,3]
+CPU utilization: 76.3%
+2026-05-09T21:46:49.265800 custom scheduler High+CPU+utilization+detected%3A+76.3%25
+2026-05-09T21:46:49.294880 update_cores freqmine [3]
+2026-05-09T21:46:49.323919 update_cores streamcluster [3]
+CPU utilization: 46.2%
+2026-05-09T21:46:50.358225 custom scheduler Moderate+CPU+utilization+detected%3A+46.2%25
+2026-05-09T21:46:50.385398 update_cores freqmine [2,3]
+2026-05-09T21:46:50.414832 update_cores streamcluster [2,3]
+CPU utilization: 75.4%
+2026-05-09T21:46:51.471531 custom scheduler High+CPU+utilization+detected%3A+75.4%25
+2026-05-09T21:46:51.505185 update_cores freqmine [3]
+2026-05-09T21:46:51.537140 update_cores streamcluster [3]
+CPU utilization: 47.1%
+2026-05-09T21:46:52.571709 custom scheduler Moderate+CPU+utilization+detected%3A+47.1%25
+2026-05-09T21:46:52.604456 update_cores freqmine [2,3]
+2026-05-09T21:46:52.635559 update_cores streamcluster [2,3]
+CPU utilization: 76.2%
+2026-05-09T21:46:53.693091 custom scheduler High+CPU+utilization+detected%3A+76.2%25
+2026-05-09T21:46:53.730955 update_cores freqmine [3]
+2026-05-09T21:46:53.762869 update_cores streamcluster [3]
+CPU utilization: 41.1%
+2026-05-09T21:46:54.794971 custom scheduler Moderate+CPU+utilization+detected%3A+41.1%25
+2026-05-09T21:46:54.818695 update_cores freqmine [2,3]
+2026-05-09T21:46:54.859066 update_cores streamcluster [2,3]
+CPU utilization: 60.4%
+2026-05-09T21:46:55.919608 custom scheduler High+CPU+utilization+detected%3A+60.4%25
+2026-05-09T21:46:55.949530 update_cores freqmine [3]
+2026-05-09T21:46:55.979814 update_cores streamcluster [3]
+CPU utilization: 34.9%
+2026-05-09T21:46:57.007288 custom scheduler Moderate+CPU+utilization+detected%3A+34.9%25
+2026-05-09T21:46:57.030229 update_cores freqmine [2,3]
+2026-05-09T21:46:57.053989 update_cores streamcluster [2,3]
+CPU utilization: 60.0%
+2026-05-09T21:46:58.092442 custom scheduler High+CPU+utilization+detected%3A+60.0%25
+2026-05-09T21:46:58.117382 update_cores freqmine [3]
+2026-05-09T21:46:58.141087 update_cores streamcluster [3]
+CPU utilization: 34.5%
+2026-05-09T21:46:59.173532 custom scheduler Moderate+CPU+utilization+detected%3A+34.5%25
+2026-05-09T21:46:59.196860 update_cores freqmine [2,3]
+2026-05-09T21:46:59.223668 update_cores streamcluster [2,3]
+CPU utilization: 60.0%
+2026-05-09T21:47:00.258049 custom scheduler High+CPU+utilization+detected%3A+60.0%25
+2026-05-09T21:47:00.282617 update_cores freqmine [3]
+2026-05-09T21:47:00.306711 update_cores streamcluster [3]
+CPU utilization: 34.6%
+2026-05-09T21:47:01.334831 custom scheduler Moderate+CPU+utilization+detected%3A+34.6%25
+2026-05-09T21:47:01.357585 update_cores freqmine [2,3]
+2026-05-09T21:47:01.383525 update_cores streamcluster [2,3]
+CPU utilization: 60.5%
+2026-05-09T21:47:02.418568 custom scheduler High+CPU+utilization+detected%3A+60.5%25
+2026-05-09T21:47:02.445277 update_cores freqmine [3]
+2026-05-09T21:47:02.470773 update_cores streamcluster [3]
+CPU utilization: 34.2%
+2026-05-09T21:47:03.497390 custom scheduler Moderate+CPU+utilization+detected%3A+34.2%25
+2026-05-09T21:47:03.520837 update_cores freqmine [2,3]
+2026-05-09T21:47:03.545596 update_cores streamcluster [2,3]
+CPU utilization: 59.7%
+CPU utilization: 62.5%
+2026-05-09T21:47:05.627244 custom scheduler High+CPU+utilization+detected%3A+62.5%25
+2026-05-09T21:47:05.653570 update_cores freqmine [3]
+2026-05-09T21:47:05.688571 update_cores streamcluster [3]
+CPU utilization: 33.2%
+2026-05-09T21:47:06.732208 custom scheduler Moderate+CPU+utilization+detected%3A+33.2%25
+2026-05-09T21:47:06.755568 update_cores freqmine [2,3]
+2026-05-09T21:47:06.780460 update_cores streamcluster [2,3]
+CPU utilization: 65.7%
+2026-05-09T21:47:07.819268 custom scheduler High+CPU+utilization+detected%3A+65.7%25
+2026-05-09T21:47:07.843894 update_cores freqmine [3]
+2026-05-09T21:47:07.851502 update_cores streamcluster [3]
+2026-05-09T21:47:07.877207 end streamcluster
+CPU utilization: 33.0%
+2026-05-09T21:47:08.877683 custom scheduler Moderate+CPU+utilization+detected%3A+33.0%25
+2026-05-09T21:47:08.902371 update_cores freqmine [2,3]
+CPU utilization: 74.4%
+2026-05-09T21:47:09.934598 custom scheduler High+CPU+utilization+detected%3A+74.4%25
+2026-05-09T21:47:09.973780 update_cores freqmine [3]
+CPU utilization: 64.9%
+CPU utilization: 66.5%
+CPU utilization: 64.4%
+CPU utilization: 66.1%
+CPU utilization: 64.8%
+CPU utilization: 66.2%
+CPU utilization: 65.7%
+CPU utilization: 66.6%
+CPU utilization: 64.4%
+CPU utilization: 67.6%
+CPU utilization: 64.2%
+CPU utilization: 66.8%
+CPU utilization: 63.7%
+CPU utilization: 62.2%
+CPU utilization: 33.2%
+2026-05-09T21:47:25.628209 custom scheduler Moderate+CPU+utilization+detected%3A+33.2%25
+2026-05-09T21:47:25.661370 update_cores freqmine [2,3]
+CPU utilization: 62.7%
+2026-05-09T21:47:26.710384 custom scheduler High+CPU+utilization+detected%3A+62.7%25
+2026-05-09T21:47:26.735274 update_cores freqmine [3]
+CPU utilization: 33.5%
+2026-05-09T21:47:27.768284 custom scheduler Moderate+CPU+utilization+detected%3A+33.5%25
+2026-05-09T21:47:27.798253 update_cores freqmine [2,3]
+CPU utilization: 60.5%
+2026-05-09T21:47:28.846685 custom scheduler High+CPU+utilization+detected%3A+60.5%25
+2026-05-09T21:47:28.871471 update_cores freqmine [3]
+CPU utilization: 35.0%
+2026-05-09T21:47:29.899668 custom scheduler Moderate+CPU+utilization+detected%3A+35.0%25
+2026-05-09T21:47:29.922515 update_cores freqmine [2,3]
+CPU utilization: 61.2%
+2026-05-09T21:47:30.964283 custom scheduler High+CPU+utilization+detected%3A+61.2%25
+2026-05-09T21:47:30.989846 update_cores freqmine [3]
+CPU utilization: 36.2%
+2026-05-09T21:47:32.017955 custom scheduler Moderate+CPU+utilization+detected%3A+36.2%25
+2026-05-09T21:47:32.043817 update_cores freqmine [2,3]
+CPU utilization: 60.8%
+2026-05-09T21:47:33.090517 custom scheduler High+CPU+utilization+detected%3A+60.8%25
+2026-05-09T21:47:33.114333 update_cores freqmine [3]
+CPU utilization: 36.1%
+2026-05-09T21:47:34.145672 custom scheduler Moderate+CPU+utilization+detected%3A+36.1%25
+2026-05-09T21:47:34.169697 update_cores freqmine [2,3]
+CPU utilization: 60.2%
+2026-05-09T21:47:35.210748 custom scheduler High+CPU+utilization+detected%3A+60.2%25
+2026-05-09T21:47:35.234557 update_cores freqmine [3]
+CPU utilization: 36.7%
+2026-05-09T21:47:36.262120 custom scheduler Moderate+CPU+utilization+detected%3A+36.7%25
+2026-05-09T21:47:36.287359 update_cores freqmine [2,3]
+CPU utilization: 60.6%
+2026-05-09T21:47:37.323690 custom scheduler High+CPU+utilization+detected%3A+60.6%25
+2026-05-09T21:47:37.350216 update_cores freqmine [3]
+CPU utilization: 36.1%
+2026-05-09T21:47:38.381767 custom scheduler Moderate+CPU+utilization+detected%3A+36.1%25
+2026-05-09T21:47:38.405580 update_cores freqmine [2,3]
+CPU utilization: 60.4%
+2026-05-09T21:47:39.447263 custom scheduler High+CPU+utilization+detected%3A+60.4%25
+2026-05-09T21:47:39.484041 update_cores freqmine [3]
+CPU utilization: 65.6%
+CPU utilization: 62.6%
+CPU utilization: 65.4%
+CPU utilization: 63.4%
+CPU utilization: 65.3%
+CPU utilization: 62.5%
+CPU utilization: 65.3%
+CPU utilization: 63.2%
+CPU utilization: 66.2%
+CPU utilization: 62.8%
+CPU utilization: 65.7%
+CPU utilization: 63.2%
+CPU utilization: 66.0%
+CPU utilization: 65.1%
+CPU utilization: 50.9%
+2026-05-09T21:47:55.178790 custom scheduler Moderate+CPU+utilization+detected%3A+50.9%25
+2026-05-09T21:47:55.206753 update_cores freqmine [2,3]
+CPU utilization: 70.5%
+2026-05-09T21:47:56.252337 custom scheduler High+CPU+utilization+detected%3A+70.5%25
+2026-05-09T21:47:56.279564 update_cores freqmine [3]
+CPU utilization: 46.4%
+2026-05-09T21:47:57.312165 custom scheduler Moderate+CPU+utilization+detected%3A+46.4%25
+2026-05-09T21:47:57.338948 update_cores freqmine [2,3]
+CPU utilization: 70.0%
+2026-05-09T21:47:58.380214 custom scheduler High+CPU+utilization+detected%3A+70.0%25
+2026-05-09T21:47:58.408966 update_cores freqmine [3]
+CPU utilization: 45.1%
+2026-05-09T21:47:59.447939 custom scheduler Moderate+CPU+utilization+detected%3A+45.1%25
+2026-05-09T21:47:59.473682 update_cores freqmine [2,3]
+CPU utilization: 71.4%
+2026-05-09T21:48:00.518793 custom scheduler High+CPU+utilization+detected%3A+71.4%25
+2026-05-09T21:48:00.546892 update_cores freqmine [3]
+CPU utilization: 45.8%
+2026-05-09T21:48:01.580901 custom scheduler Moderate+CPU+utilization+detected%3A+45.8%25
+2026-05-09T21:48:01.608511 update_cores freqmine [2,3]
+CPU utilization: 71.2%
+2026-05-09T21:48:02.651922 custom scheduler High+CPU+utilization+detected%3A+71.2%25
+2026-05-09T21:48:02.691485 update_cores freqmine [3]
+CPU utilization: 45.6%
+2026-05-09T21:48:03.754298 custom scheduler Moderate+CPU+utilization+detected%3A+45.6%25
+2026-05-09T21:48:03.781920 update_cores freqmine [2,3]
+CPU utilization: 70.3%
+2026-05-09T21:48:04.828233 custom scheduler High+CPU+utilization+detected%3A+70.3%25
+2026-05-09T21:48:04.868271 update_cores freqmine [3]
+CPU utilization: 43.4%
+2026-05-09T21:48:05.910895 custom scheduler Moderate+CPU+utilization+detected%3A+43.4%25
+2026-05-09T21:48:05.940395 update_cores freqmine [2,3]
+CPU utilization: 72.4%
+2026-05-09T21:48:06.989114 custom scheduler High+CPU+utilization+detected%3A+72.4%25
+2026-05-09T21:48:07.016783 update_cores freqmine [3]
+CPU utilization: 43.6%
+2026-05-09T21:48:08.048734 custom scheduler Moderate+CPU+utilization+detected%3A+43.6%25
+2026-05-09T21:48:08.076504 update_cores freqmine [2,3]
+CPU utilization: 72.5%
+2026-05-09T21:48:09.114589 custom scheduler High+CPU+utilization+detected%3A+72.5%25
+2026-05-09T21:48:09.145104 update_cores freqmine [3]
+CPU utilization: 35.5%
+2026-05-09T21:48:10.178949 custom scheduler Moderate+CPU+utilization+detected%3A+35.5%25
+2026-05-09T21:48:10.202828 update_cores freqmine [2,3]
+CPU utilization: 61.1%
+2026-05-09T21:48:11.235510 custom scheduler High+CPU+utilization+detected%3A+61.1%25
+2026-05-09T21:48:11.258959 update_cores freqmine [3]
+CPU utilization: 32.9%
+2026-05-09T21:48:12.285439 custom scheduler Moderate+CPU+utilization+detected%3A+32.9%25
+2026-05-09T21:48:12.308435 update_cores freqmine [2,3]
+CPU utilization: 60.7%
+2026-05-09T21:48:13.340682 custom scheduler High+CPU+utilization+detected%3A+60.7%25
+2026-05-09T21:48:13.363719 update_cores freqmine [3]
+CPU utilization: 32.5%
+2026-05-09T21:48:14.390643 custom scheduler Moderate+CPU+utilization+detected%3A+32.5%25
+2026-05-09T21:48:14.413641 update_cores freqmine [2,3]
+CPU utilization: 60.8%
+2026-05-09T21:48:15.457081 custom scheduler High+CPU+utilization+detected%3A+60.8%25
+2026-05-09T21:48:15.480973 update_cores freqmine [3]
+CPU utilization: 33.3%
+2026-05-09T21:48:16.509297 custom scheduler Moderate+CPU+utilization+detected%3A+33.3%25
+2026-05-09T21:48:16.532812 update_cores freqmine [2,3]
+CPU utilization: 61.1%
+2026-05-09T21:48:17.568373 custom scheduler High+CPU+utilization+detected%3A+61.1%25
+2026-05-09T21:48:17.594662 update_cores freqmine [3]
+CPU utilization: 32.9%
+2026-05-09T21:48:18.623178 custom scheduler Moderate+CPU+utilization+detected%3A+32.9%25
+2026-05-09T21:48:18.647702 update_cores freqmine [2,3]
+CPU utilization: 62.3%
+2026-05-09T21:48:19.693623 custom scheduler High+CPU+utilization+detected%3A+62.3%25
+2026-05-09T21:48:19.725807 update_cores freqmine [3]
+CPU utilization: 33.2%
+2026-05-09T21:48:20.762177 custom scheduler Moderate+CPU+utilization+detected%3A+33.2%25
+2026-05-09T21:48:20.786927 update_cores freqmine [2,3]
+CPU utilization: 61.3%
+2026-05-09T21:48:21.821721 custom scheduler High+CPU+utilization+detected%3A+61.3%25
+2026-05-09T21:48:21.845705 update_cores freqmine [3]
+CPU utilization: 33.2%
+2026-05-09T21:48:22.871392 custom scheduler Moderate+CPU+utilization+detected%3A+33.2%25
+2026-05-09T21:48:22.893851 update_cores freqmine [2,3]
+CPU utilization: 61.3%
+2026-05-09T21:48:23.928288 custom scheduler High+CPU+utilization+detected%3A+61.3%25
+2026-05-09T21:48:23.954262 update_cores freqmine [3]
+CPU utilization: 51.9%
+2026-05-09T21:48:24.986783 custom scheduler Moderate+CPU+utilization+detected%3A+51.9%25
+2026-05-09T21:48:25.020554 update_cores freqmine [2,3]
+CPU utilization: 90.7%
+2026-05-09T21:48:26.066189 custom scheduler High+CPU+utilization+detected%3A+90.7%25
+2026-05-09T21:48:26.105259 update_cores freqmine [3]
+CPU utilization: 70.7%
+CPU utilization: 70.0%
+CPU utilization: 66.8%
+CPU utilization: 71.9%
+CPU utilization: 68.2%
+CPU utilization: 69.6%
+CPU utilization: 67.2%
+CPU utilization: 70.4%
+CPU utilization: 68.1%
+CPU utilization: 72.3%
+CPU utilization: 67.4%
+CPU utilization: 69.9%
+CPU utilization: 63.6%
+CPU utilization: 53.0%
+2026-05-09T21:48:40.782677 custom scheduler Moderate+CPU+utilization+detected%3A+53.0%25
+2026-05-09T21:48:40.810855 update_cores freqmine [2,3]
+CPU utilization: 76.7%
+2026-05-09T21:48:41.863718 custom scheduler High+CPU+utilization+detected%3A+76.7%25
+2026-05-09T21:48:41.895464 update_cores freqmine [3]
+CPU utilization: 55.3%
+2026-05-09T21:48:42.930973 custom scheduler Moderate+CPU+utilization+detected%3A+55.3%25
+2026-05-09T21:48:42.959560 update_cores freqmine [2,3]
+CPU utilization: 77.1%
+2026-05-09T21:48:44.004963 custom scheduler High+CPU+utilization+detected%3A+77.1%25
+2026-05-09T21:48:44.037467 update_cores freqmine [3]
+CPU utilization: 52.6%
+2026-05-09T21:48:45.097855 custom scheduler Moderate+CPU+utilization+detected%3A+52.6%25
+2026-05-09T21:48:45.127439 update_cores freqmine [2,3]
+CPU utilization: 78.2%
+2026-05-09T21:48:46.176091 custom scheduler High+CPU+utilization+detected%3A+78.2%25
+2026-05-09T21:48:46.207184 update_cores freqmine [3]
+CPU utilization: 51.9%
+2026-05-09T21:48:47.247446 custom scheduler Moderate+CPU+utilization+detected%3A+51.9%25
+2026-05-09T21:48:47.276163 update_cores freqmine [2,3]
+CPU utilization: 78.1%
+2026-05-09T21:48:48.320856 custom scheduler High+CPU+utilization+detected%3A+78.1%25
+2026-05-09T21:48:48.350763 update_cores freqmine [3]
+CPU utilization: 52.0%
+2026-05-09T21:48:49.390835 custom scheduler Moderate+CPU+utilization+detected%3A+52.0%25
+2026-05-09T21:48:49.417693 update_cores freqmine [2,3]
+CPU utilization: 78.7%
+2026-05-09T21:48:50.463391 custom scheduler High+CPU+utilization+detected%3A+78.7%25
+2026-05-09T21:48:50.494683 update_cores freqmine [3]
+CPU utilization: 50.6%
+2026-05-09T21:48:51.529142 custom scheduler Moderate+CPU+utilization+detected%3A+50.6%25
+2026-05-09T21:48:51.558239 update_cores freqmine [2,3]
+CPU utilization: 79.0%
+2026-05-09T21:48:52.619599 custom scheduler High+CPU+utilization+detected%3A+79.0%25
+2026-05-09T21:48:52.650997 update_cores freqmine [3]
+CPU utilization: 52.0%
+2026-05-09T21:48:53.697819 custom scheduler Moderate+CPU+utilization+detected%3A+52.0%25
+2026-05-09T21:48:53.731354 update_cores freqmine [2,3]
+CPU utilization: 84.3%
+2026-05-09T21:48:54.777006 custom scheduler High+CPU+utilization+detected%3A+84.3%25
+2026-05-09T21:48:54.828933 update_cores freqmine [3]
+CPU utilization: 76.8%
+CPU utilization: 78.7%
+CPU utilization: 77.5%
+CPU utilization: 78.7%
+CPU utilization: 76.4%
+CPU utilization: 79.1%
+CPU utilization: 79.1%
+CPU utilization: 78.2%
+CPU utilization: 76.5%
+CPU utilization: 83.2%
+CPU utilization: 78.6%
+CPU utilization: 84.2%
+CPU utilization: 77.2%
+CPU utilization: 68.7%
+CPU utilization: 33.9%
+2026-05-09T21:49:10.762083 custom scheduler Moderate+CPU+utilization+detected%3A+33.9%25
+2026-05-09T21:49:10.786179 update_cores freqmine [2,3]
+CPU utilization: 63.1%
+2026-05-09T21:49:11.821470 custom scheduler High+CPU+utilization+detected%3A+63.1%25
+2026-05-09T21:49:11.845802 update_cores freqmine [3]
+CPU utilization: 24.9%
+2026-05-09T21:49:12.872508 custom scheduler Moderate+CPU+utilization+detected%3A+24.9%25
+2026-05-09T21:49:12.880911 update_cores freqmine [2,3]
+2026-05-09T21:49:12.905852 end freqmine
+2026-05-09T21:49:12.905936 end scheduler
