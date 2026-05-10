@@ -202,13 +202,16 @@ if __name__ == "__main__":
     last_util = -1
     MAX_CPU_UTIL = 100
     HIGH_CPU_UTIL = 50
-    MEDIUM_CPU_UTIL = 20
+    MEDIUM_CPU_UTIL = 40
     LOW_CPU_UTIL = 0  # Explicitly define the lower bound
     NUM_CONCURRENT_JOBS = 2
     QPS_INTERVAL_S = 15
     paused = False
 
     while True:
+        if memcached_process is None or not memcached_process.is_running():
+            memcached_process = get_memcached_process()
+        memcached_max_cpu_util = max_thread_cpu_percent(memcached_process, interval=1.0)
         if len(logger.remaining_jobs) > 0 and len(logger.running_jobs) < NUM_CONCURRENT_JOBS:
             next_job = logger.remaining_jobs.pop(0)
             logger.job_start(next_job, initial_cores=["0", "1", "2", "3"], initial_threads=2)
@@ -216,21 +219,17 @@ if __name__ == "__main__":
         if len(logger.running_jobs) == 0:
             logger.end()
             exit(0)
-        if paused:
+        if paused and memcached_max_cpu_util < MEDIUM_CPU_UTIL:
             for job in logger.running_jobs:
                 logger.job_unpause(job)
             paused = False
 
-        if memcached_process is None or not memcached_process.is_running():
-            memcached_process = get_memcached_process()
-        memcached_max_cpu_util = max_thread_cpu_percent(memcached_process, interval=1.0)
         print(f"Memcached max thread CPU utilization: {memcached_max_cpu_util}%")
         if memcached_max_cpu_util >= HIGH_CPU_UTIL and not paused:
             logger.custom_event(Job.SCHEDULER, f"High CPU utilization detected: {memcached_max_cpu_util}%. Pausing jobs.")
             for job in logger.running_jobs:
                 logger.job_pause(job)
             paused = True
-            time.sleep(QPS_INTERVAL_S)
 
         # if HIGH_CPU_UTIL <= cpu_util <= MAX_CPU_UTIL and last_util != HIGH_CPU_UTIL:
         #     logger.custom_event(Job.SCHEDULER, f"High CPU utilization detected: {cpu_util}%")

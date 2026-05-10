@@ -22,7 +22,7 @@ python_modules=(
 
 memcached_runtime_seconds=1200
 
-VERSION=4
+VERSION=5
 OUTPUT_DIR="./results/part4/2/version_${VERSION}"
 mkdir -p "$OUTPUT_DIR"
 
@@ -49,7 +49,7 @@ for module in "${python_modules[@]}"; do
 done
 
 
-for i in {1..3}; do
+for i in {4..5}; do
     gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "TERM=xterm-256color tmux new-session -d 'bash -c \"${MEASURE_CMD} |& tee ~/measurements_${i}.txt\"'"
     sleep 5
     sleep ${memcached_runtime_seconds} & # wait for memcached runtime to be over before collecting results, ensures we have the full runtime of memcached in our measurements and logs
