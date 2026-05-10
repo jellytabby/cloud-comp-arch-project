@@ -22,10 +22,10 @@ class Job(Enum):
     VIPS = "vips"
 
 jobs = [
+    Job.FREQMINE,
     Job.BARNES,
     Job.BLACKSCHOLES,
     Job.CANNEAL,
-    Job.FREQMINE,
     Job.RADIX,
     Job.STREAMCLUSTER,
     Job.VIPS
@@ -47,6 +47,7 @@ class SchedulerLogger:
 
         self.docker_client = docker.from_env()
         self.running_jobs = []
+        self.remaining_jobs = jobs.copy()
         self.completed_jobs = set()
         self.file_name = None
         self.file = sys.stdout
@@ -88,13 +89,21 @@ class SchedulerLogger:
 
     def memcached_start(self, initial_cores: list[str], initial_threads: int):
         job = Job.MEMCACHED
+        self._log("start", job, "["+(",".join(str(i) for i in initial_cores))+"] "+str(initial_threads))
         # command_start = f"sudo sed -i 's/^-t [0-9]*/-t {initial_threads}/' /etc/memcached.conf && sudo systemctl restart memcached && sudo systemctl status memcached"
-        cpu_list = ",".join(initial_cores)
-        command_taskset = f"sudo taskset -a -cp {cpu_list} $(pgrep memcached)"
+        # cpu_list = ",".join(initial_cores)
+        # command_taskset = f"sudo taskset -a -cp {cpu_list} $(pgrep memcached)"
+        memcached_process = [p for p in psutil.process_iter(['name']) if 'memcached' in p.info['name']][0]
+        main_cmd = f"sudo renice -n -17 -p {memcached_process.pid}"
+        subprocess.run(main_cmd, shell=True, check=True)
+
+        for thread in memcached_process.threads():
+            thread_cmd = f"sudo renice -n -17 -p {thread.id}"
+            subprocess.run(thread_cmd, shell=True, check=True)
+        self._log("custom", job, "Reniced memcached to -17")
         # subprocess.run(command_start, shell=True, check=True)
         time.sleep(2)  # Give memcached some time to restart
-        subprocess.run(command_taskset, shell=True, check=True)
-        self._log("start", job, "["+(",".join(str(i) for i in initial_cores))+"] "+str(initial_threads))
+        # subprocess.run(command_taskset, shell=True, check=True)
 
 
 
@@ -154,23 +163,56 @@ class SchedulerLogger:
         return self.file_name
 
 
+def get_memcached_process() -> psutil.Process | None:
+    for process in psutil.process_iter(["name"]):
+        name = process.info.get("name")
+        if name and "memcached" in name:
+            return process
+    return None
+
+
+def max_thread_cpu_percent(process: psutil.Process | None, interval: float = 1.0) -> float:
+    if process is None:
+        return 0.0
+    try:
+        threads_start = {t.id: t.user_time + t.system_time for t in process.threads()}
+    except (psutil.NoSuchProcess, psutil.AccessDenied):
+        return 0.0
+
+    time.sleep(interval)
+
+    try:
+        threads_end = {t.id: t.user_time + t.system_time for t in process.threads()}
+    except (psutil.NoSuchProcess, psutil.AccessDenied):
+        return 0.0
+
+    if not threads_end:
+        return 0.0
+
+    deltas = [threads_end[tid] - threads_start.get(tid, threads_end[tid]) for tid in threads_end]
+    return max(deltas) / interval * 100.0
+
+
 if __name__ == "__main__":
     logger = SchedulerLogger()
-    logger.memcached_start(initial_cores=["0", "1"], initial_threads=2)
+    logger.memcached_start(initial_cores=["0", "1", "2", "3"], initial_threads=4)
     time.sleep(5)  # Give memcached some time to start up
-    for job in jobs:
-        logger.job_start(job, initial_cores=["2", "3"], initial_threads=2)
-        logger.running_jobs.append(job)
+    memcached_process = get_memcached_process()
 
     last_util = -1
     MAX_CPU_UTIL = 100
-    HIGH_CPU_UTIL = 60
+    HIGH_CPU_UTIL = 50
     MEDIUM_CPU_UTIL = 20
     LOW_CPU_UTIL = 0  # Explicitly define the lower bound
-    HYSTERESIS = 5  # Buffer to prevent frequent toggling
+    NUM_CONCURRENT_JOBS = 2
+    QPS_INTERVAL_S = 15
     paused = False
 
     while True:
+        if len(logger.remaining_jobs) > 0 and len(logger.running_jobs) < NUM_CONCURRENT_JOBS:
+            next_job = logger.remaining_jobs.pop(0)
+            logger.job_start(next_job, initial_cores=["0", "1", "2", "3"], initial_threads=2)
+            logger.running_jobs.append(next_job)
         if len(logger.running_jobs) == 0:
             logger.end()
             exit(0)
@@ -179,27 +221,35 @@ if __name__ == "__main__":
                 logger.job_unpause(job)
             paused = False
 
-        cpu_util = psutil.cpu_percent(interval=1)
-        print(f"CPU utilization: {cpu_util}%")
-
-        if HIGH_CPU_UTIL <= cpu_util <= MAX_CPU_UTIL and last_util != HIGH_CPU_UTIL:
-            logger.custom_event(Job.SCHEDULER, f"High CPU utilization detected: {cpu_util}%")
-            last_util = HIGH_CPU_UTIL
-            for i, job in enumerate(logger.running_jobs):
-                new_cores = ["3"] if i < 3 else ["2"]
-                logger.update_cores(job, cores=new_cores)
-
-        elif MEDIUM_CPU_UTIL <= cpu_util < HIGH_CPU_UTIL and last_util != MEDIUM_CPU_UTIL:
-            logger.custom_event(Job.SCHEDULER, f"Moderate CPU utilization detected: {cpu_util}%")
-            last_util = MEDIUM_CPU_UTIL
+        if memcached_process is None or not memcached_process.is_running():
+            memcached_process = get_memcached_process()
+        memcached_max_cpu_util = max_thread_cpu_percent(memcached_process, interval=1.0)
+        print(f"Memcached max thread CPU utilization: {memcached_max_cpu_util}%")
+        if memcached_max_cpu_util >= HIGH_CPU_UTIL and not paused:
+            logger.custom_event(Job.SCHEDULER, f"High CPU utilization detected: {memcached_max_cpu_util}%. Pausing jobs.")
             for job in logger.running_jobs:
-                logger.update_cores(job, cores=["2", "3"])
+                logger.job_pause(job)
+            paused = True
+            time.sleep(QPS_INTERVAL_S)
 
-        elif LOW_CPU_UTIL <= cpu_util < MEDIUM_CPU_UTIL and last_util != LOW_CPU_UTIL:
-            logger.custom_event(Job.SCHEDULER, f"Low CPU utilization detected: {cpu_util}%")
-            last_util = LOW_CPU_UTIL
-            for job in logger.running_jobs:
-                logger.update_cores(job, cores=["1", "2", "3"])
+        # if HIGH_CPU_UTIL <= cpu_util <= MAX_CPU_UTIL and last_util != HIGH_CPU_UTIL:
+        #     logger.custom_event(Job.SCHEDULER, f"High CPU utilization detected: {cpu_util}%")
+        #     last_util = HIGH_CPU_UTIL
+        #     for i, job in enumerate(logger.running_jobs):
+        #         new_cores = ["3"] if i < 3 else ["2"]
+        #         logger.update_cores(job, cores=new_cores)
+
+        # elif MEDIUM_CPU_UTIL <= cpu_util < HIGH_CPU_UTIL and last_util != MEDIUM_CPU_UTIL:
+        #     logger.custom_event(Job.SCHEDULER, f"Moderate CPU utilization detected: {cpu_util}%")
+        #     last_util = MEDIUM_CPU_UTIL
+        #     for job in logger.running_jobs:
+        #         logger.update_cores(job, cores=["2", "3"])
+
+        # elif LOW_CPU_UTIL <= cpu_util < MEDIUM_CPU_UTIL and last_util != LOW_CPU_UTIL:
+        #     logger.custom_event(Job.SCHEDULER, f"Low CPU utilization detected: {cpu_util}%")
+        #     last_util = LOW_CPU_UTIL
+        #     for job in logger.running_jobs:
+        #         logger.update_cores(job, cores=["1", "2", "3"])
 
         logger.get_completed_jobs()
 

@@ -22,7 +22,7 @@ python_modules=(
 
 memcached_runtime_seconds=1200
 
-VERSION=1
+VERSION=4
 OUTPUT_DIR="./results/part4/2/version_${VERSION}"
 mkdir -p "$OUTPUT_DIR"
 
@@ -33,7 +33,7 @@ MEASURE_CMD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_SERVER_INT_IP} 
 
 
 #start memcached because restarting it kills the measure
-memcached_threads=2
+memcached_threads=4
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${MEMCACHED_SERVER_NODE}" --command "sudo sed -i 's/^-t [0-9]*/-t ${memcached_threads}/' /etc/memcached.conf && sudo systemctl restart memcached && sudo systemctl status memcached"
 gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_CMD}'\""
 # start client agent in tmux session
@@ -49,8 +49,9 @@ for module in "${python_modules[@]}"; do
 done
 
 
-for i in {2..3}; do
+for i in {1..3}; do
     gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "TERM=xterm-256color tmux new-session -d 'bash -c \"${MEASURE_CMD} |& tee ~/measurements_${i}.txt\"'"
+    sleep 5
     sleep ${memcached_runtime_seconds} & # wait for memcached runtime to be over before collecting results, ensures we have the full runtime of memcached in our measurements and logs
     gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${MEMCACHED_SERVER_NODE}" --command "echo 'mpstat -A 1 | while read line; do echo \$(date +%s%3N) \$line; done | tee ~/mpstat_run${i}.txt' > ~/run_mpstat.sh && TERM=xterm-256color tmux new-session -d bash ~/run_mpstat.sh"
     # start scheduler logger
