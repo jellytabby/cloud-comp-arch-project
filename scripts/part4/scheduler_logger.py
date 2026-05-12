@@ -211,7 +211,7 @@ if __name__ == "__main__":
             next_job = logger.remaining_jobs.pop(0)
             initial_threads = thread_map[next_job]
             initial_cores = [str(i[0]) for i in sorted(cpu_utils, key=lambda x: x[1])[:initial_threads]]
-            logger.job_start(next_job, initial_cores=initial_cores, initial_threads=2)
+            logger.job_start(next_job, initial_cores=initial_cores, initial_threads=initial_threads)
             logger.running_jobs.append(next_job)
         if len(logger.running_jobs) == 0:
             logger.end()
