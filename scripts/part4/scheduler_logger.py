@@ -235,7 +235,7 @@ if __name__ == "__main__":
         #         updated_cores = [str(i) for i in sorted(cpu_utils, key=lambda x: x[1])]
         #         updated_cores = updated_cores[:initial_threads]
         #         logger.update_cores(job, cores=updated_cores)
-        time.sleep(5)
+        # time.sleep(5)
 
 
 
