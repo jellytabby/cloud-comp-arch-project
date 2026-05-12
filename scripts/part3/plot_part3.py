@@ -30,6 +30,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from matplotlib.ticker import FuncFormatter
 from datetime import datetime
  
 # ── Job colours (matching the template's main.tex) ───────────────────────────
@@ -48,6 +49,13 @@ NODE_HATCHES = {
     "node-a-8core": "/",
     "node-b-4core": "+",
 }
+
+NODE_CORES = {
+    "node-a-8core": 8,
+    "node-b-4core": 4,
+}
+
+NODE_ORDER = ["node-a-8core", "node-b-4core"]
 
 
 JOBS = ["barnes", "blackscholes", "canneal", "freqmine",
@@ -137,7 +145,8 @@ def parse_pods(path):
     pods = []
     for item in data["items"]:
         name = item['status']['containerStatuses'][0]['name'][7:]  # strip "parsec-"
-        node = item.get("spec", {}).get("nodeName", "unknown")[:-5]
+        node_raw = item.get("spec", {}).get("nodeName", "unknown")
+        node = "-".join(node_raw.split("-")[:-1]) if "-" in node_raw else node_raw
         print(f"Pod: {name} on {node}")
  
         cs = item.get("status", {}).get("containerStatuses", [])
@@ -153,6 +162,44 @@ def parse_pods(path):
         if name in JOBS:
             pods.append({"job": name, "node": node, "cstart": cstart, "cend": cend})
     return pods
+
+
+def _node_sort_key(node):
+    if node in NODE_ORDER:
+        return (0, NODE_ORDER.index(node))
+    return (1, node)
+
+
+def _infer_node_cores(node):
+    if node in NODE_CORES:
+        return NODE_CORES[node]
+    if "8core" in node:
+        return 8
+    if "4core" in node:
+        return 4
+    return 4
+
+
+def assign_jobs_to_cores(pods):
+    """
+    Assign each job to a core on its node based on start time.
+    Returns a list of dicts: job, node, core_idx, cstart, cend.
+    """
+    schedule = []
+    for p in pods:
+        if p["job"] not in JOBS or not (p["cstart"] and p["cend"]):
+            continue
+        ncores = _infer_node_cores(p["node"])
+        for core_idx in range(ncores):
+            schedule.append({
+                "job": p["job"],
+                "node": p["node"],
+                "core_idx": core_idx,
+                "cstart": p["cstart"],
+                "cend": p["cend"],
+            })
+
+    return schedule
 
     # time_format = '%Y-%m-%dT%H:%M:%SZ'
     # start_times = []
@@ -226,80 +273,80 @@ def make_plot(run_idx, measurements, pods, output_path):
     xs      = [m["ts_start"] / 1e3 - t0 for m in measurements]
     widths  = [(m["ts_end"] - m["ts_start"]) / 1e3 for m in measurements]
     heights = [m["p95"] for m in measurements]
- 
-    fig, ax = plt.subplots(figsize=(14, 5))
+
+    fig, ax = plt.subplots(figsize=(14, 6))
+
     ax.bar(xs, heights, width=widths, align="edge",
            color="#4A90D9", alpha=0.99, zorder=10)
     ax.axhline(1.0, color="red", linewidth=1.2, linestyle="--",
                label="SLO 1 ms", zorder=3)
     ax.grid(axis="y", linestyle=":", alpha=0.4, zorder=1)
- 
-    # ── Job annotation bars above the plot ───────────────────────────────────
-    # nodes    = sorted(set(p["node"] for p in pods if p["job"] in JOBS))
-    # node_row = {n: i for i, n in enumerate(nodes)}
-    # n_nodes  = max(1, len(nodes))
-    ymax     = 0.4
-    bar_h    = ymax * 0.09
-    gap      = ymax * 0.025
- 
+
+    ymax     = max(1.05, max(heights) * 1.15) if heights else 1.05
+    bar_h    = ymax * 0.08
+    gap      = ymax * 0.02
+
     for p in pods:
         if p["job"] not in JOBS or not (p["cstart"] and p["cend"]):
             continue
         index = JOBS.index(p["job"]) + 1
         x0  = p["cstart"] - t0
         x1  = p["cend"]   - t0
-        # row = node_row.get(p["node"], 0)
-        y1  = ymax + index * (bar_h + gap)
-        zlevel = len(pods) - index  # ensure bars are above the grid and main bars
+        y0  = ymax + (index - 1) * (bar_h + gap)
         col = JOB_COLORS[p["job"]]
         hatch = NODE_HATCHES.get(p["node"], None)
- 
-        # ax.add_patch(mpatches.FancyBboxPatch(
-        #     (x0, y0), x1 - x0, bar_h,
-        #     boxstyle="round,pad=0.5", linewidth=0.4,
-        #     edgecolor="white", facecolor=col, alpha=0.92,
-        #     transform=ax.transData, clip_on=False))
+
         ax.add_patch(mpatches.Rectangle(
-            (x0, 0.0), x1 - x0, y1,
+            (x0, y0), x1 - x0, bar_h,
             linewidth=0.4, edgecolor="white", facecolor=col, alpha=0.92,
-            hatch=hatch, transform=ax.transData, clip_on=False, zorder=zlevel))
- 
-        # ax.text((x0 + x1) / 2, y0 + bar_h / 2,
-        #         p["job"][:3].upper(),
-        #         ha="center", va="center", fontsize=6.5,
-        #         color="white", fontweight="bold",
-        #         transform=ax.transData, clip_on=False)
- 
-    # Node labels to the right of the annotation bars
-    # ax_h = ymax + gap + n_nodes * (bar_h + gap)
-    # for node, row in node_row.items():
-    #     y_centre = ymax + gap + row * (bar_h + gap) + bar_h / 2
-    #     # strip the random suffix (last token after final '-')
-    #     short = "-".join(node.split("-")[:-1]) if "-" in node else node
-    #     ax.text(1.003, y_centre / ax_h, short,
-    #             transform=ax.transAxes, fontsize=7,
-    #             va="center", color="#444")
+            hatch=hatch, transform=ax.transData, clip_on=False, zorder=2))
+
     ax.set_xlabel("Time since first batch job start [s]", fontsize=10)
     ax.set_ylabel("p95 latency [ms]", fontsize=10)
     ax.set_title(f"Run {run_idx}: Memcached p95 latency with batch job annotations",
                  fontsize=11)
-    # ax.set_xlim(left=min(xs) if xs else 0, right=max(xs)+widths[-1]+1 if xs else 0)
-    ax.set_ylim(bottom=0, ymax=1.05)
-    last_meas_end = max(xs) + widths[-1] if xs else 0
-    last_job_end  = max(p["cend"] - t0 for p in pods 
-                    if p["job"] in JOBS and p["cend"])
-    ax.set_xlim(left=min(xs) if xs else 0, 
-            right=max(last_meas_end, last_job_end) + 5)
 
-    handles = [mpatches.Patch(color=JOB_COLORS[p["job"]], label=p["job"], hatch=NODE_HATCHES.get(p["node"], None)) for p in pods if p["job"] in JOBS]
-    # handles = [mpatches.Patch(color="#000000", label="Node A (8-core)", hatch="/"),
-    #            mpatches.Patch(color="#000000", label="Node B (4-core)", hatch=NODE_HATCHES["node-b-4core"])]
-    handles += [
-        plt.Line2D([0], [0], color="red", linestyle="--", label="SLO 1 ms"),
-        mpatches.Patch(color="#4A90D9", alpha=0.75, label="p95 latency - memcached", hatch=NODE_HATCHES["node-b-4core"]),
+    top_ylim = ymax + len(JOBS) * (bar_h + gap) + gap
+    ax.set_ylim(bottom=0, top=top_ylim)
+
+    last_meas_end = max(xs) + widths[-1] if xs else 0
+    last_job_end  = max((p["cend"] - t0) for p in pods if p["job"] in JOBS and p["cend"]) if pods else 0
+    xmax = max(last_meas_end, last_job_end) + 5
+    xleft = min(xs) if xs else 0
+    span = max(xmax - xleft, 1)
+    pad = max(2.0, 0.05 * span)
+    ax.set_xlim(left=xleft - pad, right=xmax)
+
+    job_handles = [mpatches.Patch(color=JOB_COLORS[job], label=job) for job in JOBS]
+    node_handles = [
+        mpatches.Patch(facecolor="#FFFFFF", edgecolor="#333333",
+                       hatch=NODE_HATCHES[node], label=node)
+        for node in NODE_HATCHES
     ]
-    ax.legend(handles=handles, loc="upper left", fontsize=7.5,
-              ncol=3, framealpha=0.95)
+    ax.legend(handles=job_handles + node_handles,
+              loc="upper left", bbox_to_anchor=(1.02, 1.0),
+              fontsize=7.5, ncol=1, framealpha=0.95)
+
+    tick_entries = []
+    for p in pods:
+        if p["job"] not in JOBS or not (p["cstart"] and p["cend"]):
+            continue
+        tick_entries.append((p["cstart"] - t0, f"{p['job']} start"))
+        tick_entries.append((p["cend"] - t0, f"{p['job']} end"))
+    if tick_entries:
+        tick_entries.sort(key=lambda t: t[0])
+        tick_times = [t[0] for t in tick_entries]
+        # two-line labels: job/start-end on top line, numeric time (s) on second line
+        tick_labels = [f"{t[1]}" for t in tick_entries]
+        # add these as minor ticks so the major ticks remain automatic (0,25,50...)
+        ax.set_xticks(tick_times, minor=True)
+        ax.set_xticklabels(tick_labels, minor=True, rotation=45, ha="right")
+        ax.tick_params(axis='x', which='minor', labelsize=8, pad=17)
+
+    # Keep automatic major ticks (e.g. 0,25,50s) and format them with an 's'
+    ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{int(x)}s"))
+    ax.tick_params(axis='x', which='major', labelrotation=0)
+    ax.set_xlabel("Time since first batch job start [s]", fontsize=9)
  
     plt.savefig(output_path, dpi=150, bbox_inches="tight")
     plt.close()

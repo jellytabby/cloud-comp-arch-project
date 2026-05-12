@@ -1,0 +1,1209 @@
+2026-05-10T20:41:35.313844 start scheduler
+2026-05-10T20:41:35.313899 start memcached [0,1,2,3] 4
+798525 (process ID) old priority -17, new priority -17
+798525 (process ID) old priority -17, new priority -17
+798527 (process ID) old priority -17, new priority -17
+798528 (process ID) old priority -17, new priority -17
+798529 (process ID) old priority -17, new priority -17
+798530 (process ID) old priority -17, new priority -17
+798531 (process ID) old priority -17, new priority -17
+798532 (process ID) old priority -17, new priority -17
+798533 (process ID) old priority -17, new priority -17
+798534 (process ID) old priority -17, new priority -17
+798535 (process ID) old priority -17, new priority -17
+2026-05-10T20:41:35.532634 custom memcached Reniced memcached to -17
+2026-05-10T20:41:43.850232 start freqmine [0,1,2,3] 2
+Memcached max thread CPU utilization: 40.000000000009095%
+2026-05-10T20:41:46.915097 start barnes [0,1,2,3] 2
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 17.999999999994998%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 19.000000000016826%
+Memcached max thread CPU utilization: 22.99999999999045%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 22.99999999999045%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 17.999999999994998%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 25.00000000001137%
+Memcached max thread CPU utilization: 48.00000000001319%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 44.99999999999318%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 41.99999999999591%
+Memcached max thread CPU utilization: 40.000000000009095%
+Memcached max thread CPU utilization: 41.000000000008185%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 16.999999999995907%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 4.9999999999954525%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 7.000000000005002%
+Memcached max thread CPU utilization: 7.999999999992724%
+Memcached max thread CPU utilization: 7.000000000005002%
+Memcached max thread CPU utilization: 7.999999999992724%
+Memcached max thread CPU utilization: 18.99999999999409%
+Memcached max thread CPU utilization: 19.99999999999318%
+Memcached max thread CPU utilization: 18.99999999999409%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 18.99999999999409%
+Memcached max thread CPU utilization: 9.999999999990905%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 9.999999999990905%
+Memcached max thread CPU utilization: 10.000000000013642%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 43.000000000017735%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 7.000000000005002%
+Memcached max thread CPU utilization: 7.000000000016371%
+Memcached max thread CPU utilization: 7.999999999992724%
+Memcached max thread CPU utilization: 7.000000000005002%
+Memcached max thread CPU utilization: 7.999999999992724%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 7.999999999992724%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 38.000000000010914%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 35.999999999989996%
+Memcached max thread CPU utilization: 35.00000000001364%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 2.9999999999972715%
+Memcached max thread CPU utilization: 4.000000000007731%
+Memcached max thread CPU utilization: 4.000000000007731%
+Memcached max thread CPU utilization: 5.000000000006821%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 25.00000000001137%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 10.000000000013642%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 42.999999999995%
+Memcached max thread CPU utilization: 43.000000000017735%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 16.999999999995907%
+Memcached max thread CPU utilization: 33.00000000000409%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 31.00000000001728%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 22.000000000014097%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 19.000000000016826%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 36.999999999989086%
+Memcached max thread CPU utilization: 36.00000000001273%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 19.99999999999318%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 20.000000000015916%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 22.000000000014097%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 22.000000000014097%
+Memcached max thread CPU utilization: 16.999999999995907%
+Memcached max thread CPU utilization: 17.000000000018645%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 8.000000000015461%
+Memcached max thread CPU utilization: 19.000000000016826%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 36.00000000001273%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 34.999999999990905%
+Memcached max thread CPU utilization: 41.99999999999591%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 64.00000000001%
+2026-05-10T20:44:39.927009 custom scheduler High+CPU+utilization+detected%3A+64.00000000001%25.+Pausing+jobs.
+2026-05-10T20:44:39.978118 pause freqmine
+2026-05-10T20:44:40.042099 pause barnes
+Memcached max thread CPU utilization: 85.99999999999%
+Memcached max thread CPU utilization: 57.00000000001637%
+Memcached max thread CPU utilization: 52.99999999999727%
+Memcached max thread CPU utilization: 41.000000000008185%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 40.000000000009095%
+Memcached max thread CPU utilization: 42.000000000007276%
+2026-05-10T20:44:48.270715 unpause freqmine
+2026-05-10T20:44:48.298095 unpause barnes
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 17.000000000018645%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 7.000000000005002%
+Memcached max thread CPU utilization: 6.9999999999936335%
+2026-05-10T20:44:55.463966 end barnes
+2026-05-10T20:44:56.740506 start blackscholes [0,1,2,3] 2
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 31.00000000001728%
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 42.999999999995%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 39.999999999997726%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 34.00000000001455%
+Memcached max thread CPU utilization: 22.99999999999045%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 12.000000000011823%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 36.999999999989086%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 25.00000000001137%
+Memcached max thread CPU utilization: 23.99999999998954%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 22.000000000014097%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 20.99999999999227%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 33.00000000001546%
+Memcached max thread CPU utilization: 34.999999999990905%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 43.99999999999409%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 4.000000000007731%
+Memcached max thread CPU utilization: 3.999999999996362%
+Memcached max thread CPU utilization: 3.999999999996362%
+Memcached max thread CPU utilization: 4.000000000007731%
+Memcached max thread CPU utilization: 6.9999999999936335%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 5.999999999994543%
+Memcached max thread CPU utilization: 5.000000000006821%
+Memcached max thread CPU utilization: 5.999999999994543%
+Memcached max thread CPU utilization: 4.9999999999954525%
+Memcached max thread CPU utilization: 5.999999999994543%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 24.99999999998863%
+Memcached max thread CPU utilization: 21.99999999999136%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 7.999999999992724%
+Memcached max thread CPU utilization: 9.000000000014552%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 11.000000000012733%
+2026-05-10T20:46:45.600195 end blackscholes
+2026-05-10T20:46:46.937286 start canneal [0,1,2,3] 2
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 33.00000000001546%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 31.999999999993634%
+Memcached max thread CPU utilization: 20.000000000015916%
+Memcached max thread CPU utilization: 19.99999999999318%
+Memcached max thread CPU utilization: 19.99999999999318%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 9.999999999990905%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 49.99999999998863%
+Memcached max thread CPU utilization: 41.99999999999591%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 43.99999999999409%
+Memcached max thread CPU utilization: 47.0000000000141%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 47.99999999999045%
+Memcached max thread CPU utilization: 57.000000000005%
+2026-05-10T20:47:18.093933 custom scheduler High+CPU+utilization+detected%3A+57.000000000005%25.+Pausing+jobs.
+2026-05-10T20:47:18.155903 pause freqmine
+2026-05-10T20:47:18.228329 pause canneal
+2026-05-10T20:47:19.315911 unpause freqmine
+2026-05-10T20:47:19.339329 unpause canneal
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 11.000000000012733%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 42.999999999995%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 41.000000000008185%
+Memcached max thread CPU utilization: 41.99999999999591%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 43.99999999999409%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 47.0000000000141%
+Memcached max thread CPU utilization: 52.00000000000955%
+2026-05-10T20:47:35.967956 custom scheduler High+CPU+utilization+detected%3A+52.00000000000955%25.+Pausing+jobs.
+2026-05-10T20:47:36.009653 pause freqmine
+2026-05-10T20:47:36.047092 pause canneal
+Memcached max thread CPU utilization: 71.99999999999136%
+Memcached max thread CPU utilization: 58.00000000001546%
+2026-05-10T20:47:39.184289 unpause freqmine
+2026-05-10T20:47:39.206530 unpause canneal
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 15.000000000009095%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 10.000000000013642%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 25.00000000001137%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 35.00000000001364%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 44.00000000000546%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 10.000000000013642%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 13.000000000010914%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 25.00000000001137%
+Memcached max thread CPU utilization: 50.99999999998772%
+2026-05-10T20:48:14.436813 custom scheduler High+CPU+utilization+detected%3A+50.99999999998772%25.+Pausing+jobs.
+2026-05-10T20:48:14.490390 pause freqmine
+2026-05-10T20:48:14.547667 pause canneal
+Memcached max thread CPU utilization: 62.000000000000455%
+Memcached max thread CPU utilization: 55.99999999999454%
+Memcached max thread CPU utilization: 59.999999999990905%
+2026-05-10T20:48:18.732125 unpause freqmine
+2026-05-10T20:48:18.753981 unpause canneal
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 13.000000000010914%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 15.000000000009095%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 5.000000000006821%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 5.999999999994543%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 24.99999999998863%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 35.999999999989996%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 38.000000000010914%
+Memcached max thread CPU utilization: 37.00000000001182%
+Memcached max thread CPU utilization: 35.999999999989996%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 37.00000000001182%
+Memcached max thread CPU utilization: 37.99999999998818%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 41.000000000008185%
+Memcached max thread CPU utilization: 46.00000000001501%
+Memcached max thread CPU utilization: 59.00000000000318%
+2026-05-10T20:49:02.467201 custom scheduler High+CPU+utilization+detected%3A+59.00000000000318%25.+Pausing+jobs.
+2026-05-10T20:49:02.515460 pause freqmine
+2026-05-10T20:49:02.570211 pause canneal
+2026-05-10T20:49:03.635961 unpause freqmine
+2026-05-10T20:49:03.658816 unpause canneal
+Memcached max thread CPU utilization: 31.999999999993634%
+Memcached max thread CPU utilization: 20.000000000015916%
+Memcached max thread CPU utilization: 17.999999999994998%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 16.999999999995907%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 9.999999999990905%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 10.000000000013642%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 12.000000000011823%
+Memcached max thread CPU utilization: 11.000000000012733%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 41.000000000008185%
+Memcached max thread CPU utilization: 50.0%
+2026-05-10T20:49:26.418211 custom scheduler High+CPU+utilization+detected%3A+50.0%25.+Pausing+jobs.
+2026-05-10T20:49:26.498867 pause freqmine
+2026-05-10T20:49:26.568498 pause canneal
+Memcached max thread CPU utilization: 54.99999999999545%
+2026-05-10T20:49:28.669061 unpause freqmine
+2026-05-10T20:49:28.691617 unpause canneal
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 17.999999999994998%
+Memcached max thread CPU utilization: 17.999999999994998%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 18.99999999999409%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 19.99999999999318%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 48.00000000000182%
+Memcached max thread CPU utilization: 46.99999999999136%
+Memcached max thread CPU utilization: 64.99999999999773%
+2026-05-10T20:49:51.522319 custom scheduler High+CPU+utilization+detected%3A+64.99999999999773%25.+Pausing+jobs.
+2026-05-10T20:49:51.607771 pause freqmine
+2026-05-10T20:49:51.657809 pause canneal
+Memcached max thread CPU utilization: 76.99999999999818%
+2026-05-10T20:49:53.791754 unpause freqmine
+2026-05-10T20:49:53.815319 unpause canneal
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 15.000000000009095%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 15.000000000009095%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 11.000000000012733%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 24.99999999998863%
+Memcached max thread CPU utilization: 25.00000000001137%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 36.00000000001273%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 33.00000000000409%
+Memcached max thread CPU utilization: 34.999999999990905%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 25.00000000001137%
+Memcached max thread CPU utilization: 25.999999999987722%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 17.999999999994998%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 50.0%
+2026-05-10T20:50:37.422215 custom scheduler High+CPU+utilization+detected%3A+50.0%25.+Pausing+jobs.
+2026-05-10T20:50:37.476507 pause freqmine
+2026-05-10T20:50:37.529605 pause canneal
+2026-05-10T20:50:38.592890 unpause freqmine
+2026-05-10T20:50:38.616314 unpause canneal
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 17.999999999994998%
+Memcached max thread CPU utilization: 35.00000000001364%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 36.00000000001273%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 41.000000000008185%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 41.000000000008185%
+2026-05-10T20:50:57.515312 end freqmine
+2026-05-10T20:50:58.815232 start radix [0,1,2,3] 2
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 16.999999999995907%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 32.00000000001637%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 37.00000000001182%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 44.99999999999318%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 49.00000000000091%
+Memcached max thread CPU utilization: 47.99999999999045%
+Memcached max thread CPU utilization: 52.00000000000955%
+2026-05-10T20:51:19.710256 custom scheduler High+CPU+utilization+detected%3A+52.00000000000955%25.+Pausing+jobs.
+2026-05-10T20:51:19.763871 pause canneal
+2026-05-10T20:51:19.830406 pause radix
+Memcached max thread CPU utilization: 69.99999999999318%
+Memcached max thread CPU utilization: 55.00000000000682%
+Memcached max thread CPU utilization: 82.99999999999272%
+Memcached max thread CPU utilization: 64.99999999999773%
+Memcached max thread CPU utilization: 51.00000000001046%
+Memcached max thread CPU utilization: 54.99999999999545%
+Memcached max thread CPU utilization: 48.00000000001319%
+Memcached max thread CPU utilization: 42.999999999995%
+2026-05-10T20:51:29.310227 unpause canneal
+2026-05-10T20:51:29.338826 unpause radix
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 47.0000000000141%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 48.99999999998954%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 20.99999999999227%
+Memcached max thread CPU utilization: 6.9999999999936335%
+Memcached max thread CPU utilization: 5.999999999994543%
+Memcached max thread CPU utilization: 4.9999999999954525%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 5.999999999994543%
+Memcached max thread CPU utilization: 5.999999999994543%
+Memcached max thread CPU utilization: 5.000000000006821%
+Memcached max thread CPU utilization: 6.000000000005912%
+2026-05-10T20:51:52.225563 end radix
+2026-05-10T20:51:53.584930 start streamcluster [0,1,2,3] 2
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 12.999999999988177%
+Memcached max thread CPU utilization: 13.000000000010914%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 21.99999999999136%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 33.00000000001546%
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 42.999999999995%
+Memcached max thread CPU utilization: 50.0%
+2026-05-10T20:52:19.774482 custom scheduler High+CPU+utilization+detected%3A+50.0%25.+Pausing+jobs.
+2026-05-10T20:52:19.805997 pause canneal
+2026-05-10T20:52:19.857118 pause streamcluster
+Memcached max thread CPU utilization: 60.999999999989996%
+Memcached max thread CPU utilization: 56.99999999999363%
+Memcached max thread CPU utilization: 58.999999999991815%
+2026-05-10T20:52:24.062700 unpause canneal
+2026-05-10T20:52:24.080094 unpause streamcluster
+Memcached max thread CPU utilization: 9.000000000014552%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 13.000000000010914%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 41.99999999999591%
+Memcached max thread CPU utilization: 40.000000000009095%
+Memcached max thread CPU utilization: 39.999999999997726%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 38.000000000010914%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 43.99999999999409%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 42.999999999995%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 20.99999999999227%
+Memcached max thread CPU utilization: 48.99999999998954%
+Memcached max thread CPU utilization: 52.9999999999859%
+2026-05-10T20:52:50.378076 custom scheduler High+CPU+utilization+detected%3A+52.9999999999859%25.+Pausing+jobs.
+2026-05-10T20:52:50.435223 pause canneal
+2026-05-10T20:52:50.481044 pause streamcluster
+Memcached max thread CPU utilization: 52.99999999999727%
+Memcached max thread CPU utilization: 66.00000000000819%
+Memcached max thread CPU utilization: 59.999999999990905%
+Memcached max thread CPU utilization: 59.00000000001455%
+Memcached max thread CPU utilization: 59.00000000000318%
+Memcached max thread CPU utilization: 54.99999999999545%
+Memcached max thread CPU utilization: 54.00000000000773%
+Memcached max thread CPU utilization: 58.00000000000409%
+Memcached max thread CPU utilization: 55.00000000000682%
+Memcached max thread CPU utilization: 55.00000000000682%
+Memcached max thread CPU utilization: 56.00000000000591%
+Memcached max thread CPU utilization: 55.00000000000682%
+Memcached max thread CPU utilization: 50.0%
+Memcached max thread CPU utilization: 51.00000000001046%
+Memcached max thread CPU utilization: 49.00000000001228%
+Memcached max thread CPU utilization: 50.0%
+Memcached max thread CPU utilization: 62.999999999999545%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 60.000000000002274%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 44.99999999999318%
+2026-05-10T20:53:13.726244 unpause canneal
+2026-05-10T20:53:13.754854 unpause streamcluster
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 12.000000000011823%
+Memcached max thread CPU utilization: 11.999999999989086%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 22.000000000014097%
+Memcached max thread CPU utilization: 23.99999999998954%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 50.0%
+2026-05-10T20:53:29.509694 custom scheduler High+CPU+utilization+detected%3A+50.0%25.+Pausing+jobs.
+2026-05-10T20:53:29.553054 pause canneal
+2026-05-10T20:53:29.605107 pause streamcluster
+Memcached max thread CPU utilization: 50.99999999999909%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 48.00000000001319%
+2026-05-10T20:53:33.867389 unpause canneal
+2026-05-10T20:53:33.891274 unpause streamcluster
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 31.00000000001728%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 31.00000000001728%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 38.000000000010914%
+2026-05-10T20:53:45.566612 end canneal
+2026-05-10T20:53:46.981216 start vips [0,1,2,3] 2
+Memcached max thread CPU utilization: 35.999999999989996%
+Memcached max thread CPU utilization: 39.999999999997726%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 31.999999999993634%
+Memcached max thread CPU utilization: 31.999999999993634%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 38.000000000010914%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 39.999999999997726%
+Memcached max thread CPU utilization: 40.000000000009095%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 22.99999999999045%
+Memcached max thread CPU utilization: 33.00000000000409%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 39.999999999997726%
+Memcached max thread CPU utilization: 31.999999999993634%
+Memcached max thread CPU utilization: 40.000000000009095%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 36.999999999989086%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 38.000000000010914%
+Memcached max thread CPU utilization: 23.99999999998954%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 11.000000000012733%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 12.000000000011823%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 36.999999999989086%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 37.00000000001182%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 17.000000000007276%
+Memcached max thread CPU utilization: 12.000000000011823%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 49.00000000000091%
+Memcached max thread CPU utilization: 49.99999999998863%
+Memcached max thread CPU utilization: 48.00000000001319%
+Memcached max thread CPU utilization: 50.99999999999909%
+2026-05-10T20:55:02.460299 custom scheduler High+CPU+utilization+detected%3A+50.99999999999909%25.+Pausing+jobs.
+2026-05-10T20:55:02.506161 pause streamcluster
+2026-05-10T20:55:02.569733 pause vips
+Memcached max thread CPU utilization: 72.00000000000273%
+2026-05-10T20:55:04.708663 unpause streamcluster
+2026-05-10T20:55:04.743560 unpause vips
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 33.00000000000409%
+Memcached max thread CPU utilization: 32.00000000001637%
+Memcached max thread CPU utilization: 34.999999999990905%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 7.000000000005002%
+Memcached max thread CPU utilization: 6.00000000001728%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 6.9999999999936335%
+Memcached max thread CPU utilization: 6.000000000005912%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 47.99999999999045%
+Memcached max thread CPU utilization: 44.000000000016826%
+Memcached max thread CPU utilization: 11.999999999989086%
+2026-05-10T20:55:36.544834 end vips
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 22.99999999999045%
+Memcached max thread CPU utilization: 31.00000000000591%
+Memcached max thread CPU utilization: 50.99999999998772%
+2026-05-10T20:55:40.702963 custom scheduler High+CPU+utilization+detected%3A+50.99999999998772%25.+Pausing+jobs.
+2026-05-10T20:55:40.729493 pause streamcluster
+2026-05-10T20:55:41.796252 unpause streamcluster
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 33.00000000000409%
+Memcached max thread CPU utilization: 49.00000000000091%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 44.00000000000546%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 12.000000000000455%
+Memcached max thread CPU utilization: 12.000000000011823%
+Memcached max thread CPU utilization: 11.000000000012733%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 19.99999999999318%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 19.000000000016826%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 34.00000000001455%
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 33.00000000001546%
+Memcached max thread CPU utilization: 38.000000000010914%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 33.999999999991815%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 35.999999999989996%
+Memcached max thread CPU utilization: 46.00000000001501%
+Memcached max thread CPU utilization: 42.999999999995%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 44.00000000000546%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 47.0000000000141%
+Memcached max thread CPU utilization: 41.99999999999591%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 35.00000000001364%
+Memcached max thread CPU utilization: 42.000000000007276%
+Memcached max thread CPU utilization: 33.00000000000409%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 41.99999999999591%
+Memcached max thread CPU utilization: 32.999999999992724%
+Memcached max thread CPU utilization: 34.999999999990905%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 51.99999999999818%
+2026-05-10T20:56:39.269501 custom scheduler High+CPU+utilization+detected%3A+51.99999999999818%25.+Pausing+jobs.
+2026-05-10T20:56:39.323586 pause streamcluster
+Memcached max thread CPU utilization: 55.00000000001819%
+Memcached max thread CPU utilization: 56.99999999999363%
+Memcached max thread CPU utilization: 69.99999999999318%
+Memcached max thread CPU utilization: 51.99999999999818%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 45.000000000015916%
+Memcached max thread CPU utilization: 43.99999999999409%
+2026-05-10T20:56:48.893254 unpause streamcluster
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 11.000000000012733%
+Memcached max thread CPU utilization: 11.000000000001364%
+Memcached max thread CPU utilization: 10.000000000013642%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 48.99999999998954%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 37.00000000001182%
+Memcached max thread CPU utilization: 33.00000000000409%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 24.99999999998863%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 24.00000000000091%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 31.999999999993634%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 36.00000000001273%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 59.00000000000318%
+2026-05-10T20:57:29.180253 custom scheduler High+CPU+utilization+detected%3A+59.00000000000318%25.+Pausing+jobs.
+2026-05-10T20:57:29.230843 pause streamcluster
+Memcached max thread CPU utilization: 52.00000000000955%
+Memcached max thread CPU utilization: 56.00000000000591%
+Memcached max thread CPU utilization: 52.99999999999727%
+2026-05-10T20:57:33.518449 unpause streamcluster
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 12.000000000011823%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 23.99999999998954%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 55.99999999999454%
+2026-05-10T20:57:44.070020 custom scheduler High+CPU+utilization+detected%3A+55.99999999999454%25.+Pausing+jobs.
+2026-05-10T20:57:44.117292 pause streamcluster
+Memcached max thread CPU utilization: 60.000000000002274%
+Memcached max thread CPU utilization: 58.00000000000409%
+Memcached max thread CPU utilization: 56.99999999999363%
+Memcached max thread CPU utilization: 56.00000000000591%
+Memcached max thread CPU utilization: 55.00000000000682%
+Memcached max thread CPU utilization: 57.999999999992724%
+Memcached max thread CPU utilization: 56.00000000000591%
+Memcached max thread CPU utilization: 60.000000000002274%
+Memcached max thread CPU utilization: 46.99999999999136%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 48.99999999998954%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 43.00000000000637%
+2026-05-10T20:57:59.067553 unpause streamcluster
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 15.000000000009095%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 57.999999999992724%
+2026-05-10T20:58:04.369507 custom scheduler High+CPU+utilization+detected%3A+57.999999999992724%25.+Pausing+jobs.
+2026-05-10T20:58:04.429030 pause streamcluster
+Memcached max thread CPU utilization: 52.00000000000955%
+Memcached max thread CPU utilization: 52.99999999999727%
+Memcached max thread CPU utilization: 53.00000000000864%
+Memcached max thread CPU utilization: 42.000000000007276%
+2026-05-10T20:58:09.760887 unpause streamcluster
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 35.000000000002274%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 35.999999999989996%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 37.00000000001182%
+Memcached max thread CPU utilization: 40.000000000009095%
+Memcached max thread CPU utilization: 49.00000000000091%
+Memcached max thread CPU utilization: 50.99999999999909%
+2026-05-10T20:58:20.360764 custom scheduler High+CPU+utilization+detected%3A+50.99999999999909%25.+Pausing+jobs.
+2026-05-10T20:58:20.420880 pause streamcluster
+Memcached max thread CPU utilization: 51.00000000001046%
+Memcached max thread CPU utilization: 50.99999999999909%
+2026-05-10T20:58:23.620206 unpause streamcluster
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 8.999999999991815%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 14.000000000010004%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 25.99999999999909%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 15.999999999996817%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 21.99999999999136%
+Memcached max thread CPU utilization: 28.00000000000864%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 50.0%
+2026-05-10T20:58:54.095024 custom scheduler High+CPU+utilization+detected%3A+50.0%25.+Pausing+jobs.
+2026-05-10T20:58:54.140137 pause streamcluster
+Memcached max thread CPU utilization: 56.00000000001728%
+Memcached max thread CPU utilization: 55.00000000000682%
+Memcached max thread CPU utilization: 53.00000000000864%
+Memcached max thread CPU utilization: 44.00000000000546%
+2026-05-10T20:58:59.512204 unpause streamcluster
+Memcached max thread CPU utilization: 24.000000000012278%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 23.00000000000182%
+Memcached max thread CPU utilization: 21.99999999999136%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 30.999999999994543%
+Memcached max thread CPU utilization: 28.999999999996362%
+Memcached max thread CPU utilization: 30.00000000000682%
+Memcached max thread CPU utilization: 44.99999999999318%
+Memcached max thread CPU utilization: 47.00000000000273%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 47.99999999999045%
+Memcached max thread CPU utilization: 45.00000000000455%
+Memcached max thread CPU utilization: 16.999999999995907%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 16.000000000008185%
+Memcached max thread CPU utilization: 14.999999999997726%
+Memcached max thread CPU utilization: 19.000000000016826%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 22.99999999999045%
+Memcached max thread CPU utilization: 23.000000000013188%
+Memcached max thread CPU utilization: 22.99999999999045%
+Memcached max thread CPU utilization: 15.000000000009095%
+Memcached max thread CPU utilization: 13.999999999998636%
+Memcached max thread CPU utilization: 13.000000000010914%
+Memcached max thread CPU utilization: 13.000000000010914%
+Memcached max thread CPU utilization: 12.999999999999545%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 39.000000000010004%
+Memcached max thread CPU utilization: 45.99999999999227%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 43.000000000017735%
+Memcached max thread CPU utilization: 43.99999999999409%
+Memcached max thread CPU utilization: 44.00000000000546%
+Memcached max thread CPU utilization: 46.00000000000364%
+Memcached max thread CPU utilization: 31.999999999993634%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 20.000000000015916%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 18.000000000006366%
+Memcached max thread CPU utilization: 37.999999999999545%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 43.00000000000637%
+Memcached max thread CPU utilization: 42.999999999995%
+Memcached max thread CPU utilization: 41.000000000008185%
+Memcached max thread CPU utilization: 39.999999999997726%
+Memcached max thread CPU utilization: 40.000000000009095%
+Memcached max thread CPU utilization: 38.999999999998636%
+Memcached max thread CPU utilization: 38.99999999998727%
+Memcached max thread CPU utilization: 27.99999999999727%
+Memcached max thread CPU utilization: 11.999999999989086%
+Memcached max thread CPU utilization: 9.000000000014552%
+Memcached max thread CPU utilization: 9.999999999990905%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 19.000000000005457%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 25.0%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 50.0%
+2026-05-10T21:00:03.968513 custom scheduler High+CPU+utilization+detected%3A+50.0%25.+Pausing+jobs.
+2026-05-10T21:00:04.011627 pause streamcluster
+Memcached max thread CPU utilization: 51.00000000001046%
+Memcached max thread CPU utilization: 49.00000000001228%
+Memcached max thread CPU utilization: 50.99999999999909%
+Memcached max thread CPU utilization: 52.00000000000955%
+Memcached max thread CPU utilization: 58.999999999991815%
+Memcached max thread CPU utilization: 56.00000000000591%
+Memcached max thread CPU utilization: 57.000000000005%
+Memcached max thread CPU utilization: 54.00000000000773%
+Memcached max thread CPU utilization: 41.99999999999591%
+2026-05-10T21:00:14.700299 unpause streamcluster
+Memcached max thread CPU utilization: 32.000000000005%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 29.999999999995453%
+Memcached max thread CPU utilization: 29.00000000000773%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 37.000000000000455%
+Memcached max thread CPU utilization: 38.000000000010914%
+Memcached max thread CPU utilization: 40.99999999999682%
+Memcached max thread CPU utilization: 36.000000000001364%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 22.000000000014097%
+Memcached max thread CPU utilization: 22.00000000000273%
+Memcached max thread CPU utilization: 21.99999999999136%
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 49.00000000000091%
+Memcached max thread CPU utilization: 50.00000000001137%
+2026-05-10T21:00:30.596249 custom scheduler High+CPU+utilization+detected%3A+50.00000000001137%25.+Pausing+jobs.
+2026-05-10T21:00:30.651127 pause streamcluster
+Memcached max thread CPU utilization: 56.00000000000591%
+Memcached max thread CPU utilization: 54.99999999999545%
+2026-05-10T21:00:33.868069 unpause streamcluster
+Memcached max thread CPU utilization: 34.00000000000318%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 26.999999999986812%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 26.00000000001046%
+Memcached max thread CPU utilization: 27.00000000000955%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 26.99999999999818%
+Memcached max thread CPU utilization: 20.000000000004547%
+Memcached max thread CPU utilization: 9.000000000003183%
+Memcached max thread CPU utilization: 7.999999999992724%
+Memcached max thread CPU utilization: 10.000000000002274%
+Memcached max thread CPU utilization: 8.000000000004093%
+Memcached max thread CPU utilization: 21.000000000003638%
+Memcached max thread CPU utilization: 29.999999999995453%
+2026-05-10T21:00:49.852477 end streamcluster
+2026-05-10T21:00:50.854312 end scheduler
