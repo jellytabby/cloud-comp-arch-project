@@ -20,9 +20,9 @@ python_modules=(
     "docker"
 )
 
-memcached_runtime_seconds=1400
+memcached_runtime_seconds=1500
 
-VERSION=7
+VERSION=8
 OUTPUT_DIR="./results/part4/2/version_${VERSION}"
 mkdir -p "$OUTPUT_DIR"
 

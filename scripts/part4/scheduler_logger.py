@@ -42,9 +42,9 @@ image_map = {
 }
 
 thread_map = {
-    Job.BARNES: 2,
+    Job.BARNES: 1,
     Job.BLACKSCHOLES: 1,
-    Job.CANNEAL: 2,
+    Job.CANNEAL: 1,
     Job.FREQMINE: 2,
     Job.RADIX: 1,
     Job.STREAMCLUSTER: 2,
