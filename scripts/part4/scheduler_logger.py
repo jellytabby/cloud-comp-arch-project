@@ -190,7 +190,7 @@ def get_cpu_utils(interval: float = 1.0):
 
 if __name__ == "__main__":
     logger = SchedulerLogger()
-    logger.memcached_start(initial_cores=["0", "1", "2", "3"], initial_threads=3)
+    logger.memcached_start(initial_cores=["0", "1", "2", "3"], initial_threads=4)
     time.sleep(5)  # Give memcached some time to start up
     memcached_process = get_memcached_process()
 
@@ -216,19 +216,22 @@ if __name__ == "__main__":
         if len(logger.running_jobs) == 0:
             logger.end()
             exit(0)
-
-        memcached_max_cpu_util = max(cpu_utils, key=lambda x: x[1]) if cpu_utils else 0
-        print(f"Memcached max thread CPU utilization: {memcached_max_cpu_util}%")
-        if max(cpu_utils, key=lambda x: x[1])[1] >= HIGH_CPU_UTIL:
-            min_cpu_index = min(cpu_utils, key=lambda x: x[1])[0] if cpu_utils else 0
-            for job in logger.running_jobs:
-                logger.update_cores(job, cores=[str(min_cpu_index)])
-        elif max(cpu_utils, key=lambda x: x[1])[1] < MEDIUM_CPU_UTIL:
-            for job in logger.running_jobs:
-                initial_threads = thread_map[job]
-                updated_cores = [str(i) for i in sorted(cpu_utils, key=lambda x: x[1])]
-                updated_cores = updated_cores[:initial_threads]
-                logger.update_cores(job, cores=updated_cores)
+        
+        max_util = max(cpu_utils, key=lambda x: x[1])
+        logger.custom_event(Job.SCHEDULER, f"Current CPU utils: {','.join(f'{i}:{u:.1f}%' for i,u in cpu_utils)}; Max: {max_util[1]:.1f}%")
+        sorted_utils = [str(i[0]) for i in sorted(cpu_utils, key=lambda x: x[1])]
+        for job in logger.running_jobs:
+            logger.update_cores(job, cores=sorted_utils[:thread_map[job]])
+        # if max(cpu_utils, key=lambda x: x[1])[1] >= HIGH_CPU_UTIL:
+        #     min_cpu_index = min(cpu_utils, key=lambda x: x[1])[0] if cpu_utils else 0
+        #     for job in logger.running_jobs:
+        #         logger.update_cores(job, cores=[str(min_cpu_index)])
+        # elif max(cpu_utils, key=lambda x: x[1])[1] < MEDIUM_CPU_UTIL:
+        #     for job in logger.running_jobs:
+        #         initial_threads = thread_map[job]
+        #         updated_cores = [str(i) for i in sorted(cpu_utils, key=lambda x: x[1])]
+        #         updated_cores = updated_cores[:initial_threads]
+        #         logger.update_cores(job, cores=updated_cores)
 
 
 
