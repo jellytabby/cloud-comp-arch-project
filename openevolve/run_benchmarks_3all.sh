@@ -72,6 +72,7 @@ substitute_job() {
     #   -e "s/taskset -c [^ ]*/taskset -c ${!cpus_var}/" \
 }
 
+VERSION=5
 mkdir -p openevolve/results/part3/version${VERSION}
 # EVOLVE-BLOCK-START
 
@@ -83,8 +84,7 @@ declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7"
 declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
 declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
 
-VERSION=5
-for i in {1..3}; do
+for i in {1..1}; do
     #static schedule based on info from part 1,2 results, no kubectl affinity or resource requests/limits
 
     substitute_job "streamcluster" | kubectl create -f -
@@ -106,7 +106,7 @@ for i in {1..3}; do
 
     wait
     kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run${i}.json"
-    gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./results/part3/version${VERSION}/measurements.txt"
+    gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
     kubectl delete job --all
     sleep 5
 done
