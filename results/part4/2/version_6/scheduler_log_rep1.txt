@@ -1,0 +1,2121 @@
+2026-05-12T16:54:51.735329 start scheduler
+2026-05-12T16:54:51.735377 start memcached [0,1,2,3] 4
+44224 (process ID) old priority 0, new priority -17
+44224 (process ID) old priority -17, new priority -17
+44226 (process ID) old priority 0, new priority -17
+44227 (process ID) old priority 0, new priority -17
+44228 (process ID) old priority 0, new priority -17
+44229 (process ID) old priority 0, new priority -17
+44230 (process ID) old priority 0, new priority -17
+44231 (process ID) old priority 0, new priority -17
+44232 (process ID) old priority 0, new priority -17
+44233 (process ID) old priority 0, new priority -17
+44234 (process ID) old priority 0, new priority -17
+2026-05-12T16:54:51.901720 custom memcached Reniced memcached to -17
+2026-05-12T16:55:01.183228 start freqmine [0,2] 2
+Memcached max thread CPU utilization: (3, 52.8)%
+2026-05-12T16:55:01.213490 update_cores freqmine [0]
+2026-05-12T16:55:05.264687 start barnes [2,1] 2
+Memcached max thread CPU utilization: (3, 58.8)%
+2026-05-12T16:55:05.299723 update_cores freqmine [2]
+2026-05-12T16:55:05.333421 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 59.7)%
+2026-05-12T16:55:07.385056 update_cores freqmine [0]
+2026-05-12T16:55:07.435067 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 59.3)%
+2026-05-12T16:55:09.491811 update_cores freqmine [2]
+2026-05-12T16:55:09.535457 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 59.7)%
+2026-05-12T16:55:11.591076 update_cores freqmine [0]
+2026-05-12T16:55:11.622271 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 60.8)%
+2026-05-12T16:55:13.671304 update_cores freqmine [2]
+2026-05-12T16:55:13.702361 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 84.5)%
+2026-05-12T16:55:15.755729 update_cores freqmine [0]
+2026-05-12T16:55:15.819504 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 85.5)%
+2026-05-12T16:55:17.885719 update_cores freqmine [2]
+2026-05-12T16:55:17.935500 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 87.2)%
+2026-05-12T16:55:20.020631 update_cores freqmine [0]
+2026-05-12T16:55:20.059694 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 86.4)%
+2026-05-12T16:55:22.135357 update_cores freqmine [2]
+2026-05-12T16:55:22.185340 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 85.5)%
+2026-05-12T16:55:24.253749 update_cores freqmine [0]
+2026-05-12T16:55:24.303770 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 84.3)%
+2026-05-12T16:55:26.381186 update_cores freqmine [2]
+2026-05-12T16:55:26.428660 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 85.7)%
+2026-05-12T16:55:28.503307 update_cores freqmine [0]
+2026-05-12T16:55:28.563246 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 67.2)%
+2026-05-12T16:55:30.622661 update_cores freqmine [2]
+2026-05-12T16:55:30.658358 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 65.0)%
+2026-05-12T16:55:32.704462 update_cores freqmine [0]
+2026-05-12T16:55:32.737477 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 66.7)%
+2026-05-12T16:55:34.788762 update_cores freqmine [2]
+2026-05-12T16:55:34.822342 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 64.4)%
+2026-05-12T16:55:36.873741 update_cores freqmine [0]
+2026-05-12T16:55:36.904048 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 64.1)%
+2026-05-12T16:55:38.958578 update_cores freqmine [2]
+2026-05-12T16:55:38.989271 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 65.5)%
+2026-05-12T16:55:41.049806 update_cores freqmine [0]
+2026-05-12T16:55:41.088081 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 65.8)%
+2026-05-12T16:55:43.143468 update_cores freqmine [2]
+2026-05-12T16:55:43.175372 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 50.4)%
+2026-05-12T16:55:45.220270 update_cores freqmine [0]
+2026-05-12T16:55:45.247567 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 52.5)%
+2026-05-12T16:55:47.290879 update_cores freqmine [2]
+2026-05-12T16:55:47.320103 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 48.7)%
+2026-05-12T16:55:49.364393 update_cores freqmine [0]
+2026-05-12T16:55:49.392328 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 50.0)%
+2026-05-12T16:55:51.438561 update_cores freqmine [2]
+2026-05-12T16:55:51.468047 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 48.3)%
+2026-05-12T16:55:53.516308 update_cores freqmine [0]
+2026-05-12T16:55:53.552995 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 50.0)%
+2026-05-12T16:55:55.600487 update_cores freqmine [2]
+2026-05-12T16:55:55.628292 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 48.7)%
+2026-05-12T16:55:57.669884 update_cores freqmine [0]
+2026-05-12T16:55:57.698894 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 59.2)%
+2026-05-12T16:55:59.745590 update_cores freqmine [2]
+2026-05-12T16:55:59.774430 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 62.2)%
+2026-05-12T16:56:01.830368 update_cores freqmine [0]
+2026-05-12T16:56:01.862218 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 59.3)%
+2026-05-12T16:56:03.914241 update_cores freqmine [2]
+2026-05-12T16:56:03.946352 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 59.7)%
+2026-05-12T16:56:05.996599 update_cores freqmine [0]
+2026-05-12T16:56:06.029457 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 59.5)%
+2026-05-12T16:56:08.080686 update_cores freqmine [2]
+2026-05-12T16:56:08.114007 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 58.5)%
+2026-05-12T16:56:10.161677 update_cores freqmine [0]
+2026-05-12T16:56:10.191073 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 61.1)%
+2026-05-12T16:56:12.235954 update_cores freqmine [2]
+2026-05-12T16:56:12.267321 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 54.2)%
+2026-05-12T16:56:14.311682 update_cores freqmine [0]
+2026-05-12T16:56:14.339361 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 45.0)%
+2026-05-12T16:56:16.385903 update_cores freqmine [2]
+2026-05-12T16:56:16.413935 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 46.4)%
+2026-05-12T16:56:18.457928 update_cores freqmine [0]
+2026-05-12T16:56:18.487251 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 46.5)%
+2026-05-12T16:56:20.548822 update_cores freqmine [2]
+2026-05-12T16:56:20.579027 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 45.5)%
+2026-05-12T16:56:22.622488 update_cores freqmine [0]
+2026-05-12T16:56:22.649707 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 46.8)%
+2026-05-12T16:56:24.694610 update_cores freqmine [2]
+2026-05-12T16:56:24.722629 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 46.0)%
+2026-05-12T16:56:26.765969 update_cores freqmine [0]
+2026-05-12T16:56:26.793919 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 47.3)%
+2026-05-12T16:56:28.846332 update_cores freqmine [2]
+2026-05-12T16:56:28.892411 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 86.4)%
+2026-05-12T16:56:30.972915 update_cores freqmine [0]
+2026-05-12T16:56:31.027130 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 87.2)%
+2026-05-12T16:56:33.102440 update_cores freqmine [2]
+2026-05-12T16:56:33.158518 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 84.7)%
+2026-05-12T16:56:35.232331 update_cores freqmine [0]
+2026-05-12T16:56:35.283783 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 83.2)%
+2026-05-12T16:56:37.359688 update_cores freqmine [2]
+2026-05-12T16:56:37.432500 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 86.2)%
+2026-05-12T16:56:39.511689 update_cores freqmine [0]
+2026-05-12T16:56:39.575974 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 83.8)%
+2026-05-12T16:56:41.649220 update_cores freqmine [2]
+2026-05-12T16:56:41.719835 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 86.1)%
+2026-05-12T16:56:43.788946 update_cores freqmine [0]
+2026-05-12T16:56:43.850027 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 88.7)%
+2026-05-12T16:56:45.934057 update_cores freqmine [2]
+2026-05-12T16:56:45.988748 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 86.1)%
+2026-05-12T16:56:48.065996 update_cores freqmine [0]
+2026-05-12T16:56:48.115273 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 86.8)%
+2026-05-12T16:56:50.186053 update_cores freqmine [2]
+2026-05-12T16:56:50.242541 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 85.5)%
+2026-05-12T16:56:52.313708 update_cores freqmine [0]
+2026-05-12T16:56:52.376132 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 85.5)%
+2026-05-12T16:56:54.449276 update_cores freqmine [2]
+2026-05-12T16:56:54.498008 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 86.8)%
+2026-05-12T16:56:56.573794 update_cores freqmine [0]
+2026-05-12T16:56:56.630253 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 88.8)%
+2026-05-12T16:56:58.698511 update_cores freqmine [2]
+2026-05-12T16:56:58.763935 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 82.7)%
+2026-05-12T16:57:00.840472 update_cores freqmine [0]
+2026-05-12T16:57:00.886878 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 82.9)%
+2026-05-12T16:57:02.953679 update_cores freqmine [2]
+2026-05-12T16:57:03.001097 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 82.3)%
+2026-05-12T16:57:05.067018 update_cores freqmine [0]
+2026-05-12T16:57:05.133256 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 86.4)%
+2026-05-12T16:57:07.207222 update_cores freqmine [2]
+2026-05-12T16:57:07.254212 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 85.2)%
+2026-05-12T16:57:09.346780 update_cores freqmine [0]
+2026-05-12T16:57:09.399243 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 83.0)%
+2026-05-12T16:57:11.471944 update_cores freqmine [2]
+2026-05-12T16:57:11.531195 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 83.5)%
+2026-05-12T16:57:13.608341 update_cores freqmine [0]
+2026-05-12T16:57:13.659233 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 45.5)%
+2026-05-12T16:57:15.714238 update_cores freqmine [2]
+2026-05-12T16:57:15.741855 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 46.9)%
+2026-05-12T16:57:17.785959 update_cores freqmine [0]
+2026-05-12T16:57:17.815174 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 45.1)%
+2026-05-12T16:57:19.860197 update_cores freqmine [2]
+2026-05-12T16:57:19.888717 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 43.6)%
+2026-05-12T16:57:21.935221 update_cores freqmine [0]
+2026-05-12T16:57:21.963308 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 47.8)%
+2026-05-12T16:57:24.008004 update_cores freqmine [2]
+2026-05-12T16:57:24.038191 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 45.5)%
+2026-05-12T16:57:26.082337 update_cores freqmine [0]
+2026-05-12T16:57:26.109575 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 45.5)%
+2026-05-12T16:57:28.155427 update_cores freqmine [2]
+2026-05-12T16:57:28.182992 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 6.7)%
+2026-05-12T16:57:30.223187 update_cores freqmine [1]
+2026-05-12T16:57:30.249571 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 4.4)%
+2026-05-12T16:57:32.285388 update_cores freqmine [3]
+2026-05-12T16:57:32.310908 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:57:34.345438 update_cores freqmine [1]
+2026-05-12T16:57:34.368272 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 4.4)%
+2026-05-12T16:57:36.402366 update_cores freqmine [3]
+2026-05-12T16:57:36.427054 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:57:38.462443 update_cores freqmine [1]
+2026-05-12T16:57:38.486420 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 1.1)%
+2026-05-12T16:57:40.534319 update_cores freqmine [3]
+2026-05-12T16:57:40.573255 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:57:42.610716 update_cores freqmine [1]
+2026-05-12T16:57:42.633379 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T16:57:44.678404 update_cores freqmine [2]
+2026-05-12T16:57:44.710468 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 68.9)%
+2026-05-12T16:57:46.759407 update_cores freqmine [0]
+2026-05-12T16:57:46.793523 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 69.7)%
+2026-05-12T16:57:48.844572 update_cores freqmine [2]
+2026-05-12T16:57:48.881418 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 68.9)%
+2026-05-12T16:57:50.938566 update_cores freqmine [0]
+2026-05-12T16:57:50.971619 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 69.0)%
+2026-05-12T16:57:53.023199 update_cores freqmine [2]
+2026-05-12T16:57:53.056338 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 69.2)%
+2026-05-12T16:57:55.113124 update_cores freqmine [0]
+2026-05-12T16:57:55.151224 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 70.2)%
+2026-05-12T16:57:57.206489 update_cores freqmine [2]
+2026-05-12T16:57:57.245926 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 45.2)%
+2026-05-12T16:57:59.287538 update_cores freqmine [0]
+2026-05-12T16:57:59.310191 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 8.9)%
+2026-05-12T16:58:01.347483 update_cores freqmine [2]
+2026-05-12T16:58:01.370289 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 10.0)%
+2026-05-12T16:58:03.406011 update_cores freqmine [1]
+2026-05-12T16:58:03.430644 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 3.5)%
+2026-05-12T16:58:05.467893 update_cores freqmine [3]
+2026-05-12T16:58:05.492066 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:58:07.535350 update_cores freqmine [1]
+2026-05-12T16:58:07.563677 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 5.7)%
+2026-05-12T16:58:09.608509 update_cores freqmine [3]
+2026-05-12T16:58:09.634661 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:58:11.671016 update_cores freqmine [1]
+2026-05-12T16:58:11.693244 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 8.9)%
+2026-05-12T16:58:13.729432 update_cores freqmine [3]
+2026-05-12T16:58:13.754206 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:58:15.794836 update_cores freqmine [1]
+2026-05-12T16:58:15.822966 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 46.8)%
+2026-05-12T16:58:17.871951 update_cores freqmine [3]
+2026-05-12T16:58:17.910634 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:58:19.956387 update_cores freqmine [1]
+2026-05-12T16:58:19.983742 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 46.8)%
+2026-05-12T16:58:22.032923 update_cores freqmine [3]
+2026-05-12T16:58:22.060184 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:58:24.103506 update_cores freqmine [1]
+2026-05-12T16:58:24.132587 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 50.8)%
+2026-05-12T16:58:26.176564 update_cores freqmine [2]
+2026-05-12T16:58:26.204196 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 51.8)%
+2026-05-12T16:58:28.248988 update_cores freqmine [0]
+2026-05-12T16:58:28.279239 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 22.6)%
+2026-05-12T16:58:30.318931 update_cores freqmine [2]
+2026-05-12T16:58:30.342010 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 20.7)%
+2026-05-12T16:58:32.379014 update_cores freqmine [0]
+2026-05-12T16:58:32.403618 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 22.1)%
+2026-05-12T16:58:34.442467 update_cores freqmine [2]
+2026-05-12T16:58:34.467199 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 20.4)%
+2026-05-12T16:58:36.515228 update_cores freqmine [3]
+2026-05-12T16:58:36.548519 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:58:38.595483 update_cores freqmine [2]
+2026-05-12T16:58:38.620606 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 20.9)%
+2026-05-12T16:58:40.662502 update_cores freqmine [0]
+2026-05-12T16:58:40.691263 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 18.7)%
+2026-05-12T16:58:42.730478 update_cores freqmine [2]
+2026-05-12T16:58:42.755934 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 82.1)%
+2026-05-12T16:58:44.813674 update_cores freqmine [0]
+2026-05-12T16:58:44.859178 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 83.9)%
+2026-05-12T16:58:46.932036 update_cores freqmine [2]
+2026-05-12T16:58:46.992940 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 81.2)%
+2026-05-12T16:58:49.073505 update_cores freqmine [0]
+2026-05-12T16:58:49.129315 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 82.9)%
+2026-05-12T16:58:51.189979 update_cores freqmine [2]
+2026-05-12T16:58:51.227567 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 82.0)%
+2026-05-12T16:58:53.296484 update_cores freqmine [0]
+2026-05-12T16:58:53.339666 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 83.0)%
+2026-05-12T16:58:55.427323 update_cores freqmine [2]
+2026-05-12T16:58:55.477606 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 82.1)%
+2026-05-12T16:58:57.559314 update_cores freqmine [0]
+2026-05-12T16:58:57.604407 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 20.9)%
+2026-05-12T16:58:59.663461 update_cores freqmine [2]
+2026-05-12T16:58:59.685713 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 10.1)%
+2026-05-12T16:59:01.720044 update_cores freqmine [1]
+2026-05-12T16:59:01.742351 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 5.6)%
+2026-05-12T16:59:03.777350 update_cores freqmine [3]
+2026-05-12T16:59:03.801538 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:05.836468 update_cores freqmine [1]
+2026-05-12T16:59:05.859129 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 4.5)%
+2026-05-12T16:59:07.893011 update_cores freqmine [3]
+2026-05-12T16:59:07.919733 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:09.956644 update_cores freqmine [1]
+2026-05-12T16:59:09.980117 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 4.5)%
+2026-05-12T16:59:12.015924 update_cores freqmine [3]
+2026-05-12T16:59:12.041309 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:14.079463 update_cores freqmine [2]
+2026-05-12T16:59:14.104056 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 13.5)%
+2026-05-12T16:59:16.144124 update_cores freqmine [3]
+2026-05-12T16:59:16.169998 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:18.206879 update_cores freqmine [1]
+2026-05-12T16:59:18.230715 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 11.0)%
+2026-05-12T16:59:20.277774 update_cores freqmine [3]
+2026-05-12T16:59:20.304458 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:22.338544 update_cores freqmine [1]
+2026-05-12T16:59:22.362631 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 10.1)%
+2026-05-12T16:59:24.401721 update_cores freqmine [3]
+2026-05-12T16:59:24.426982 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:26.463791 update_cores freqmine [1]
+2026-05-12T16:59:26.487976 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 12.2)%
+2026-05-12T16:59:28.530783 update_cores freqmine [3]
+2026-05-12T16:59:28.561798 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:30.609569 update_cores freqmine [1]
+2026-05-12T16:59:30.649840 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 76.1)%
+2026-05-12T16:59:32.707232 update_cores freqmine [2]
+2026-05-12T16:59:32.740640 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 76.1)%
+2026-05-12T16:59:34.801161 update_cores freqmine [0]
+2026-05-12T16:59:34.845297 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 77.1)%
+2026-05-12T16:59:36.915356 update_cores freqmine [2]
+2026-05-12T16:59:36.954847 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 73.9)%
+2026-05-12T16:59:39.025566 update_cores freqmine [0]
+2026-05-12T16:59:39.062910 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 76.1)%
+2026-05-12T16:59:41.130977 update_cores freqmine [2]
+2026-05-12T16:59:41.194858 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 75.7)%
+2026-05-12T16:59:43.283417 update_cores freqmine [0]
+2026-05-12T16:59:43.330365 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 3.3)%
+2026-05-12T16:59:45.374867 update_cores freqmine [2]
+2026-05-12T16:59:45.397028 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 3.3)%
+2026-05-12T16:59:47.430186 update_cores freqmine [3]
+2026-05-12T16:59:47.452574 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:49.486355 update_cores freqmine [1]
+2026-05-12T16:59:49.510778 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 3.3)%
+2026-05-12T16:59:51.567042 update_cores freqmine [3]
+2026-05-12T16:59:51.596728 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:53.634803 update_cores freqmine [1]
+2026-05-12T16:59:53.659576 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 1.1)%
+2026-05-12T16:59:55.696410 update_cores freqmine [3]
+2026-05-12T16:59:55.723236 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T16:59:57.765871 update_cores freqmine [1]
+2026-05-12T16:59:57.796009 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 57.3)%
+2026-05-12T16:59:59.850379 update_cores freqmine [0]
+2026-05-12T16:59:59.880687 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 61.5)%
+2026-05-12T17:00:01.936104 update_cores freqmine [2]
+2026-05-12T17:00:01.985608 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 60.9)%
+2026-05-12T17:00:04.039293 update_cores freqmine [0]
+2026-05-12T17:00:04.069909 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 62.4)%
+2026-05-12T17:00:06.124874 update_cores freqmine [2]
+2026-05-12T17:00:06.156016 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 60.3)%
+2026-05-12T17:00:08.210202 update_cores freqmine [0]
+2026-05-12T17:00:08.244613 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 60.7)%
+2026-05-12T17:00:10.293236 update_cores freqmine [2]
+2026-05-12T17:00:10.325458 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T17:00:12.375600 update_cores freqmine [0]
+2026-05-12T17:00:12.405273 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 39.2)%
+2026-05-12T17:00:14.448411 update_cores freqmine [2]
+2026-05-12T17:00:14.473540 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 19.3)%
+2026-05-12T17:00:16.513907 update_cores freqmine [3]
+2026-05-12T17:00:16.555054 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:00:18.600412 update_cores freqmine [2]
+2026-05-12T17:00:18.628113 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 22.3)%
+2026-05-12T17:00:20.667654 update_cores freqmine [1]
+2026-05-12T17:00:20.691672 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 18.3)%
+2026-05-12T17:00:22.729700 update_cores freqmine [3]
+2026-05-12T17:00:22.756481 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:00:24.797186 update_cores freqmine [1]
+2026-05-12T17:00:24.822673 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 13.5)%
+2026-05-12T17:00:26.863545 update_cores freqmine [3]
+2026-05-12T17:00:26.891281 update_cores barnes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:00:28.949084 update_cores freqmine [1]
+2026-05-12T17:00:28.987827 update_cores barnes [1]
+Memcached max thread CPU utilization: (3, 81.7)%
+2026-05-12T17:00:31.060276 update_cores freqmine [0]
+2026-05-12T17:00:31.132008 update_cores barnes [0]
+Memcached max thread CPU utilization: (3, 82.4)%
+2026-05-12T17:00:33.198428 update_cores freqmine [2]
+2026-05-12T17:00:33.255400 update_cores barnes [2]
+Memcached max thread CPU utilization: (3, 84.4)%
+2026-05-12T17:00:35.325596 update_cores freqmine [0]
+2026-05-12T17:00:35.338460 update_cores barnes [0]
+2026-05-12T17:00:35.362032 end barnes
+2026-05-12T17:00:37.849363 start blackscholes [2] 2
+Memcached max thread CPU utilization: (3, 82.7)%
+2026-05-12T17:00:37.897006 update_cores freqmine [2]
+2026-05-12T17:00:37.965238 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 82.7)%
+2026-05-12T17:00:40.047138 update_cores freqmine [0]
+2026-05-12T17:00:40.094334 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 81.4)%
+2026-05-12T17:00:42.173298 update_cores freqmine [2]
+2026-05-12T17:00:42.223992 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 62.3)%
+2026-05-12T17:00:44.281008 update_cores freqmine [0]
+2026-05-12T17:00:44.307137 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 38.1)%
+2026-05-12T17:00:46.356875 update_cores freqmine [2]
+2026-05-12T17:00:46.385549 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 39.0)%
+2026-05-12T17:00:48.435246 update_cores freqmine [0]
+2026-05-12T17:00:48.463514 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 39.0)%
+2026-05-12T17:00:51.366636 update_cores freqmine [2]
+2026-05-12T17:00:51.969448 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 42.1)%
+2026-05-12T17:00:54.808057 update_cores freqmine [0]
+2026-05-12T17:00:54.982323 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 38.3)%
+2026-05-12T17:00:57.029654 update_cores freqmine [2]
+2026-05-12T17:00:57.056397 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 47.2)%
+2026-05-12T17:00:59.115112 update_cores freqmine [0]
+2026-05-12T17:00:59.150541 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 71.8)%
+2026-05-12T17:01:01.231608 update_cores freqmine [2]
+2026-05-12T17:01:01.282923 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 70.9)%
+2026-05-12T17:01:03.371424 update_cores freqmine [0]
+2026-05-12T17:01:03.407164 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 73.3)%
+2026-05-12T17:01:05.479460 update_cores freqmine [2]
+2026-05-12T17:01:05.522565 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 71.8)%
+2026-05-12T17:01:07.607976 update_cores freqmine [0]
+2026-05-12T17:01:07.651764 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 72.3)%
+2026-05-12T17:01:09.723704 update_cores freqmine [2]
+2026-05-12T17:01:09.772393 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 72.5)%
+2026-05-12T17:01:11.846966 update_cores freqmine [0]
+2026-05-12T17:01:11.886705 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 72.2)%
+2026-05-12T17:01:13.950803 update_cores freqmine [2]
+2026-05-12T17:01:13.986578 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 74.1)%
+2026-05-12T17:01:16.050976 update_cores freqmine [0]
+2026-05-12T17:01:16.087368 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 75.9)%
+2026-05-12T17:01:18.157047 update_cores freqmine [2]
+2026-05-12T17:01:18.201163 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 72.4)%
+2026-05-12T17:01:20.271332 update_cores freqmine [0]
+2026-05-12T17:01:20.313981 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 73.1)%
+2026-05-12T17:01:22.371572 update_cores freqmine [2]
+2026-05-12T17:01:22.404831 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 73.7)%
+2026-05-12T17:01:24.471847 update_cores freqmine [0]
+2026-05-12T17:01:24.513991 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 73.5)%
+2026-05-12T17:01:26.613237 update_cores freqmine [2]
+2026-05-12T17:01:26.662108 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 72.9)%
+2026-05-12T17:01:28.737217 update_cores freqmine [0]
+2026-05-12T17:01:28.775016 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 57.4)%
+2026-05-12T17:01:30.838920 update_cores freqmine [2]
+2026-05-12T17:01:30.868404 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 58.9)%
+2026-05-12T17:01:32.919224 update_cores freqmine [0]
+2026-05-12T17:01:32.949477 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 58.0)%
+2026-05-12T17:01:35.001236 update_cores freqmine [2]
+2026-05-12T17:01:35.030849 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 57.4)%
+2026-05-12T17:01:37.084229 update_cores freqmine [0]
+2026-05-12T17:01:37.115385 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 59.3)%
+2026-05-12T17:01:39.170187 update_cores freqmine [2]
+2026-05-12T17:01:39.201407 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 61.5)%
+2026-05-12T17:01:41.262326 update_cores freqmine [0]
+2026-05-12T17:01:41.297779 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 58.3)%
+2026-05-12T17:01:43.357890 update_cores freqmine [2]
+2026-05-12T17:01:43.388511 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 61.6)%
+2026-05-12T17:01:45.442195 update_cores freqmine [0]
+2026-05-12T17:01:45.488328 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 62.1)%
+2026-05-12T17:01:47.574664 update_cores freqmine [2]
+2026-05-12T17:01:47.617397 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 62.7)%
+2026-05-12T17:01:49.675367 update_cores freqmine [0]
+2026-05-12T17:01:49.705528 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 62.3)%
+2026-05-12T17:01:51.764416 update_cores freqmine [2]
+2026-05-12T17:01:51.796449 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 62.4)%
+2026-05-12T17:01:53.854947 update_cores freqmine [0]
+2026-05-12T17:01:53.890691 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 62.7)%
+2026-05-12T17:01:55.951854 update_cores freqmine [2]
+2026-05-12T17:01:55.983721 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 63.2)%
+2026-05-12T17:01:58.043017 update_cores freqmine [0]
+2026-05-12T17:01:58.074305 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 38.2)%
+2026-05-12T17:02:00.125671 update_cores freqmine [2]
+2026-05-12T17:02:00.154307 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 37.0)%
+2026-05-12T17:02:02.202304 update_cores freqmine [0]
+2026-05-12T17:02:02.229539 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 40.4)%
+2026-05-12T17:02:04.278063 update_cores freqmine [2]
+2026-05-12T17:02:04.304726 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 37.3)%
+2026-05-12T17:02:06.350900 update_cores freqmine [0]
+2026-05-12T17:02:06.378659 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 41.2)%
+2026-05-12T17:02:08.426888 update_cores freqmine [2]
+2026-05-12T17:02:08.455329 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 37.6)%
+2026-05-12T17:02:10.502157 update_cores freqmine [0]
+2026-05-12T17:02:10.531039 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 39.8)%
+2026-05-12T17:02:12.586622 update_cores freqmine [2]
+2026-05-12T17:02:12.613223 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 71.9)%
+2026-05-12T17:02:14.667848 update_cores freqmine [0]
+2026-05-12T17:02:14.704433 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 76.3)%
+2026-05-12T17:02:16.772433 update_cores freqmine [2]
+2026-05-12T17:02:16.814449 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 75.9)%
+2026-05-12T17:02:18.886246 update_cores freqmine [0]
+2026-05-12T17:02:18.924722 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 74.8)%
+2026-05-12T17:02:20.991403 update_cores freqmine [2]
+2026-05-12T17:02:21.030978 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 72.8)%
+2026-05-12T17:02:23.100265 update_cores freqmine [0]
+2026-05-12T17:02:23.142065 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 74.8)%
+2026-05-12T17:02:25.203856 update_cores freqmine [2]
+2026-05-12T17:02:25.244969 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 76.5)%
+2026-05-12T17:02:27.313345 update_cores freqmine [0]
+2026-05-12T17:02:27.350368 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T17:02:29.414360 update_cores freqmine [2]
+2026-05-12T17:02:29.443895 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 45.7)%
+2026-05-12T17:02:31.494241 update_cores freqmine [0]
+2026-05-12T17:02:31.523862 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 45.8)%
+2026-05-12T17:02:33.587053 update_cores freqmine [2]
+2026-05-12T17:02:33.616174 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 48.6)%
+2026-05-12T17:02:35.680819 update_cores freqmine [0]
+2026-05-12T17:02:35.722046 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 50.0)%
+2026-05-12T17:02:37.775396 update_cores freqmine [2]
+2026-05-12T17:02:37.803721 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 48.6)%
+2026-05-12T17:02:39.854518 update_cores freqmine [0]
+2026-05-12T17:02:39.882321 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 49.0)%
+2026-05-12T17:02:41.933730 update_cores freqmine [2]
+2026-05-12T17:02:41.963565 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 50.0)%
+2026-05-12T17:02:44.014298 update_cores freqmine [0]
+2026-05-12T17:02:44.044527 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 55.9)%
+2026-05-12T17:02:46.102511 update_cores freqmine [2]
+2026-05-12T17:02:46.135306 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 58.9)%
+2026-05-12T17:02:48.191694 update_cores freqmine [0]
+2026-05-12T17:02:48.223120 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 59.1)%
+2026-05-12T17:02:50.279702 update_cores freqmine [2]
+2026-05-12T17:02:50.311547 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 60.2)%
+2026-05-12T17:02:52.367404 update_cores freqmine [0]
+2026-05-12T17:02:52.397933 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 58.9)%
+2026-05-12T17:02:54.460309 update_cores freqmine [2]
+2026-05-12T17:02:54.491230 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 56.0)%
+2026-05-12T17:02:56.551966 update_cores freqmine [0]
+2026-05-12T17:02:56.592562 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 56.9)%
+2026-05-12T17:02:58.653541 update_cores freqmine [2]
+2026-05-12T17:02:58.683489 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 41.3)%
+2026-05-12T17:03:00.738969 update_cores freqmine [0]
+2026-05-12T17:03:00.766842 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 40.8)%
+2026-05-12T17:03:02.816214 update_cores freqmine [2]
+2026-05-12T17:03:02.844419 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 42.9)%
+2026-05-12T17:03:04.900280 update_cores freqmine [0]
+2026-05-12T17:03:04.928551 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 43.9)%
+2026-05-12T17:03:06.977322 update_cores freqmine [2]
+2026-05-12T17:03:07.006291 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 45.4)%
+2026-05-12T17:03:09.055445 update_cores freqmine [0]
+2026-05-12T17:03:09.091502 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 43.3)%
+2026-05-12T17:03:11.143041 update_cores freqmine [2]
+2026-05-12T17:03:11.169523 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 41.3)%
+2026-05-12T17:03:13.219914 update_cores freqmine [0]
+2026-05-12T17:03:13.250542 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 13.6)%
+2026-05-12T17:03:15.298459 update_cores freqmine [3]
+2026-05-12T17:03:15.325401 update_cores blackscholes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:03:17.367107 update_cores freqmine [1]
+2026-05-12T17:03:17.390536 update_cores blackscholes [1]
+Memcached max thread CPU utilization: (3, 9.1)%
+2026-05-12T17:03:19.431984 update_cores freqmine [3]
+2026-05-12T17:03:19.461468 update_cores blackscholes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:03:21.503434 update_cores freqmine [1]
+2026-05-12T17:03:21.528368 update_cores blackscholes [1]
+Memcached max thread CPU utilization: (3, 9.1)%
+2026-05-12T17:03:23.576649 update_cores freqmine [3]
+2026-05-12T17:03:23.601586 update_cores blackscholes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:03:25.642470 update_cores freqmine [1]
+2026-05-12T17:03:25.667130 update_cores blackscholes [1]
+Memcached max thread CPU utilization: (3, 9.1)%
+2026-05-12T17:03:27.706539 update_cores freqmine [3]
+2026-05-12T17:03:27.731522 update_cores blackscholes [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:03:29.779967 update_cores freqmine [1]
+2026-05-12T17:03:29.813061 update_cores blackscholes [1]
+Memcached max thread CPU utilization: (3, 71.3)%
+2026-05-12T17:03:31.875171 update_cores freqmine [0]
+2026-05-12T17:03:31.910122 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 79.6)%
+2026-05-12T17:03:33.980023 update_cores freqmine [2]
+2026-05-12T17:03:34.022567 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 75.7)%
+2026-05-12T17:03:36.091403 update_cores freqmine [0]
+2026-05-12T17:03:36.126050 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 77.2)%
+2026-05-12T17:03:38.191763 update_cores freqmine [2]
+2026-05-12T17:03:38.235364 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 75.2)%
+2026-05-12T17:03:40.303273 update_cores freqmine [0]
+2026-05-12T17:03:40.342478 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 73.5)%
+2026-05-12T17:03:42.406649 update_cores freqmine [2]
+2026-05-12T17:03:42.444269 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 67.5)%
+2026-05-12T17:03:44.507712 update_cores freqmine [0]
+2026-05-12T17:03:44.545138 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 65.8)%
+2026-05-12T17:03:46.614507 update_cores freqmine [2]
+2026-05-12T17:03:46.650999 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 63.2)%
+2026-05-12T17:03:48.708672 update_cores freqmine [0]
+2026-05-12T17:03:48.740190 update_cores blackscholes [0]
+Memcached max thread CPU utilization: (3, 65.3)%
+2026-05-12T17:03:50.798520 update_cores freqmine [2]
+2026-05-12T17:03:50.831037 update_cores blackscholes [2]
+Memcached max thread CPU utilization: (3, 69.0)%
+2026-05-12T17:03:53.641510 update_cores freqmine [0]
+2026-05-12T17:03:54.362590 update_cores blackscholes [0]
+2026-05-12T17:03:54.385687 end blackscholes
+2026-05-12T17:03:56.698020 start canneal [2,1] 2
+Memcached max thread CPU utilization: (3, 62.8)%
+2026-05-12T17:03:56.730086 update_cores freqmine [2]
+2026-05-12T17:03:56.765787 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 63.2)%
+2026-05-12T17:03:58.837876 update_cores freqmine [0]
+2026-05-12T17:03:58.884850 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 78.9)%
+2026-05-12T17:04:00.961650 update_cores freqmine [2]
+2026-05-12T17:04:01.002209 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 78.6)%
+2026-05-12T17:04:03.109196 update_cores freqmine [0]
+2026-05-12T17:04:03.367958 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 80.5)%
+2026-05-12T17:04:05.438797 update_cores freqmine [2]
+2026-05-12T17:04:05.487052 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 82.5)%
+2026-05-12T17:04:07.579804 update_cores freqmine [0]
+2026-05-12T17:04:07.625370 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 78.6)%
+2026-05-12T17:04:09.724500 update_cores freqmine [2]
+2026-05-12T17:04:09.767169 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 77.0)%
+2026-05-12T17:04:11.857200 update_cores freqmine [0]
+2026-05-12T17:04:11.923497 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 79.1)%
+2026-05-12T17:04:13.999356 update_cores freqmine [2]
+2026-05-12T17:04:14.054918 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 87.9)%
+2026-05-12T17:04:16.145629 update_cores freqmine [0]
+2026-05-12T17:04:16.205981 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 88.3)%
+2026-05-12T17:04:18.299642 update_cores freqmine [2]
+2026-05-12T17:04:18.355159 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 89.4)%
+2026-05-12T17:04:20.456238 update_cores freqmine [0]
+2026-05-12T17:04:20.519373 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 87.6)%
+2026-05-12T17:04:22.601198 update_cores freqmine [2]
+2026-05-12T17:04:22.680516 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 91.5)%
+2026-05-12T17:04:24.768270 update_cores freqmine [0]
+2026-05-12T17:04:24.819633 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 88.6)%
+2026-05-12T17:04:26.915894 update_cores freqmine [2]
+2026-05-12T17:04:26.982198 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 85.3)%
+2026-05-12T17:04:29.063413 update_cores freqmine [0]
+2026-05-12T17:04:29.106636 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 74.1)%
+2026-05-12T17:04:31.182232 update_cores freqmine [2]
+2026-05-12T17:04:31.225691 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 72.5)%
+2026-05-12T17:04:33.298821 update_cores freqmine [0]
+2026-05-12T17:04:33.340007 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 73.9)%
+2026-05-12T17:04:35.412651 update_cores freqmine [2]
+2026-05-12T17:04:35.453218 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 74.3)%
+2026-05-12T17:04:37.523018 update_cores freqmine [0]
+2026-05-12T17:04:37.567781 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 76.6)%
+2026-05-12T17:04:39.654212 update_cores freqmine [2]
+2026-05-12T17:04:39.689070 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 77.9)%
+2026-05-12T17:04:41.759244 update_cores freqmine [0]
+2026-05-12T17:04:41.803046 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 75.7)%
+2026-05-12T17:04:43.864031 update_cores freqmine [2]
+2026-05-12T17:04:43.893213 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 43.8)%
+2026-05-12T17:04:45.941620 update_cores freqmine [0]
+2026-05-12T17:04:45.968126 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 43.8)%
+2026-05-12T17:04:48.015013 update_cores freqmine [2]
+2026-05-12T17:04:48.044591 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 41.7)%
+2026-05-12T17:04:50.092440 update_cores freqmine [0]
+2026-05-12T17:04:50.119005 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 42.6)%
+2026-05-12T17:04:52.172594 update_cores freqmine [2]
+2026-05-12T17:04:52.201621 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 44.3)%
+2026-05-12T17:04:54.250222 update_cores freqmine [0]
+2026-05-12T17:04:54.278283 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 42.9)%
+2026-05-12T17:04:56.327568 update_cores freqmine [2]
+2026-05-12T17:04:56.356159 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 42.7)%
+2026-05-12T17:04:58.404701 update_cores freqmine [0]
+2026-05-12T17:04:58.430932 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 9.3)%
+2026-05-12T17:05:00.476081 update_cores freqmine [2]
+2026-05-12T17:05:00.501429 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 11.4)%
+2026-05-12T17:05:02.546579 update_cores freqmine [1]
+2026-05-12T17:05:02.573657 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 3.5)%
+2026-05-12T17:05:04.623564 update_cores freqmine [3]
+2026-05-12T17:05:04.648333 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:05:06.691322 update_cores freqmine [1]
+2026-05-12T17:05:06.715503 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 10.0)%
+2026-05-12T17:05:08.755662 update_cores freqmine [3]
+2026-05-12T17:05:08.781008 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:05:10.822540 update_cores freqmine [1]
+2026-05-12T17:05:10.847093 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 5.7)%
+2026-05-12T17:05:12.889552 update_cores freqmine [3]
+2026-05-12T17:05:12.914498 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:05:14.962034 update_cores freqmine [0]
+2026-05-12T17:05:14.996253 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 71.3)%
+2026-05-12T17:05:17.059672 update_cores freqmine [2]
+2026-05-12T17:05:17.091333 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 69.2)%
+2026-05-12T17:05:19.157215 update_cores freqmine [0]
+2026-05-12T17:05:19.191601 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 70.7)%
+2026-05-12T17:05:21.252614 update_cores freqmine [2]
+2026-05-12T17:05:21.289105 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 70.6)%
+2026-05-12T17:05:23.352459 update_cores freqmine [0]
+2026-05-12T17:05:23.387862 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 69.8)%
+2026-05-12T17:05:25.452585 update_cores freqmine [2]
+2026-05-12T17:05:25.487215 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 70.9)%
+2026-05-12T17:05:27.550202 update_cores freqmine [0]
+2026-05-12T17:05:27.591972 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 70.1)%
+2026-05-12T17:05:29.658132 update_cores freqmine [2]
+2026-05-12T17:05:29.693982 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 69.8)%
+2026-05-12T17:05:31.759714 update_cores freqmine [0]
+2026-05-12T17:05:31.797915 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 70.4)%
+2026-05-12T17:05:33.864630 update_cores freqmine [2]
+2026-05-12T17:05:33.899254 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 68.7)%
+2026-05-12T17:05:35.957659 update_cores freqmine [0]
+2026-05-12T17:05:35.995058 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 69.0)%
+2026-05-12T17:05:38.055321 update_cores freqmine [2]
+2026-05-12T17:05:38.089348 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 70.1)%
+2026-05-12T17:05:40.153383 update_cores freqmine [0]
+2026-05-12T17:05:40.188607 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 69.2)%
+2026-05-12T17:05:42.262375 update_cores freqmine [2]
+2026-05-12T17:05:42.295836 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 79.6)%
+2026-05-12T17:05:44.379453 update_cores freqmine [0]
+2026-05-12T17:05:44.424210 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 77.9)%
+2026-05-12T17:05:46.500326 update_cores freqmine [2]
+2026-05-12T17:05:46.556230 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 78.2)%
+2026-05-12T17:05:48.648428 update_cores freqmine [0]
+2026-05-12T17:05:48.735907 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 78.4)%
+2026-05-12T17:05:50.830378 update_cores freqmine [2]
+2026-05-12T17:05:50.880783 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 80.4)%
+2026-05-12T17:05:52.959672 update_cores freqmine [0]
+2026-05-12T17:05:53.037770 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 80.9)%
+2026-05-12T17:05:55.122549 update_cores freqmine [2]
+2026-05-12T17:05:55.166162 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 81.8)%
+2026-05-12T17:05:57.240040 update_cores freqmine [0]
+2026-05-12T17:05:57.286542 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 67.5)%
+2026-05-12T17:05:59.347132 update_cores freqmine [2]
+2026-05-12T17:05:59.379969 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 59.1)%
+2026-05-12T17:06:01.434295 update_cores freqmine [0]
+2026-05-12T17:06:01.466518 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T17:06:03.520724 update_cores freqmine [2]
+2026-05-12T17:06:03.554244 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 59.0)%
+2026-05-12T17:06:05.617979 update_cores freqmine [0]
+2026-05-12T17:06:05.651413 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 59.5)%
+2026-05-12T17:06:07.710627 update_cores freqmine [2]
+2026-05-12T17:06:07.744531 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 57.9)%
+2026-05-12T17:06:09.804954 update_cores freqmine [0]
+2026-05-12T17:06:09.837676 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 59.6)%
+2026-05-12T17:06:11.899525 update_cores freqmine [2]
+2026-05-12T17:06:11.932869 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 53.6)%
+2026-05-12T17:06:13.982645 update_cores freqmine [0]
+2026-05-12T17:06:14.009079 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 26.3)%
+2026-05-12T17:06:16.053441 update_cores freqmine [2]
+2026-05-12T17:06:16.079602 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 24.7)%
+2026-05-12T17:06:18.122296 update_cores freqmine [0]
+2026-05-12T17:06:18.148859 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 23.1)%
+2026-05-12T17:06:20.195653 update_cores freqmine [2]
+2026-05-12T17:06:20.221441 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 23.9)%
+2026-05-12T17:06:22.266341 update_cores freqmine [0]
+2026-05-12T17:06:22.291177 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 28.1)%
+2026-05-12T17:06:24.336723 update_cores freqmine [2]
+2026-05-12T17:06:24.362580 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 21.3)%
+2026-05-12T17:06:26.408681 update_cores freqmine [0]
+2026-05-12T17:06:26.432909 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 24.7)%
+2026-05-12T17:06:28.478125 update_cores freqmine [2]
+2026-05-12T17:06:28.505310 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 68.4)%
+2026-05-12T17:06:30.586290 update_cores freqmine [0]
+2026-05-12T17:06:30.648806 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 70.7)%
+2026-05-12T17:06:32.721922 update_cores freqmine [2]
+2026-05-12T17:06:32.765445 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 71.3)%
+2026-05-12T17:06:34.843341 update_cores freqmine [0]
+2026-05-12T17:06:34.878697 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 67.8)%
+2026-05-12T17:06:36.949562 update_cores freqmine [2]
+2026-05-12T17:06:36.991979 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 72.4)%
+2026-05-12T17:06:39.062087 update_cores freqmine [0]
+2026-05-12T17:06:39.100358 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 69.2)%
+2026-05-12T17:06:41.172951 update_cores freqmine [2]
+2026-05-12T17:06:41.208384 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 69.0)%
+2026-05-12T17:06:43.271888 update_cores freqmine [0]
+2026-05-12T17:06:43.315140 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 61.2)%
+2026-05-12T17:06:45.384719 update_cores freqmine [2]
+2026-05-12T17:06:45.415698 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 59.6)%
+2026-05-12T17:06:47.471326 update_cores freqmine [0]
+2026-05-12T17:06:47.502725 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 59.8)%
+2026-05-12T17:06:49.580836 update_cores freqmine [2]
+2026-05-12T17:06:49.634901 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 60.7)%
+2026-05-12T17:06:51.698672 update_cores freqmine [0]
+2026-05-12T17:06:51.734671 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 59.8)%
+2026-05-12T17:06:53.792925 update_cores freqmine [2]
+2026-05-12T17:06:53.833388 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 60.9)%
+2026-05-12T17:06:55.891232 update_cores freqmine [0]
+2026-05-12T17:06:55.923140 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 61.5)%
+2026-05-12T17:06:57.977799 update_cores freqmine [2]
+2026-05-12T17:06:58.018322 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 52.2)%
+2026-05-12T17:07:00.073378 update_cores freqmine [0]
+2026-05-12T17:07:00.101256 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 50.9)%
+2026-05-12T17:07:02.157476 update_cores freqmine [2]
+2026-05-12T17:07:02.187041 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 53.1)%
+2026-05-12T17:07:04.236502 update_cores freqmine [0]
+2026-05-12T17:07:04.264467 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 50.9)%
+2026-05-12T17:07:06.320903 update_cores freqmine [2]
+2026-05-12T17:07:06.352063 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 51.4)%
+2026-05-12T17:07:08.405317 update_cores freqmine [0]
+2026-05-12T17:07:08.436462 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 50.5)%
+2026-05-12T17:07:10.487694 update_cores freqmine [2]
+2026-05-12T17:07:10.524342 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 48.6)%
+2026-05-12T17:07:12.591984 update_cores freqmine [0]
+2026-05-12T17:07:12.628452 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 57.0)%
+2026-05-12T17:07:14.683439 update_cores freqmine [2]
+2026-05-12T17:07:14.715881 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 54.1)%
+2026-05-12T17:07:16.772342 update_cores freqmine [0]
+2026-05-12T17:07:16.803130 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 55.4)%
+2026-05-12T17:07:18.857654 update_cores freqmine [2]
+2026-05-12T17:07:18.887715 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 55.4)%
+2026-05-12T17:07:20.942118 update_cores freqmine [0]
+2026-05-12T17:07:20.974190 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 53.6)%
+2026-05-12T17:07:23.046535 update_cores freqmine [2]
+2026-05-12T17:07:23.085484 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 56.4)%
+2026-05-12T17:07:25.143338 update_cores freqmine [0]
+2026-05-12T17:07:25.175071 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 57.0)%
+2026-05-12T17:07:27.228201 update_cores freqmine [2]
+2026-05-12T17:07:27.260396 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 48.1)%
+2026-05-12T17:07:29.310068 update_cores freqmine [0]
+2026-05-12T17:07:29.338333 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 42.7)%
+2026-05-12T17:07:31.385225 update_cores freqmine [2]
+2026-05-12T17:07:31.411443 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 37.0)%
+2026-05-12T17:07:33.459283 update_cores freqmine [0]
+2026-05-12T17:07:33.486672 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 42.5)%
+2026-05-12T17:07:35.533018 update_cores freqmine [2]
+2026-05-12T17:07:35.564544 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 39.2)%
+2026-05-12T17:07:37.619709 update_cores freqmine [0]
+2026-05-12T17:07:37.646083 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 41.7)%
+2026-05-12T17:07:39.698471 update_cores freqmine [2]
+2026-05-12T17:07:39.725428 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 39.6)%
+2026-05-12T17:07:41.775135 update_cores freqmine [0]
+2026-05-12T17:07:41.802967 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 42.3)%
+2026-05-12T17:07:43.859339 update_cores freqmine [2]
+2026-05-12T17:07:43.895467 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 67.0)%
+2026-05-12T17:07:45.955990 update_cores freqmine [0]
+2026-05-12T17:07:45.992182 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 68.4)%
+2026-05-12T17:07:48.051833 update_cores freqmine [2]
+2026-05-12T17:07:48.084141 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 69.2)%
+2026-05-12T17:07:50.142809 update_cores freqmine [0]
+2026-05-12T17:07:50.182505 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 67.0)%
+2026-05-12T17:07:52.250040 update_cores freqmine [2]
+2026-05-12T17:07:52.285977 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 69.6)%
+2026-05-12T17:07:54.346478 update_cores freqmine [0]
+2026-05-12T17:07:54.382699 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 68.1)%
+2026-05-12T17:07:56.442309 update_cores freqmine [2]
+2026-05-12T17:07:56.475051 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 66.9)%
+2026-05-12T17:07:58.534884 update_cores freqmine [0]
+2026-05-12T17:07:58.581798 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 71.7)%
+2026-05-12T17:08:00.662782 update_cores freqmine [2]
+2026-05-12T17:08:00.701917 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 71.4)%
+2026-05-12T17:08:02.773577 update_cores freqmine [0]
+2026-05-12T17:08:02.810905 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 72.8)%
+2026-05-12T17:08:04.880958 update_cores freqmine [2]
+2026-05-12T17:08:04.924553 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 70.2)%
+2026-05-12T17:08:06.990913 update_cores freqmine [0]
+2026-05-12T17:08:07.028802 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 72.2)%
+2026-05-12T17:08:09.102573 update_cores freqmine [2]
+2026-05-12T17:08:09.138046 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 71.1)%
+2026-05-12T17:08:11.210570 update_cores freqmine [0]
+2026-05-12T17:08:11.246367 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 70.4)%
+2026-05-12T17:08:13.313486 update_cores freqmine [2]
+2026-05-12T17:08:13.349118 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 60.2)%
+2026-05-12T17:08:15.419128 update_cores freqmine [0]
+2026-05-12T17:08:15.451482 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 59.5)%
+2026-05-12T17:08:17.512687 update_cores freqmine [2]
+2026-05-12T17:08:17.548195 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T17:08:19.621630 update_cores freqmine [0]
+2026-05-12T17:08:19.676301 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 58.0)%
+2026-05-12T17:08:21.730189 update_cores freqmine [2]
+2026-05-12T17:08:21.760456 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 60.0)%
+2026-05-12T17:08:23.815694 update_cores freqmine [0]
+2026-05-12T17:08:23.849423 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T17:08:25.910297 update_cores freqmine [2]
+2026-05-12T17:08:25.947316 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 59.8)%
+2026-05-12T17:08:28.000551 update_cores freqmine [0]
+2026-05-12T17:08:28.038641 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 57.4)%
+2026-05-12T17:08:30.094551 update_cores freqmine [2]
+2026-05-12T17:08:30.124628 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 56.8)%
+2026-05-12T17:08:32.178298 update_cores freqmine [0]
+2026-05-12T17:08:32.210433 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 60.0)%
+2026-05-12T17:08:34.265402 update_cores freqmine [2]
+2026-05-12T17:08:34.296600 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 57.9)%
+2026-05-12T17:08:36.354609 update_cores freqmine [0]
+2026-05-12T17:08:36.388441 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T17:08:38.445511 update_cores freqmine [2]
+2026-05-12T17:08:38.476216 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 56.8)%
+2026-05-12T17:08:40.534474 update_cores freqmine [0]
+2026-05-12T17:08:40.572255 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 57.5)%
+2026-05-12T17:08:42.638394 update_cores freqmine [2]
+2026-05-12T17:08:42.672630 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 79.8)%
+2026-05-12T17:08:44.739980 update_cores freqmine [0]
+2026-05-12T17:08:44.791431 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 84.1)%
+2026-05-12T17:08:46.872675 update_cores freqmine [2]
+2026-05-12T17:08:46.917748 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 83.5)%
+2026-05-12T17:08:48.996961 update_cores freqmine [0]
+2026-05-12T17:08:49.051720 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 83.3)%
+2026-05-12T17:08:51.133494 update_cores freqmine [2]
+2026-05-12T17:08:51.169190 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 84.4)%
+2026-05-12T17:08:53.252367 update_cores freqmine [0]
+2026-05-12T17:08:53.303872 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 82.9)%
+2026-05-12T17:08:55.391031 update_cores freqmine [2]
+2026-05-12T17:08:55.455738 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 85.5)%
+2026-05-12T17:08:57.564551 update_cores freqmine [0]
+2026-05-12T17:08:57.632077 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 18.1)%
+2026-05-12T17:08:59.694904 update_cores freqmine [2]
+2026-05-12T17:08:59.718321 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 7.6)%
+2026-05-12T17:09:01.763490 update_cores freqmine [1]
+2026-05-12T17:09:01.785396 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 1.1)%
+2026-05-12T17:09:03.823218 update_cores freqmine [3]
+2026-05-12T17:09:03.845492 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:05.889820 update_cores freqmine [1]
+2026-05-12T17:09:05.913090 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 3.3)%
+2026-05-12T17:09:07.950974 update_cores freqmine [3]
+2026-05-12T17:09:07.975320 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:10.013363 update_cores freqmine [1]
+2026-05-12T17:09:10.036063 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 6.5)%
+2026-05-12T17:09:12.074705 update_cores freqmine [3]
+2026-05-12T17:09:12.100085 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:14.140065 update_cores freqmine [1]
+2026-05-12T17:09:14.165427 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 10.1)%
+2026-05-12T17:09:16.206739 update_cores freqmine [3]
+2026-05-12T17:09:16.231988 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:18.277313 update_cores freqmine [1]
+2026-05-12T17:09:18.301074 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 10.2)%
+2026-05-12T17:09:20.341251 update_cores freqmine [3]
+2026-05-12T17:09:20.366867 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:22.406861 update_cores freqmine [1]
+2026-05-12T17:09:22.431546 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 8.0)%
+2026-05-12T17:09:24.474095 update_cores freqmine [3]
+2026-05-12T17:09:24.502367 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:26.544457 update_cores freqmine [1]
+2026-05-12T17:09:26.573395 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 9.0)%
+2026-05-12T17:09:28.620432 update_cores freqmine [3]
+2026-05-12T17:09:28.645570 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:30.694036 update_cores freqmine [1]
+2026-05-12T17:09:30.716285 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 6.5)%
+2026-05-12T17:09:32.757362 update_cores freqmine [3]
+2026-05-12T17:09:32.782631 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:34.821088 update_cores freqmine [1]
+2026-05-12T17:09:34.843665 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 3.4)%
+2026-05-12T17:09:36.882351 update_cores freqmine [3]
+2026-05-12T17:09:36.906920 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:38.944676 update_cores freqmine [1]
+2026-05-12T17:09:38.966614 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 4.5)%
+2026-05-12T17:09:41.008382 update_cores freqmine [3]
+2026-05-12T17:09:41.032998 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:09:43.075129 update_cores freqmine [1]
+2026-05-12T17:09:43.098282 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 51.8)%
+2026-05-12T17:09:45.142320 update_cores freqmine [0]
+2026-05-12T17:09:45.170744 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 53.6)%
+2026-05-12T17:09:47.224626 update_cores freqmine [2]
+2026-05-12T17:09:47.256608 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 55.4)%
+2026-05-12T17:09:49.311591 update_cores freqmine [0]
+2026-05-12T17:09:49.341900 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 55.4)%
+2026-05-12T17:09:51.395903 update_cores freqmine [2]
+2026-05-12T17:09:51.429036 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 56.1)%
+2026-05-12T17:09:53.490249 update_cores freqmine [0]
+2026-05-12T17:09:53.521682 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 54.1)%
+2026-05-12T17:09:55.582350 update_cores freqmine [2]
+2026-05-12T17:09:55.624327 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 53.6)%
+2026-05-12T17:09:57.680037 update_cores freqmine [0]
+2026-05-12T17:09:57.710448 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 17.6)%
+2026-05-12T17:09:59.756620 update_cores freqmine [2]
+2026-05-12T17:09:59.781490 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 13.3)%
+2026-05-12T17:10:01.829565 update_cores freqmine [0]
+2026-05-12T17:10:01.861273 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 13.6)%
+2026-05-12T17:10:03.905043 update_cores freqmine [2]
+2026-05-12T17:10:03.930203 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 10.5)%
+2026-05-12T17:10:05.971326 update_cores freqmine [3]
+2026-05-12T17:10:05.997189 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:10:08.041078 update_cores freqmine [1]
+2026-05-12T17:10:08.067113 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 8.0)%
+2026-05-12T17:10:10.109002 update_cores freqmine [3]
+2026-05-12T17:10:10.135376 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:10:12.178293 update_cores freqmine [2]
+2026-05-12T17:10:12.203002 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 41.0)%
+2026-05-12T17:10:14.259048 update_cores freqmine [0]
+2026-05-12T17:10:14.296597 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 74.1)%
+2026-05-12T17:10:16.377398 update_cores freqmine [2]
+2026-05-12T17:10:16.414061 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 72.8)%
+2026-05-12T17:10:18.485277 update_cores freqmine [0]
+2026-05-12T17:10:18.533888 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 74.6)%
+2026-05-12T17:10:20.622451 update_cores freqmine [2]
+2026-05-12T17:10:20.673901 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 74.1)%
+2026-05-12T17:10:22.742981 update_cores freqmine [0]
+2026-05-12T17:10:22.784740 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 73.7)%
+2026-05-12T17:10:24.853053 update_cores freqmine [2]
+2026-05-12T17:10:24.895646 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 73.9)%
+2026-05-12T17:10:26.959560 update_cores freqmine [0]
+2026-05-12T17:10:26.995996 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 63.2)%
+2026-05-12T17:10:29.057281 update_cores freqmine [2]
+2026-05-12T17:10:29.081942 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 13.6)%
+2026-05-12T17:10:31.124186 update_cores freqmine [3]
+2026-05-12T17:10:31.151608 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:10:33.199391 update_cores freqmine [1]
+2026-05-12T17:10:33.224572 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 10.2)%
+2026-05-12T17:10:35.267120 update_cores freqmine [3]
+2026-05-12T17:10:35.296475 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:10:37.336753 update_cores freqmine [1]
+2026-05-12T17:10:37.360553 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 11.4)%
+2026-05-12T17:10:39.405107 update_cores freqmine [3]
+2026-05-12T17:10:39.431648 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:10:41.472939 update_cores freqmine [1]
+2026-05-12T17:10:41.497191 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 10.2)%
+2026-05-12T17:10:43.540358 update_cores freqmine [3]
+2026-05-12T17:10:43.569372 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:10:45.636570 update_cores freqmine [0]
+2026-05-12T17:10:45.708267 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 73.5)%
+2026-05-12T17:10:47.802474 update_cores freqmine [2]
+2026-05-12T17:10:47.841735 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 73.5)%
+2026-05-12T17:10:49.902750 update_cores freqmine [0]
+2026-05-12T17:10:49.941952 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 74.6)%
+2026-05-12T17:10:52.011512 update_cores freqmine [2]
+2026-05-12T17:10:52.050019 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 73.3)%
+2026-05-12T17:10:54.114193 update_cores freqmine [0]
+2026-05-12T17:10:54.149615 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 74.3)%
+2026-05-12T17:10:56.216479 update_cores freqmine [2]
+2026-05-12T17:10:56.251610 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 73.9)%
+2026-05-12T17:10:58.319948 update_cores freqmine [0]
+2026-05-12T17:10:58.354926 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 55.8)%
+2026-05-12T17:11:00.417278 update_cores freqmine [2]
+2026-05-12T17:11:00.446930 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 50.9)%
+2026-05-12T17:11:02.497909 update_cores freqmine [0]
+2026-05-12T17:11:02.526333 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 52.7)%
+2026-05-12T17:11:04.580463 update_cores freqmine [2]
+2026-05-12T17:11:04.613489 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 54.1)%
+2026-05-12T17:11:06.668641 update_cores freqmine [0]
+2026-05-12T17:11:06.697187 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 53.2)%
+2026-05-12T17:11:08.746495 update_cores freqmine [2]
+2026-05-12T17:11:08.777358 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 50.5)%
+2026-05-12T17:11:10.839104 update_cores freqmine [0]
+2026-05-12T17:11:10.867325 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 53.6)%
+2026-05-12T17:11:12.918066 update_cores freqmine [2]
+2026-05-12T17:11:12.948214 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 20.2)%
+2026-05-12T17:11:14.994387 update_cores freqmine [3]
+2026-05-12T17:11:15.021037 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:11:17.062500 update_cores freqmine [1]
+2026-05-12T17:11:17.087419 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 12.2)%
+2026-05-12T17:11:19.127219 update_cores freqmine [3]
+2026-05-12T17:11:19.152535 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:11:21.195180 update_cores freqmine [2]
+2026-05-12T17:11:21.220717 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 15.9)%
+2026-05-12T17:11:23.267594 update_cores freqmine [3]
+2026-05-12T17:11:23.295174 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:11:25.337737 update_cores freqmine [2]
+2026-05-12T17:11:25.365720 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 16.7)%
+2026-05-12T17:11:27.408338 update_cores freqmine [1]
+2026-05-12T17:11:27.432542 update_cores canneal [1]
+Memcached max thread CPU utilization: (3, 55.8)%
+2026-05-12T17:11:29.488308 update_cores freqmine [3]
+2026-05-12T17:11:29.523922 update_cores canneal [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:11:31.609316 update_cores freqmine [2]
+2026-05-12T17:11:31.665292 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 78.4)%
+2026-05-12T17:11:33.747453 update_cores freqmine [0]
+2026-05-12T17:11:33.787630 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 80.0)%
+2026-05-12T17:11:35.871743 update_cores freqmine [2]
+2026-05-12T17:11:35.915995 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 77.9)%
+2026-05-12T17:11:37.991242 update_cores freqmine [0]
+2026-05-12T17:11:38.037078 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 78.4)%
+2026-05-12T17:11:40.123971 update_cores freqmine [2]
+2026-05-12T17:11:40.180803 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 77.6)%
+2026-05-12T17:11:42.256380 update_cores freqmine [0]
+2026-05-12T17:11:42.296329 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 68.2)%
+2026-05-12T17:11:44.363668 update_cores freqmine [2]
+2026-05-12T17:11:44.396880 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 60.9)%
+2026-05-12T17:11:46.454331 update_cores freqmine [0]
+2026-05-12T17:11:46.488920 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 62.4)%
+2026-05-12T17:11:48.544629 update_cores freqmine [2]
+2026-05-12T17:11:48.588417 update_cores canneal [2]
+Memcached max thread CPU utilization: (3, 61.7)%
+2026-05-12T17:11:50.655903 update_cores freqmine [0]
+2026-05-12T17:11:50.686278 update_cores canneal [0]
+Memcached max thread CPU utilization: (3, 65.8)%
+2026-05-12T17:11:52.722040 update_cores freqmine [2]
+2026-05-12T17:11:52.752134 update_cores canneal [2]
+2026-05-12T17:11:52.775188 end freqmine
+2026-05-12T17:11:56.351662 start radix [0] 2
+Memcached max thread CPU utilization: (3, 61.4)%
+2026-05-12T17:11:56.383592 update_cores canneal [0]
+2026-05-12T17:11:56.417696 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 62.4)%
+2026-05-12T17:11:58.482155 update_cores canneal [2]
+2026-05-12T17:11:58.513878 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 86.1)%
+2026-05-12T17:12:00.589988 update_cores canneal [0]
+2026-05-12T17:12:00.647980 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 88.7)%
+2026-05-12T17:12:02.749679 update_cores canneal [2]
+2026-05-12T17:12:02.794169 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 88.7)%
+2026-05-12T17:12:04.890629 update_cores canneal [0]
+2026-05-12T17:12:04.955913 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 86.1)%
+2026-05-12T17:12:07.042945 update_cores canneal [2]
+2026-05-12T17:12:07.086049 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 88.6)%
+2026-05-12T17:12:09.183238 update_cores canneal [0]
+2026-05-12T17:12:09.239038 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 89.5)%
+2026-05-12T17:12:11.339371 update_cores canneal [2]
+2026-05-12T17:12:11.398624 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 87.0)%
+2026-05-12T17:12:13.472823 update_cores canneal [0]
+2026-05-12T17:12:13.526635 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 17.0)%
+2026-05-12T17:12:15.605210 update_cores canneal [3]
+2026-05-12T17:12:15.631617 update_cores radix [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:12:17.683994 update_cores canneal [1]
+2026-05-12T17:12:17.710540 update_cores radix [1]
+Memcached max thread CPU utilization: (3, 13.5)%
+2026-05-12T17:12:19.756835 update_cores canneal [3]
+2026-05-12T17:12:19.788671 update_cores radix [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:12:21.834664 update_cores canneal [1]
+2026-05-12T17:12:21.858285 update_cores radix [1]
+Memcached max thread CPU utilization: (3, 14.6)%
+2026-05-12T17:12:23.904697 update_cores canneal [3]
+2026-05-12T17:12:23.933457 update_cores radix [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:12:25.978424 update_cores canneal [1]
+2026-05-12T17:12:26.003379 update_cores radix [1]
+Memcached max thread CPU utilization: (3, 13.5)%
+2026-05-12T17:12:28.050279 update_cores canneal [3]
+2026-05-12T17:12:28.076647 update_cores radix [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:12:30.143519 update_cores canneal [0]
+2026-05-12T17:12:30.180682 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 81.4)%
+2026-05-12T17:12:32.257095 update_cores canneal [2]
+2026-05-12T17:12:32.298687 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 83.8)%
+2026-05-12T17:12:34.380413 update_cores canneal [0]
+2026-05-12T17:12:34.415880 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 81.1)%
+2026-05-12T17:12:36.498595 update_cores canneal [2]
+2026-05-12T17:12:36.549279 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 84.9)%
+2026-05-12T17:12:38.690130 update_cores canneal [0]
+2026-05-12T17:12:38.750523 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 82.1)%
+2026-05-12T17:12:40.855985 update_cores canneal [2]
+2026-05-12T17:12:40.899155 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 83.0)%
+2026-05-12T17:12:42.979970 update_cores canneal [0]
+2026-05-12T17:12:43.020938 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 81.2)%
+2026-05-12T17:12:45.110650 update_cores canneal [2]
+2026-05-12T17:12:45.151494 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 78.8)%
+2026-05-12T17:12:47.246603 update_cores canneal [0]
+2026-05-12T17:12:47.291844 update_cores radix [0]
+Memcached max thread CPU utilization: (3, 79.5)%
+2026-05-12T17:12:49.376139 update_cores canneal [2]
+2026-05-12T17:12:49.419310 update_cores radix [2]
+Memcached max thread CPU utilization: (3, 78.6)%
+2026-05-12T17:12:51.475385 update_cores canneal [0]
+2026-05-12T17:12:51.512191 update_cores radix [0]
+2026-05-12T17:12:51.550092 end canneal
+2026-05-12T17:12:55.248559 start streamcluster [2,1] 2
+Memcached max thread CPU utilization: (3, 79.5)%
+2026-05-12T17:12:55.291427 update_cores radix [2]
+2026-05-12T17:12:55.342263 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 77.0)%
+2026-05-12T17:12:57.454699 update_cores radix [0]
+2026-05-12T17:12:57.502011 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 85.2)%
+2026-05-12T17:12:59.598343 update_cores radix [2]
+2026-05-12T17:12:59.659006 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 87.7)%
+2026-05-12T17:13:01.762308 update_cores radix [0]
+2026-05-12T17:13:01.830067 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 88.6)%
+2026-05-12T17:13:03.938808 update_cores radix [2]
+2026-05-12T17:13:03.999290 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 85.7)%
+2026-05-12T17:13:06.091062 update_cores radix [0]
+2026-05-12T17:13:06.142376 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 85.2)%
+2026-05-12T17:13:08.252529 update_cores radix [3]
+2026-05-12T17:13:08.293304 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:13:10.380093 update_cores radix [0]
+2026-05-12T17:13:10.435435 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 85.0)%
+2026-05-12T17:13:12.537374 update_cores radix [2]
+2026-05-12T17:13:12.593635 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 44.6)%
+2026-05-12T17:13:14.707937 update_cores radix [0]
+2026-05-12T17:13:14.735039 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 40.4)%
+2026-05-12T17:13:16.795599 update_cores radix [2]
+2026-05-12T17:13:16.823363 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 39.2)%
+2026-05-12T17:13:18.884038 update_cores radix [0]
+2026-05-12T17:13:18.910679 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 40.4)%
+2026-05-12T17:13:20.970522 update_cores radix [2]
+2026-05-12T17:13:20.997257 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 42.0)%
+2026-05-12T17:13:23.119299 update_cores radix [0]
+2026-05-12T17:13:23.144575 update_cores streamcluster [0]
+2026-05-12T17:13:23.174616 end radix
+2026-05-12T17:14:24.663717 start vips [2] 2
+Memcached max thread CPU utilization: (3, 38.6)%
+2026-05-12T17:14:24.714776 update_cores streamcluster [2]
+2026-05-12T17:14:24.774544 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 81.2)%
+2026-05-12T17:14:26.876883 update_cores streamcluster [0]
+2026-05-12T17:14:26.918705 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 71.7)%
+2026-05-12T17:14:29.012448 update_cores streamcluster [1]
+2026-05-12T17:14:29.037206 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 15.6)%
+2026-05-12T17:14:31.093704 update_cores streamcluster [3]
+2026-05-12T17:14:31.120289 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:14:33.174120 update_cores streamcluster [2]
+2026-05-12T17:14:33.203390 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 18.0)%
+2026-05-12T17:14:35.258061 update_cores streamcluster [3]
+2026-05-12T17:14:35.287589 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:14:37.345509 update_cores streamcluster [1]
+2026-05-12T17:14:37.369206 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 19.6)%
+2026-05-12T17:14:40.106576 update_cores streamcluster [3]
+2026-05-12T17:14:40.640661 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:14:43.219958 update_cores streamcluster [2]
+2026-05-12T17:14:44.051707 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 33.3)%
+2026-05-12T17:14:46.662188 update_cores streamcluster [0]
+2026-05-12T17:14:47.489489 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 35.4)%
+2026-05-12T17:14:49.550458 update_cores streamcluster [2]
+2026-05-12T17:14:49.583644 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 33.7)%
+2026-05-12T17:14:51.661017 update_cores streamcluster [0]
+2026-05-12T17:14:51.688318 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 37.4)%
+2026-05-12T17:14:53.746203 update_cores streamcluster [2]
+2026-05-12T17:14:53.773569 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 35.0)%
+2026-05-12T17:14:55.837289 update_cores streamcluster [0]
+2026-05-12T17:14:55.863487 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 36.4)%
+2026-05-12T17:14:57.924281 update_cores streamcluster [2]
+2026-05-12T17:14:57.952364 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 93.3)%
+2026-05-12T17:15:00.041226 update_cores streamcluster [0]
+2026-05-12T17:15:00.116709 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 95.1)%
+2026-05-12T17:15:02.257594 update_cores streamcluster [2]
+2026-05-12T17:15:02.327389 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 96.1)%
+2026-05-12T17:15:04.570470 update_cores streamcluster [0]
+2026-05-12T17:15:04.634447 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 93.3)%
+2026-05-12T17:15:06.768550 update_cores streamcluster [2]
+2026-05-12T17:15:06.836856 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 93.3)%
+2026-05-12T17:15:08.973350 update_cores streamcluster [0]
+2026-05-12T17:15:09.035118 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 92.5)%
+2026-05-12T17:15:11.161076 update_cores streamcluster [2]
+2026-05-12T17:15:11.226793 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 93.3)%
+2026-05-12T17:15:13.342749 update_cores streamcluster [0]
+2026-05-12T17:15:13.417959 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 25.8)%
+2026-05-12T17:15:15.506320 update_cores streamcluster [2]
+2026-05-12T17:15:15.532988 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 25.8)%
+2026-05-12T17:15:17.597099 update_cores streamcluster [0]
+2026-05-12T17:15:17.637613 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 28.1)%
+2026-05-12T17:15:19.698880 update_cores streamcluster [2]
+2026-05-12T17:15:19.724463 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 23.1)%
+2026-05-12T17:15:21.781398 update_cores streamcluster [0]
+2026-05-12T17:15:21.808544 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 26.6)%
+2026-05-12T17:15:23.867206 update_cores streamcluster [2]
+2026-05-12T17:15:23.892885 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 27.7)%
+2026-05-12T17:15:25.949449 update_cores streamcluster [0]
+2026-05-12T17:15:25.975619 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 26.6)%
+2026-05-12T17:15:28.038689 update_cores streamcluster [2]
+2026-05-12T17:15:28.064211 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 54.1)%
+2026-05-12T17:15:30.127120 update_cores streamcluster [0]
+2026-05-12T17:15:30.156927 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 54.5)%
+2026-05-12T17:15:32.228121 update_cores streamcluster [2]
+2026-05-12T17:15:32.258931 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 54.9)%
+2026-05-12T17:15:34.336968 update_cores streamcluster [0]
+2026-05-12T17:15:34.371654 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 58.6)%
+2026-05-12T17:15:36.572900 update_cores streamcluster [2]
+2026-05-12T17:15:36.609290 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 56.8)%
+2026-05-12T17:15:38.696654 update_cores streamcluster [0]
+2026-05-12T17:15:38.728385 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 56.8)%
+2026-05-12T17:15:40.801296 update_cores streamcluster [2]
+2026-05-12T17:15:40.833480 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 56.6)%
+2026-05-12T17:15:42.906387 update_cores streamcluster [0]
+2026-05-12T17:15:42.938591 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 10.0)%
+2026-05-12T17:15:45.009572 update_cores streamcluster [2]
+2026-05-12T17:15:45.035130 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 9.0)%
+2026-05-12T17:15:47.092348 update_cores streamcluster [3]
+2026-05-12T17:15:47.115193 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:15:49.167946 update_cores streamcluster [1]
+2026-05-12T17:15:49.191241 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 5.7)%
+2026-05-12T17:15:51.259003 update_cores streamcluster [3]
+2026-05-12T17:15:51.291516 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:15:53.344193 update_cores streamcluster [1]
+2026-05-12T17:15:53.367788 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 5.6)%
+2026-05-12T17:15:55.418423 update_cores streamcluster [3]
+2026-05-12T17:15:55.442604 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:15:57.497895 update_cores streamcluster [1]
+2026-05-12T17:15:57.521067 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 30.3)%
+2026-05-12T17:15:59.584180 update_cores streamcluster [3]
+2026-05-12T17:15:59.621301 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:16:01.694786 update_cores streamcluster [1]
+2026-05-12T17:16:01.720589 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 37.6)%
+2026-05-12T17:16:03.782083 update_cores streamcluster [3]
+2026-05-12T17:16:03.812720 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:16:05.878235 update_cores streamcluster [1]
+2026-05-12T17:16:05.907235 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 36.6)%
+2026-05-12T17:16:07.973690 update_cores streamcluster [3]
+2026-05-12T17:16:08.001873 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:16:10.062520 update_cores streamcluster [1]
+2026-05-12T17:16:10.087503 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 34.7)%
+2026-05-12T17:16:12.154551 update_cores streamcluster [3]
+2026-05-12T17:16:12.182915 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:16:14.246075 update_cores streamcluster [1]
+2026-05-12T17:16:14.277310 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 55.7)%
+2026-05-12T17:16:16.346438 update_cores streamcluster [2]
+2026-05-12T17:16:16.378114 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 58.8)%
+2026-05-12T17:16:18.451664 update_cores streamcluster [0]
+2026-05-12T17:16:18.485978 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 61.7)%
+2026-05-12T17:16:20.562381 update_cores streamcluster [2]
+2026-05-12T17:16:20.608266 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 56.3)%
+2026-05-12T17:16:22.699546 update_cores streamcluster [0]
+2026-05-12T17:16:22.730516 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 57.5)%
+2026-05-12T17:16:24.803392 update_cores streamcluster [2]
+2026-05-12T17:16:24.833647 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 57.0)%
+2026-05-12T17:16:26.902764 update_cores streamcluster [0]
+2026-05-12T17:16:26.933671 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 49.5)%
+2026-05-12T17:16:29.001256 update_cores streamcluster [2]
+2026-05-12T17:16:29.026761 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 10.2)%
+2026-05-12T17:16:31.082680 update_cores streamcluster [3]
+2026-05-12T17:16:31.109071 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:16:33.165817 update_cores streamcluster [1]
+2026-05-12T17:16:33.190740 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 5.7)%
+2026-05-12T17:16:35.244178 update_cores streamcluster [3]
+2026-05-12T17:16:35.270334 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:16:37.330459 update_cores streamcluster [2]
+2026-05-12T17:16:37.356390 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 9.2)%
+2026-05-12T17:16:39.412064 update_cores streamcluster [3]
+2026-05-12T17:16:39.439010 update_cores vips [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:16:42.131381 update_cores streamcluster [1]
+2026-05-12T17:16:42.576967 update_cores vips [1]
+Memcached max thread CPU utilization: (3, 66.7)%
+2026-05-12T17:16:44.653660 update_cores streamcluster [2]
+2026-05-12T17:16:44.691900 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 78.8)%
+2026-05-12T17:16:46.789016 update_cores streamcluster [0]
+2026-05-12T17:16:46.834861 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 78.4)%
+2026-05-12T17:16:48.939974 update_cores streamcluster [2]
+2026-05-12T17:16:48.982578 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 77.7)%
+2026-05-12T17:16:51.074504 update_cores streamcluster [0]
+2026-05-12T17:16:51.112891 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 78.6)%
+2026-05-12T17:16:53.206489 update_cores streamcluster [2]
+2026-05-12T17:16:53.244649 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 76.6)%
+2026-05-12T17:16:55.341909 update_cores streamcluster [0]
+2026-05-12T17:16:55.395114 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 79.1)%
+2026-05-12T17:16:57.509985 update_cores streamcluster [2]
+2026-05-12T17:16:57.557394 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 76.7)%
+2026-05-12T17:16:59.676637 update_cores streamcluster [0]
+2026-05-12T17:16:59.715035 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 77.0)%
+2026-05-12T17:17:01.806614 update_cores streamcluster [2]
+2026-05-12T17:17:01.850372 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 75.7)%
+2026-05-12T17:17:03.943520 update_cores streamcluster [0]
+2026-05-12T17:17:03.984475 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 75.0)%
+2026-05-12T17:17:06.072820 update_cores streamcluster [2]
+2026-05-12T17:17:06.110309 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 74.3)%
+2026-05-12T17:17:08.209301 update_cores streamcluster [0]
+2026-05-12T17:17:08.251978 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 72.8)%
+2026-05-12T17:17:10.341674 update_cores streamcluster [2]
+2026-05-12T17:17:10.386302 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 73.9)%
+2026-05-12T17:17:12.477191 update_cores streamcluster [0]
+2026-05-12T17:17:12.523322 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 81.1)%
+2026-05-12T17:17:14.637906 update_cores streamcluster [2]
+2026-05-12T17:17:14.684936 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 82.6)%
+2026-05-12T17:17:16.793132 update_cores streamcluster [0]
+2026-05-12T17:17:16.841801 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 81.8)%
+2026-05-12T17:17:18.960034 update_cores streamcluster [2]
+2026-05-12T17:17:19.011422 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 80.0)%
+2026-05-12T17:17:21.113633 update_cores streamcluster [0]
+2026-05-12T17:17:21.162874 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 83.3)%
+2026-05-12T17:17:23.285009 update_cores streamcluster [2]
+2026-05-12T17:17:23.354322 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 80.2)%
+2026-05-12T17:17:25.459955 update_cores streamcluster [0]
+2026-05-12T17:17:25.509108 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 80.9)%
+2026-05-12T17:17:27.617379 update_cores streamcluster [2]
+2026-05-12T17:17:27.704281 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 46.3)%
+2026-05-12T17:17:29.798541 update_cores streamcluster [0]
+2026-05-12T17:17:29.826282 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 43.4)%
+2026-05-12T17:17:31.895463 update_cores streamcluster [2]
+2026-05-12T17:17:31.925265 update_cores vips [2]
+Memcached max thread CPU utilization: (3, 45.7)%
+2026-05-12T17:17:33.999579 update_cores streamcluster [0]
+2026-05-12T17:17:34.028546 update_cores vips [0]
+Memcached max thread CPU utilization: (3, 45.7)%
+2026-05-12T17:17:36.092246 update_cores streamcluster [2]
+2026-05-12T17:17:36.101420 update_cores vips [2]
+2026-05-12T17:17:36.138904 end vips
+Memcached max thread CPU utilization: (3, 45.3)%
+2026-05-12T17:17:38.168378 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 44.9)%
+2026-05-12T17:17:40.235423 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 43.9)%
+2026-05-12T17:17:42.309011 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 29.6)%
+2026-05-12T17:17:44.395521 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 15.7)%
+2026-05-12T17:17:46.473061 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:17:48.542120 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 14.4)%
+2026-05-12T17:17:50.597039 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:17:52.665046 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 11.4)%
+2026-05-12T17:17:54.719234 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:17:56.779776 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 15.6)%
+2026-05-12T17:17:58.844452 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:00.930610 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 71.6)%
+2026-05-12T17:18:03.015932 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.1)%
+2026-05-12T17:18:05.085612 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:18:07.131461 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:09.179689 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:11.226098 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:13.276872 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:15.323519 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:17.371592 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 7.1)%
+2026-05-12T17:18:19.420707 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 6.0)%
+2026-05-12T17:18:21.478883 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:23.530171 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:25.579404 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:27.635412 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:18:29.681673 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:31.729498 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:33.778602 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:35.829062 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:37.874761 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:39.922455 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:18:41.970870 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:44.020030 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:18:46.065416 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:18:48.112683 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 6.0)%
+2026-05-12T17:18:50.168781 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:18:52.213901 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 6.1)%
+2026-05-12T17:18:54.258471 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.1)%
+2026-05-12T17:18:56.303781 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 6.0)%
+2026-05-12T17:18:58.349966 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 6.1)%
+2026-05-12T17:19:00.393859 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:19:02.439139 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:04.485716 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:19:06.538205 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 7.0)%
+2026-05-12T17:19:08.586274 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:19:10.638470 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:19:12.683475 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 6.1)%
+2026-05-12T17:19:14.734642 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:16.785537 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 6.0)%
+2026-05-12T17:19:18.832877 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:20.878644 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 6.0)%
+2026-05-12T17:19:22.924627 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:19:24.969970 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:19:27.018369 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:29.064191 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.1)%
+2026-05-12T17:19:31.110741 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:33.156848 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:19:35.204424 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:19:37.251955 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:39.297452 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:41.345262 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:19:43.393548 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:19:45.448802 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:47.494973 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:19:49.542977 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:51.590638 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:19:53.649714 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:19:55.694799 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:19:57.742022 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 5.1)%
+2026-05-12T17:19:59.787223 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 3.1)%
+2026-05-12T17:20:01.838968 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:03.891796 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 6.0)%
+2026-05-12T17:20:05.936952 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:20:07.983007 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:10.032300 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:20:12.081105 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:20:14.128563 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 5.1)%
+2026-05-12T17:20:16.178615 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:20:18.226995 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:20.273208 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:20:22.317795 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.9)%
+2026-05-12T17:20:24.362968 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:26.409242 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:20:28.457276 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 6.1)%
+2026-05-12T17:20:30.501011 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 2.0)%
+2026-05-12T17:20:32.549324 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:34.596046 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:20:36.649310 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:38.696005 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 2.0)%
+2026-05-12T17:20:40.745635 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:42.794338 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:20:44.839787 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:46.884098 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:20:48.932411 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:20:50.976898 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.1)%
+2026-05-12T17:20:53.020702 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:55.067375 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 1.0)%
+2026-05-12T17:20:57.112021 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:20:59.159793 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 2.0)%
+2026-05-12T17:21:01.204270 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:21:03.252093 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:21:05.299362 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:21:07.344258 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:21:09.389951 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:21:11.438100 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 1.0)%
+2026-05-12T17:21:13.482751 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:21:15.528686 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 1.0)%
+2026-05-12T17:21:17.574565 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:21:19.629484 update_cores streamcluster [1]
+Memcached max thread CPU utilization: (3, 1.0)%
+2026-05-12T17:21:21.685269 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:21:23.732198 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:21:25.778195 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 1.0)%
+2026-05-12T17:21:27.828233 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:21:29.879521 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 2.0)%
+2026-05-12T17:21:31.927980 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:21:33.974099 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:21:36.021552 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:21:38.069894 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:21:40.116347 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:21:42.161955 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 5.0)%
+2026-05-12T17:21:44.209028 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 4.0)%
+2026-05-12T17:21:46.256135 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 2.0)%
+2026-05-12T17:21:48.303265 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:21:50.351794 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 2.0)%
+2026-05-12T17:21:52.398594 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 1.0)%
+2026-05-12T17:21:54.445625 update_cores streamcluster [3]
+Memcached max thread CPU utilization: (3, 100.0)%
+2026-05-12T17:21:56.493075 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:21:58.540797 update_cores streamcluster [0]
+Memcached max thread CPU utilization: (3, 3.0)%
+2026-05-12T17:22:00.586359 update_cores streamcluster [2]
+Memcached max thread CPU utilization: (3, 6.0)%
+2026-05-12T17:22:02.626092 update_cores streamcluster [1]
+2026-05-12T17:22:02.648899 end streamcluster
+2026-05-12T17:22:04.649693 end scheduler

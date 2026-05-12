@@ -41,6 +41,18 @@ image_map = {
     Job.VIPS: "anakli/cca:parsec_vips"
 }
 
+thread_map = {
+    Job.BARNES: 2,
+    Job.BLACKSCHOLES: 1,
+    Job.CANNEAL: 2,
+    Job.FREQMINE: 2,
+    Job.RADIX: 1,
+    Job.STREAMCLUSTER: 2,
+    Job.VIPS: 1
+}
+
+order_map = [Job.FREQMINE, Job.RADIX, Job.STREAMCLUSTER, Job.CANNEAL, Job.VIPS, Job.BARNES, Job.BLACKSCHOLES]
+
 class SchedulerLogger:
     def __init__(self):
         start_date = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -171,31 +183,14 @@ def get_memcached_process() -> psutil.Process | None:
     return None
 
 
-def max_thread_cpu_percent(process: psutil.Process | None, interval: float = 1.0) -> float:
-    if process is None:
-        return 0.0
-    try:
-        threads_start = {t.id: t.user_time + t.system_time for t in process.threads()}
-    except (psutil.NoSuchProcess, psutil.AccessDenied):
-        return 0.0
-
-    time.sleep(interval)
-
-    try:
-        threads_end = {t.id: t.user_time + t.system_time for t in process.threads()}
-    except (psutil.NoSuchProcess, psutil.AccessDenied):
-        return 0.0
-
-    if not threads_end:
-        return 0.0
-
-    deltas = [threads_end[tid] - threads_start.get(tid, threads_end[tid]) for tid in threads_end]
-    return max(deltas) / interval * 100.0
+def get_cpu_utils(interval: float = 1.0):
+    psutil.cpu_percent(interval=interval, percpu=True)  # Warm up the CPU percent calculation
+    return [(cpu_id, util) for cpu_id, util in enumerate(psutil.cpu_percent(interval=interval, percpu=True))]
 
 
 if __name__ == "__main__":
     logger = SchedulerLogger()
-    logger.memcached_start(initial_cores=["0", "1", "2", "3"], initial_threads=4)
+    logger.memcached_start(initial_cores=["0", "1", "2", "3"], initial_threads=3)
     time.sleep(5)  # Give memcached some time to start up
     memcached_process = get_memcached_process()
 
@@ -209,27 +204,34 @@ if __name__ == "__main__":
     paused = False
 
     while True:
-        if memcached_process is None or not memcached_process.is_running():
-            memcached_process = get_memcached_process()
-        memcached_max_cpu_util = max_thread_cpu_percent(memcached_process, interval=1.0)
+        # if memcached_process is None or not memcached_process.is_running():
+        #     memcached_process = get_memcached_process()
+        cpu_utils = get_cpu_utils(1.0)
         if len(logger.remaining_jobs) > 0 and len(logger.running_jobs) < NUM_CONCURRENT_JOBS:
             next_job = logger.remaining_jobs.pop(0)
-            logger.job_start(next_job, initial_cores=["0", "1", "2", "3"], initial_threads=2)
+            initial_threads = thread_map[next_job]
+            initial_cores = [str(i[0]) for i in sorted(cpu_utils, key=lambda x: x[1])[:initial_threads]]
+            logger.job_start(next_job, initial_cores=initial_cores, initial_threads=2)
             logger.running_jobs.append(next_job)
         if len(logger.running_jobs) == 0:
             logger.end()
             exit(0)
-        if paused and memcached_max_cpu_util < MEDIUM_CPU_UTIL:
-            for job in logger.running_jobs:
-                logger.job_unpause(job)
-            paused = False
 
+        memcached_max_cpu_util = max(cpu_utils, key=lambda x: x[1]) if cpu_utils else 0
         print(f"Memcached max thread CPU utilization: {memcached_max_cpu_util}%")
-        if memcached_max_cpu_util >= HIGH_CPU_UTIL and not paused:
-            logger.custom_event(Job.SCHEDULER, f"High CPU utilization detected: {memcached_max_cpu_util}%. Pausing jobs.")
+        if max(cpu_utils, key=lambda x: x[1])[1] >= HIGH_CPU_UTIL:
+            min_cpu_index = min(cpu_utils, key=lambda x: x[1])[0] if cpu_utils else 0
             for job in logger.running_jobs:
-                logger.job_pause(job)
-            paused = True
+                logger.update_cores(job, cores=[str(min_cpu_index)])
+        elif max(cpu_utils, key=lambda x: x[1])[1] < MEDIUM_CPU_UTIL:
+            for job in logger.running_jobs:
+                initial_threads = thread_map[job]
+                updated_cores = [str(i) for i in sorted(cpu_utils, key=lambda x: x[1])]
+                updated_cores = updated_cores[:initial_threads]
+                logger.update_cores(job, cores=updated_cores)
+
+
+
 
         # if HIGH_CPU_UTIL <= cpu_util <= MAX_CPU_UTIL and last_util != HIGH_CPU_UTIL:
         #     logger.custom_event(Job.SCHEDULER, f"High CPU utilization detected: {cpu_util}%")
