@@ -26,9 +26,9 @@ jobs = [
     Job.BARNES,
     Job.BLACKSCHOLES,
     Job.CANNEAL,
-    Job.RADIX,
     Job.STREAMCLUSTER,
-    Job.VIPS
+    Job.VIPS,
+    Job.RADIX,
 ]
 
 image_map = {
@@ -51,7 +51,6 @@ thread_map = {
     Job.VIPS: 1
 }
 
-order_map = [Job.FREQMINE, Job.RADIX, Job.STREAMCLUSTER, Job.CANNEAL, Job.VIPS, Job.BARNES, Job.BLACKSCHOLES]
 
 class SchedulerLogger:
     def __init__(self):
@@ -143,6 +142,9 @@ class SchedulerLogger:
     def update_cores(self, job: Job, cores: list[str]) -> None:
         assert job != Job.SCHEDULER, "You don't have to log SCHEDULER here"
         container = self.docker_client.containers.get(job.value)
+        if container.status != "running":
+            self._log("warning", job, f"Cannot update cores for container {job.value} as it is not running (status: {container.status})")
+            return
         container.update(cpuset_cpus=",".join(cores))
         self._log("update_cores", job, "["+(",".join(str(i) for i in cores))+"]")
 
@@ -221,6 +223,7 @@ if __name__ == "__main__":
         logger.custom_event(Job.SCHEDULER, f"Current CPU utils: {','.join(f'{i}:{u:.1f}%' for i,u in cpu_utils)}; Max: {max_util[1]:.1f}%")
         sorted_utils = [str(i[0]) for i in sorted(cpu_utils, key=lambda x: x[1])]
         for job in logger.running_jobs:
+            # logger.update_cores(job, cores=[sorted_utils[0]])
             logger.update_cores(job, cores=sorted_utils[:thread_map[job]])
         # if max(cpu_utils, key=lambda x: x[1])[1] >= HIGH_CPU_UTIL:
         #     min_cpu_index = min(cpu_utils, key=lambda x: x[1])[0] if cpu_utils else 0
@@ -232,6 +235,7 @@ if __name__ == "__main__":
         #         updated_cores = [str(i) for i in sorted(cpu_utils, key=lambda x: x[1])]
         #         updated_cores = updated_cores[:initial_threads]
         #         logger.update_cores(job, cores=updated_cores)
+        time.sleep(5)
 
 
 

@@ -22,7 +22,7 @@ python_modules=(
 
 memcached_runtime_seconds=1200
 
-VERSION=9
+VERSION=10
 OUTPUT_DIR="./results/part4/2/version_${VERSION}"
 mkdir -p "$OUTPUT_DIR"
 

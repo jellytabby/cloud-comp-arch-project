@@ -293,8 +293,8 @@ def latex_table(all_durations: List[Dict[str, float]], all_makespans: List[Optio
 
                 
 if __name__ == "__main__":
-    base_dir = "results/part4/2/version_9"
-    output_dir = "plots/part4/2/version_9"
+    base_dir = "results/part4/2/version_6"
+    output_dir = "plots/part4/2/version_6"
     all_durations = []
     all_makespans = []
     slo_ratios = []
