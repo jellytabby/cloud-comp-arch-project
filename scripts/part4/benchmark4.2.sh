@@ -23,13 +23,13 @@ python_modules=(
 memcached_runtime_seconds=1200
 
 VERSION=11
-OUTPUT_DIR="./results/part4/2/version_${VERSION}"
+OUTPUT_DIR="./results/part4/4/version_${VERSION}"
 mkdir -p "$OUTPUT_DIR"
 
 gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "./scripts/part4/scheduler_logger.py" "${MEMCACHED_SERVER_NODE}:~/scheduler_logger.py"
 
 CLIENT_CMD="cd memcache-perf-dynamic && ./mcperf -T 8 -A"
-MEASURE_CMD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_SERVER_INT_IP} -a ${CLIENT_INT_IP} --noload -T 8 -C 8 -D 4 -Q 1000 -c 8 -t ${memcached_runtime_seconds} --qps_interval 15 --qps_min 5000 --qps_max 110000 --qps_seed 2345 "
+MEASURE_CMD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_SERVER_INT_IP} -a ${CLIENT_INT_IP} --noload -T 8 -C 8 -D 4 -Q 1000 -c 8 -t ${memcached_runtime_seconds} --qps_interval 5 --qps_min 5000 --qps_max 110000 --qps_seed 2345 "
 
 
 #start memcached because restarting it kills the measure
