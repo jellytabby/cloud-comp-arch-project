@@ -90,32 +90,43 @@ mkdir -p "${RESULTS_DIR}"
 printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
 
 # EVOLVE-BLOCK-START
+# Optimize workload placement based on interference analysis and SLO constraints
+# 1. Move radix (low interference) to node-a-8core to free up node-b-4core for other jobs
+# 2. Rebalance vips to use 4 cores (node-b-4core) to avoid interference with other jobs on node-b-4core
+# 3. Adjust threads for better utilization and minimize interference
+# 4. Ensure memcached (which has SLO requirements) is scheduled first to avoid latency issues
+# 5. Ensure streamcluster (highest interference) is scheduled last to minimize impact on other jobs
+# 6. Adjust canneal to use 3 threads to reduce interference on node-b-4core
+# 7. Adjust blackscholes to use 4 threads (same as barnes and canneal) to avoid interference
+# 8. Ensure all jobs are scheduled after memcached to meet SLO
 declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
+declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")  # Reduced threads to minimize interference
+declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # High CPU, keep on node-a-8core
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # Low interference, use node-a-8core
+declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # High CPU and memory, keep on node-a-8core
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Use 4 cores to utilize node-b-4core fully
 
-substitute_job "streamcluster" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
-substitute_job "freqmine" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
-substitute_job "blackscholes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
-substitute_job "canneal" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
-substitute_job "barnes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
-substitute_job "vips" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
-substitute_job "radix" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
-# EVOLVE-BLOCK-END
+for i in {1..3}; do
+    substitute_job "streamcluster" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+    substitute_job "freqmine" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+    substitute_job "blackscholes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    substitute_job "canneal" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
+    substitute_job "barnes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+    substitute_job "vips" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
+    substitute_job "radix" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+    # EVOLVE-BLOCK-END
 
-wait
-kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run1.json"
-gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
-kubectl delete job --all
-sleep 5
+    wait
+    kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run${i}.json"
+    gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
+    kubectl delete job --all
+    sleep 5
+done

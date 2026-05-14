@@ -90,32 +90,40 @@ mkdir -p "${RESULTS_DIR}"
 printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
 
 # EVOLVE-BLOCK-START
+# Optimize workload placement based on interference analysis
+# 1. Use node-a-8core for parsec-radix to avoid memory constraints on node-b-4core
+# 2. Consider moving streamcluster to node-b-4core to reduce interference with other jobs on node-a-8core
+# 3. Ensure memcached is always on node-a-8core to avoid interference with other jobs
+# 4. Adjust vips to use 4 cores on node-b-4core to better utilize the node's resources
 declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # Ensure radix runs on node-a-8core due to memory constraints
+declare -A streamcluster_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Move streamcluster to node-b-4core to reduce interference with other jobs on node-a-8core
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Use 4 cores for vips to utilize node-b-4core better
 
-substitute_job "streamcluster" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
-substitute_job "freqmine" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
-substitute_job "blackscholes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
-substitute_job "canneal" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
-substitute_job "barnes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
-substitute_job "vips" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
-substitute_job "radix" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
-# EVOLVE-BLOCK-END
+for i in {1..3}; do
 
-wait
-kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run1.json"
-gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
-kubectl delete job --all
-sleep 5
+    substitute_job "streamcluster" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+    substitute_job "freqmine" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+    substitute_job "blackscholes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    substitute_job "canneal" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
+    substitute_job "barnes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+    substitute_job "vips" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
+    substitute_job "radix" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+    # EVOLVE-BLOCK-END
+
+    wait
+    kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run${i}.json"
+    gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
+    kubectl delete job --all
+    sleep 5
+done

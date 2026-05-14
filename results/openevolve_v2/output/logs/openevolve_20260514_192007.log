@@ -1,0 +1,273 @@
+2026-05-14 19:20:07,592 - openevolve.controller - INFO - Logging to openevolve/output/logs/openevolve_20260514_192007.log
+2026-05-14 19:20:07,596 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2026-05-14 19:20:07,618 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:20:07,618 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: swiss-ai/Apertus-70B-Instruct-2509 (weight: 1.00)
+2026-05-14 19:20:07,624 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2026-05-14 19:20:07,624 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-05-14 19:20:07,624 - openevolve.database - INFO - Initialized program database with 0 programs
+2026-05-14 19:20:07,625 - openevolve.evaluator - INFO - Successfully loaded evaluation function from openevolve/evaluator.py
+2026-05-14 19:20:07,625 - openevolve.evaluator - INFO - Initialized evaluator with openevolve/evaluator.py
+2026-05-14 19:20:07,625 - openevolve.controller - INFO - Initialized OpenEvolve with openevolve/run_benchmarks_3all.sh
+2026-05-14 19:20:07,625 - openevolve.controller - INFO - Adding initial program to database
+2026-05-14 19:24:01,651 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-192010/evolved_20260514-172401.sh
+2026-05-14 19:24:01,653 - openevolve.evaluator - INFO - [evaluator] avg_makespan=220.000s avg_slo_ratio=0.050000 combined_score=0.000000
+2026-05-14 19:24:01,654 - openevolve.evaluator - INFO - Evaluated program b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5 in 234.03s: combined_score=0.0000, avg_makespan=220.0000, avg_slo_ratio=0.0500, runs=1.0000
+2026-05-14 19:24:01,654 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 5, 'diversity': 0}
+2026-05-14 19:24:01,656 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2026-05-14 19:24:01,656 - openevolve.process_parallel - INFO - Worker-to-island mapping: {0: 0}
+2026-05-14 19:24:01,657 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2026-05-14 19:24:01,657 - openevolve.controller - INFO - Using island-based evolution with 5 islands
+2026-05-14 19:24:01,657 - openevolve.database - INFO - Island Status:
+2026-05-14 19:24:01,657 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0 (best: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5)
+2026-05-14 19:24:01,657 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:24:01,657 - openevolve.database - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:24:01,657 - openevolve.database - INFO -    Island 3: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:24:01,657 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:24:01,657 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 50 iterations (total: 51)
+2026-05-14 19:24:01,664 - openevolve.process_parallel - INFO - Early stopping disabled
+2026-05-14 19:24:01,683 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-05-14 19:24:01,686 - openevolve.evaluator - INFO - Successfully loaded evaluation function from openevolve/evaluator.py
+2026-05-14 19:24:01,686 - openevolve.evaluator - INFO - Initialized evaluator with openevolve/evaluator.py
+2026-05-14 19:24:01,687 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:25:09,337 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:29:04,379 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-192511/evolved_20260514-172904.sh
+2026-05-14 19:29:04,381 - openevolve.evaluator - INFO - [evaluator] avg_makespan=221.000s avg_slo_ratio=0.100000 combined_score=0.000000
+2026-05-14 19:29:04,382 - openevolve.evaluator - INFO - Evaluated program 9a59630c-6c97-416c-a109-9070e8194f89 in 235.03s: combined_score=0.0000, avg_makespan=221.0000, avg_slo_ratio=0.1000, runs=1.0000
+2026-05-14 19:29:04,384 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:29:04,390 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 9, 'diversity': 5}
+2026-05-14 19:29:04,391 - openevolve.process_parallel - INFO - Iteration 1: Program 9a59630c-6c97-416c-a109-9070e8194f89 (parent: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5) completed in 302.70s
+2026-05-14 19:29:04,391 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=221.0000, avg_slo_ratio=0.1000, runs=1.0000
+2026-05-14 19:29:04,391 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 1
+2026-05-14 19:29:04,392 - openevolve.database - INFO - Island Status:
+2026-05-14 19:29:04,392 - openevolve.database - INFO -  * Island 0: 2 programs, best=0.0000, avg=0.0000, diversity=110.10, gen=1 (best: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5)
+2026-05-14 19:29:04,392 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:29:04,392 - openevolve.database - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:29:04,392 - openevolve.database - INFO -    Island 3: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:29:04,392 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:29:04,394 - openevolve.database - INFO - Saved database with 2 programs to openevolve/output/checkpoints/checkpoint_1
+2026-05-14 19:29:04,394 - openevolve.controller - INFO - Saved best program at checkpoint 1 with metrics: combined_score=0.0000, avg_makespan=220.0000, avg_slo_ratio=0.0500, runs=1.0000
+2026-05-14 19:29:04,396 - openevolve.controller - INFO - Saved checkpoint at iteration 1 to openevolve/output/checkpoints/checkpoint_1
+2026-05-14 19:29:30,299 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:34:39,634 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-192932/evolved_20260514-173439.sh
+2026-05-14 19:34:39,635 - openevolve.evaluator - INFO - [evaluator] avg_makespan=295.000s avg_slo_ratio=0.000000 combined_score=0.016667
+2026-05-14 19:34:39,636 - openevolve.evaluator - INFO - Evaluated program 7b500b1e-933b-452d-abc4-cf1a676ab410 in 309.33s: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:34:39,639 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:34:39,646 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 9, 'diversity': 0}
+2026-05-14 19:34:39,646 - openevolve.database - INFO - New best program 7b500b1e-933b-452d-abc4-cf1a676ab410 replaces b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5 (combined_score: 0.0000 → 0.0167, +0.0167)
+2026-05-14 19:34:39,646 - openevolve.process_parallel - INFO - Iteration 2: Program 7b500b1e-933b-452d-abc4-cf1a676ab410 (parent: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5) completed in 335.25s
+2026-05-14 19:34:39,646 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:34:39,646 - openevolve.process_parallel - INFO - 🌟 New best solution found at iteration 2: 7b500b1e-933b-452d-abc4-cf1a676ab410
+2026-05-14 19:34:39,646 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 2
+2026-05-14 19:34:39,647 - openevolve.database - INFO - Island Status:
+2026-05-14 19:34:39,647 - openevolve.database - INFO -    Island 0: 3 programs, best=0.0167, avg=0.0056, diversity=80.07, gen=1 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 19:34:39,647 - openevolve.database - INFO -  * Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:34:39,647 - openevolve.database - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:34:39,647 - openevolve.database - INFO -    Island 3: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:34:39,647 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:34:39,649 - openevolve.database - INFO - Saved database with 3 programs to openevolve/output/checkpoints/checkpoint_2
+2026-05-14 19:34:39,649 - openevolve.controller - INFO - Saved best program at checkpoint 2 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:34:39,649 - openevolve.controller - INFO - Saved checkpoint at iteration 2 to openevolve/output/checkpoints/checkpoint_2
+2026-05-14 19:35:46,874 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:39:57,373 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-193549/evolved_20260514-173957.sh
+2026-05-14 19:39:57,374 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778780151000 window_end=1778780386000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 19:39:57,375 - openevolve.evaluator - INFO - [evaluator] avg_makespan=235.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 19:39:57,375 - openevolve.evaluator - INFO - Evaluated program c6c2bb16-4dc4-439a-8a32-bb6d422b336a in 250.50s: combined_score=0.0000, avg_makespan=235.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:39:57,378 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:39:57,388 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 9, 'diversity': 9}
+2026-05-14 19:39:57,389 - openevolve.process_parallel - INFO - Iteration 3: Program c6c2bb16-4dc4-439a-8a32-bb6d422b336a (parent: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5) completed in 317.74s
+2026-05-14 19:39:57,389 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=235.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:39:57,389 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 3
+2026-05-14 19:39:57,390 - openevolve.database - INFO - Island Status:
+2026-05-14 19:39:57,390 - openevolve.database - INFO -    Island 0: 4 programs, best=0.0167, avg=0.0042, diversity=101.63, gen=1 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 19:39:57,390 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:39:57,390 - openevolve.database - INFO -  * Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:39:57,390 - openevolve.database - INFO -    Island 3: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:39:57,390 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:39:57,393 - openevolve.database - INFO - Saved database with 4 programs to openevolve/output/checkpoints/checkpoint_3
+2026-05-14 19:39:57,393 - openevolve.controller - INFO - Saved best program at checkpoint 3 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:39:57,393 - openevolve.controller - INFO - Saved checkpoint at iteration 3 to openevolve/output/checkpoints/checkpoint_3
+2026-05-14 19:40:17,318 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:43:26,444 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-194019/evolved_20260514-174326.sh
+2026-05-14 19:43:26,445 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778780421000 window_end=1778780595000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 19:43:26,445 - openevolve.evaluator - INFO - [evaluator] avg_makespan=174.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 19:43:26,446 - openevolve.evaluator - INFO - Evaluated program b7d90259-a483-45d7-a154-ecb879a60ced in 189.13s: combined_score=0.0000, avg_makespan=174.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:43:26,449 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:43:26,451 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 6, 'diversity': 0}
+2026-05-14 19:43:26,451 - openevolve.process_parallel - INFO - Iteration 4: Program b7d90259-a483-45d7-a154-ecb879a60ced (parent: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5) completed in 209.07s
+2026-05-14 19:43:26,451 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=174.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:43:26,451 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 4
+2026-05-14 19:43:26,452 - openevolve.database - INFO - Island Status:
+2026-05-14 19:43:26,452 - openevolve.database - INFO -    Island 0: 5 programs, best=0.0167, avg=0.0033, diversity=59.10, gen=1 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 19:43:26,452 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:43:26,452 - openevolve.database - INFO -    Island 2: 1 programs, best=0.0167, avg=0.0167, diversity=0.00, gen=1
+2026-05-14 19:43:26,452 - openevolve.database - INFO -  * Island 3: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:43:26,452 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-05-14 19:43:26,455 - openevolve.database - INFO - Saved database with 6 programs to openevolve/output/checkpoints/checkpoint_4
+2026-05-14 19:43:26,456 - openevolve.controller - INFO - Saved best program at checkpoint 4 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:43:26,456 - openevolve.controller - INFO - Saved checkpoint at iteration 4 to openevolve/output/checkpoints/checkpoint_4
+2026-05-14 19:43:52,412 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:48:55,190 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-194354/evolved_20260514-174855.sh
+2026-05-14 19:48:55,192 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778780636000 window_end=1778780924000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 19:48:55,192 - openevolve.evaluator - INFO - [evaluator] avg_makespan=288.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 19:48:55,193 - openevolve.evaluator - INFO - Evaluated program 9da25817-9ded-4d47-b043-ea324439d07b in 302.78s: combined_score=0.0000, avg_makespan=288.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:48:55,196 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:48:55,202 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 7, 'diversity': 2}
+2026-05-14 19:48:55,203 - openevolve.process_parallel - INFO - Iteration 5: Program 9da25817-9ded-4d47-b043-ea324439d07b (parent: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5) completed in 328.75s
+2026-05-14 19:48:55,203 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=288.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:48:55,203 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 5
+2026-05-14 19:48:55,204 - openevolve.database - INFO - Island Status:
+2026-05-14 19:48:55,204 - openevolve.database - INFO -    Island 0: 6 programs, best=0.0167, avg=0.0028, diversity=45.60, gen=1 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 19:48:55,204 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:48:55,204 - openevolve.database - INFO -    Island 2: 1 programs, best=0.0167, avg=0.0167, diversity=0.00, gen=1
+2026-05-14 19:48:55,204 - openevolve.database - INFO -    Island 3: 1 programs, best=0.0167, avg=0.0167, diversity=0.00, gen=1
+2026-05-14 19:48:55,204 - openevolve.database - INFO -  * Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:48:55,207 - openevolve.database - INFO - Saved database with 8 programs to openevolve/output/checkpoints/checkpoint_5
+2026-05-14 19:48:55,207 - openevolve.controller - INFO - Saved best program at checkpoint 5 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:48:55,207 - openevolve.controller - INFO - Saved checkpoint at iteration 5 to openevolve/output/checkpoints/checkpoint_5
+2026-05-14 19:50:00,688 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:53:12,211 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-195003/evolved_20260514-175312.sh
+2026-05-14 19:53:12,213 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778781004000 window_end=1778781181000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 19:53:12,213 - openevolve.evaluator - INFO - [evaluator] avg_makespan=177.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 19:53:12,214 - openevolve.evaluator - INFO - Evaluated program 9f0213b8-f58b-4764-8fce-c1aabfa1ee80 in 191.52s: combined_score=0.0000, avg_makespan=177.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:53:12,219 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:53:12,223 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 9, 'diversity': 4}
+2026-05-14 19:53:12,224 - openevolve.process_parallel - INFO - Iteration 6: Program 9f0213b8-f58b-4764-8fce-c1aabfa1ee80 (parent: b5ce2d9b-7071-43cb-b2b7-3c21dd5a0de5) completed in 257.02s
+2026-05-14 19:53:12,224 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=177.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:53:12,224 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 6
+2026-05-14 19:53:12,225 - openevolve.database - INFO - Island Status:
+2026-05-14 19:53:12,225 - openevolve.database - INFO -  * Island 0: 7 programs, best=0.0167, avg=0.0024, diversity=49.75, gen=2 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 19:53:12,225 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:53:12,225 - openevolve.database - INFO -    Island 2: 1 programs, best=0.0167, avg=0.0167, diversity=0.00, gen=1
+2026-05-14 19:53:12,225 - openevolve.database - INFO -    Island 3: 1 programs, best=0.0167, avg=0.0167, diversity=0.00, gen=1
+2026-05-14 19:53:12,225 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:53:12,230 - openevolve.database - INFO - Saved database with 9 programs to openevolve/output/checkpoints/checkpoint_6
+2026-05-14 19:53:12,230 - openevolve.controller - INFO - Saved best program at checkpoint 6 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:53:12,230 - openevolve.controller - INFO - Saved checkpoint at iteration 6 to openevolve/output/checkpoints/checkpoint_6
+2026-05-14 19:54:20,997 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:54:21,002 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:54:21,008 - openevolve.process_parallel - WARNING - Iteration 7 error: No valid diffs found in response
+2026-05-14 19:54:43,248 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 19:59:45,132 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-195445/evolved_20260514-175945.sh
+2026-05-14 19:59:45,134 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778781287000 window_end=1778781573000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 19:59:45,134 - openevolve.evaluator - INFO - [evaluator] avg_makespan=286.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 19:59:45,135 - openevolve.evaluator - INFO - Evaluated program 714d36c4-d63f-482a-8031-d0885de3660b in 301.88s: combined_score=0.0000, avg_makespan=286.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:59:45,138 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 19:59:45,149 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 8, 'diversity': 0}
+2026-05-14 19:59:45,149 - openevolve.process_parallel - INFO - Iteration 8: Program 714d36c4-d63f-482a-8031-d0885de3660b (parent: 4d5edba7-2ad4-4ada-a224-ed72167267b8) completed in 324.14s
+2026-05-14 19:59:45,149 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=286.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 19:59:45,149 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 8
+2026-05-14 19:59:45,150 - openevolve.database - INFO - Island Status:
+2026-05-14 19:59:45,150 - openevolve.database - INFO -    Island 0: 7 programs, best=0.0167, avg=0.0024, diversity=49.75, gen=2 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 19:59:45,150 - openevolve.database - INFO -  * Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=2
+2026-05-14 19:59:45,150 - openevolve.database - INFO -    Island 2: 2 programs, best=0.0167, avg=0.0083, diversity=30.60, gen=1 (best: 714d36c4-d63f-482a-8031-d0885de3660b)
+2026-05-14 19:59:45,150 - openevolve.database - INFO -    Island 3: 1 programs, best=0.0167, avg=0.0167, diversity=0.00, gen=1
+2026-05-14 19:59:45,150 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 19:59:45,154 - openevolve.database - INFO - Saved database with 10 programs to openevolve/output/checkpoints/checkpoint_8
+2026-05-14 19:59:45,155 - openevolve.controller - INFO - Saved best program at checkpoint 8 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 19:59:45,155 - openevolve.controller - INFO - Saved checkpoint at iteration 8 to openevolve/output/checkpoints/checkpoint_8
+2026-05-14 20:00:12,435 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:05:17,297 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-200014/evolved_20260514-180517.sh
+2026-05-14 20:05:17,299 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778781616000 window_end=1778781906000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 20:05:17,299 - openevolve.evaluator - INFO - [evaluator] avg_makespan=290.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 20:05:17,300 - openevolve.evaluator - INFO - Evaluated program f001f3a3-8859-428c-8ff4-440fec0b3ebd in 304.86s: combined_score=0.0000, avg_makespan=290.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 20:05:17,304 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:05:17,310 - openevolve.process_parallel - INFO - Iteration 9: Program f001f3a3-8859-428c-8ff4-440fec0b3ebd (parent: 48ed3275-c939-4f91-8d27-245a25b475ac) completed in 332.16s
+2026-05-14 20:05:17,310 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=290.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 20:05:17,310 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 9
+2026-05-14 20:05:17,311 - openevolve.database - INFO - Island Status:
+2026-05-14 20:05:17,311 - openevolve.database - INFO -    Island 0: 7 programs, best=0.0167, avg=0.0024, diversity=49.75, gen=2 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 20:05:17,311 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=2
+2026-05-14 20:05:17,311 - openevolve.database - INFO -  * Island 2: 2 programs, best=0.0167, avg=0.0083, diversity=30.60, gen=2 (best: 714d36c4-d63f-482a-8031-d0885de3660b)
+2026-05-14 20:05:17,311 - openevolve.database - INFO -    Island 3: 2 programs, best=0.0167, avg=0.0083, diversity=39.70, gen=1 (best: f001f3a3-8859-428c-8ff4-440fec0b3ebd)
+2026-05-14 20:05:17,311 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 20:05:17,316 - openevolve.database - INFO - Saved database with 11 programs to openevolve/output/checkpoints/checkpoint_9
+2026-05-14 20:05:17,316 - openevolve.controller - INFO - Saved best program at checkpoint 9 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 20:05:17,316 - openevolve.controller - INFO - Saved checkpoint at iteration 9 to openevolve/output/checkpoints/checkpoint_9
+2026-05-14 20:06:27,865 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:06:27,870 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:06:27,878 - openevolve.process_parallel - WARNING - Iteration 10 error: No valid diffs found in response
+2026-05-14 20:07:38,314 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:11:45,497 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-200740/evolved_20260514-181145.sh
+2026-05-14 20:11:45,499 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778782062000 window_end=1778782294000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 20:11:45,499 - openevolve.evaluator - INFO - [evaluator] avg_makespan=232.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 20:11:45,499 - openevolve.evaluator - INFO - Evaluated program 7fa45e75-5ff7-4484-84a6-c2c0888084ee in 247.18s: combined_score=0.0000, avg_makespan=232.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 20:11:45,503 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:11:45,503 - openevolve.database - INFO - New MAP-Elites cell occupied: {'complexity': 8, 'diversity': 9}
+2026-05-14 20:11:45,503 - openevolve.process_parallel - INFO - Iteration 11: Program 7fa45e75-5ff7-4484-84a6-c2c0888084ee (parent: c6c2bb16-4dc4-439a-8a32-bb6d422b336a) completed in 317.63s
+2026-05-14 20:11:45,504 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=232.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 20:11:45,504 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 11
+2026-05-14 20:11:45,505 - openevolve.database - INFO - Island Status:
+2026-05-14 20:11:45,505 - openevolve.database - INFO -    Island 0: 8 programs, best=0.0167, avg=0.0021, diversity=57.85, gen=2 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 20:11:45,505 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=2
+2026-05-14 20:11:45,505 - openevolve.database - INFO -    Island 2: 2 programs, best=0.0167, avg=0.0083, diversity=30.60, gen=2 (best: 714d36c4-d63f-482a-8031-d0885de3660b)
+2026-05-14 20:11:45,505 - openevolve.database - INFO -  * Island 3: 2 programs, best=0.0167, avg=0.0083, diversity=39.70, gen=2 (best: f001f3a3-8859-428c-8ff4-440fec0b3ebd)
+2026-05-14 20:11:45,505 - openevolve.database - INFO -    Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2026-05-14 20:11:45,512 - openevolve.database - INFO - Saved database with 12 programs to openevolve/output/checkpoints/checkpoint_11
+2026-05-14 20:11:45,512 - openevolve.controller - INFO - Saved best program at checkpoint 11 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 20:11:45,512 - openevolve.controller - INFO - Saved checkpoint at iteration 11 to openevolve/output/checkpoints/checkpoint_11
+2026-05-14 20:12:12,682 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:16:34,169 - openevolve.evaluator - INFO - [evaluator] saved evolved program: /root/CCA/cloud-comp-arch-project/openevolve/results/part3/version20260514-201215/evolved_20260514-181634.sh
+2026-05-14 20:16:34,171 - openevolve.evaluator - WARNING - [evaluator] No measurements matched job window; using full set. window_start=1778782336000 window_end=1778782572000 measurement_range=(1778778631447, 1778779803905) pods=7
+2026-05-14 20:16:34,173 - openevolve.evaluator - INFO - [evaluator] avg_makespan=236.000s avg_slo_ratio=0.039604 combined_score=0.000000
+2026-05-14 20:16:34,173 - openevolve.evaluator - INFO - Evaluated program 89bcadd7-bdbb-4722-a01b-54893f396bd7 in 261.49s: combined_score=0.0000, avg_makespan=236.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 20:16:34,177 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:16:34,180 - openevolve.process_parallel - INFO - Iteration 12: Program 89bcadd7-bdbb-4722-a01b-54893f396bd7 (parent: 9f0213b8-f58b-4764-8fce-c1aabfa1ee80) completed in 288.67s
+2026-05-14 20:16:34,180 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, avg_makespan=236.0000, avg_slo_ratio=0.0396, runs=1.0000
+2026-05-14 20:16:34,180 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 12
+2026-05-14 20:16:34,181 - openevolve.database - INFO - Island Status:
+2026-05-14 20:16:34,181 - openevolve.database - INFO -    Island 0: 9 programs, best=0.0167, avg=0.0019, diversity=61.85, gen=2 (best: 7b500b1e-933b-452d-abc4-cf1a676ab410)
+2026-05-14 20:16:34,181 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=2
+2026-05-14 20:16:34,181 - openevolve.database - INFO -    Island 2: 2 programs, best=0.0167, avg=0.0083, diversity=30.60, gen=2 (best: 714d36c4-d63f-482a-8031-d0885de3660b)
+2026-05-14 20:16:34,181 - openevolve.database - INFO -    Island 3: 2 programs, best=0.0167, avg=0.0083, diversity=39.70, gen=2 (best: f001f3a3-8859-428c-8ff4-440fec0b3ebd)
+2026-05-14 20:16:34,181 - openevolve.database - INFO -  * Island 4: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=2
+2026-05-14 20:16:34,188 - openevolve.database - INFO - Saved database with 13 programs to openevolve/output/checkpoints/checkpoint_12
+2026-05-14 20:16:34,190 - openevolve.controller - INFO - Saved best program at checkpoint 12 with metrics: combined_score=0.0167, avg_makespan=295.0000, avg_slo_ratio=0.0000, runs=1.0000
+2026-05-14 20:16:34,190 - openevolve.controller - INFO - Saved checkpoint at iteration 12 to openevolve/output/checkpoints/checkpoint_12
+2026-05-14 20:17:40,600 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:17:40,604 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:17:40,609 - openevolve.process_parallel - WARNING - Iteration 13 error: No valid diffs found in response
+2026-05-14 20:18:49,188 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:18:49,192 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:18:49,200 - openevolve.process_parallel - WARNING - Iteration 14 error: No valid diffs found in response
+2026-05-14 20:19:57,219 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:19:57,224 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:19:57,233 - openevolve.process_parallel - WARNING - Iteration 15 error: No valid diffs found in response
+2026-05-14 20:21:05,068 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:21:05,072 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:21:05,077 - openevolve.process_parallel - WARNING - Iteration 16 error: No valid diffs found in response
+2026-05-14 20:21:32,318 - httpx - INFO - HTTP Request: POST https://api.swissai.cscs.ch/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-14 20:23:54,777 - openevolve.controller - INFO - Received signal 2, initiating graceful shutdown...
+2026-05-14 20:23:54,778 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2026-05-14 20:23:54,781 - openevolve.controller - INFO - Received signal 2, initiating graceful shutdown...
+2026-05-14 20:23:54,781 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2026-05-14 20:23:54,782 - openevolve.process_parallel - INFO - Shutdown requested, canceling remaining evaluations...
+2026-05-14 20:23:54,782 - openevolve.process_parallel - INFO - ✅ Evolution completed - Shutdown requested
+2026-05-14 20:23:54,782 - openevolve.controller - INFO - Evolution stopped due to shutdown request
+2026-05-14 20:23:54,791 - openevolve.evaluator - WARNING - Evaluation attempt 1/4 failed for program d77f2448-6fd4-4f93-a11b-8b966431d58a: Benchmark run failed.
+node/client-agent-a-hk9d not labeled
+node/client-agent-b-l57j not labeled
+node/client-measure-n23h not labeled
+node/node-a-8core-0r95 not labeled
+node/node-b-4core-9lhv not labeled
+===============================================================
+Client Agent A Node: client-agent-a-hk9d with external IP: 34.76.85.181 and internal IP: 10.0.16.8
+Client Agent B Node: client-agent-b-l57j with external IP: 35.187.35.31 and internal IP: 10.0.16.5
+Client Measure Node: client-measure-n23h with external IP: 34.77.115.13
+Node A (8-core) Node: node-a-8core-0r95
+Node B (4-core) Node: node-b-4core-9lhv
+===============================================================
+job.batch/parsec-streamcluster created
+job.batch/parsec-freqmine created
+job.batch/parsec-blackscholes created
+job.batch/parsec-canneal created
+job.batch/parsec-barnes created
+job.batch/parsec-vips created
+job.batch/parsec-radix created
+job.batch/parsec-radix condition met
+job.batch/parsec-freqmine condition met
+
+2026-05-14 20:23:54,979 - openevolve.controller - INFO - Force exit requested - terminating immediately
+2026-05-14 20:23:54,979 - openevolve.controller - INFO - Force exit requested - terminating immediately
+2026-05-14 20:23:54,986 - openevolve.llm.ensemble - INFO - Sampled model: swiss-ai/Apertus-70B-Instruct-2509
+2026-05-14 20:23:55,166 - openevolve.controller - INFO - Force exit requested - terminating immediately
+2026-05-14 20:23:55,166 - openevolve.controller - INFO - Force exit requested - terminating immediately

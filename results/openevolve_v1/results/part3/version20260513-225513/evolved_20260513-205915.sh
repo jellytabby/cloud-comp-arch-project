@@ -90,32 +90,40 @@ mkdir -p "${RESULTS_DIR}"
 printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
 
 # EVOLVE-BLOCK-START
-declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-
-substitute_job "streamcluster" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
-substitute_job "freqmine" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
-substitute_job "blackscholes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
-substitute_job "canneal" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
-substitute_job "barnes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
-substitute_job "vips" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
-substitute_job "radix" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3") # Barnes is memory-bound, so 4 threads on 4-core is optimal
+declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3") # Blackscholes is CPU-bound but can benefit from 4 threads on 4-core
+declare -A canneal_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-3") # Canneal has high L1D and L2 interference, better on 8-core with 4 threads
+declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7") # Freqmine is CPU-bound, 8 threads on 8-core
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-3") # Radix is memory-bound, 4 threads on 8-core to reduce L1D/L2 interference
+declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7") # Streamcluster is CPU-bound, 8 threads on 8-core
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3") # Vips is memory-bound, 3 threads on 4-core
 # EVOLVE-BLOCK-END
 
-wait
-kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run1.json"
-gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
-kubectl delete job --all
-sleep 5
+for i in {1..1}; do
+
+# EVOLVE-BLOCK-START
+    substitute_job "streamcluster" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+    substitute_job "freqmine" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+    substitute_job "blackscholes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    substitute_job "canneal" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
+    substitute_job "barnes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+    substitute_job "vips" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
+    substitute_job "radix" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+# EVOLVE-BLOCK-END
+
+    wait
+    kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run${i}.json"
+    gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
+    kubectl delete job --all
+    sleep 5
+done
+
+
+

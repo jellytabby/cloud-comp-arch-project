@@ -5,19 +5,45 @@ checkpoint_interval: 1 # Do not change this
 
 llm:
   api_base: "https://api.swissai.cscs.ch/v1"
-  primary_model: "zai-org/GLM-5.1-FP8-baseline-brachium-20260507-152340"
+  # primary_model: "zai-org/GLM-5.1-FP8-baseline-brachium-20260507-152340"
+  # primary_model: "Qwen/Qwen3.5-27B"
+  # primary_model: "zai-org/GLM-4.7-Flash"
+  primary_model: "swiss-ai/Apertus-70B-Instruct-2509"
   top_p: 0.7 # Feel free to experiment with this value
   # Possible additional parameters to configure the LLM:
   # temperature: 
   # max_tokens: 
-  # timeout: 
+  timeout: 300
 
 prompt:
   # Prompts to provide the LLM with. You can directly write the prompt in the config, e.g.
   system_message: |
-    You are an expert system engineer specializing in optimizing the scheduling of parallel applications on the cloud infrastructure. Your task is to optimize the scheduling of a parallel application on a cloud infrastructure. Consider the following factors when making your decisions:
+    You are an expert system engineer specializing in optimizing the scheduling of parallel applications on the cloud infrastructure. Your task is to optimize the scheduling of a parallel application on a cloud infrastructure.
+    Briefly include your reasoning process as comments in the code you generate. Your goal is to minimize the average makespan of the batch jobs while avoiding any SLO violations (i.e., 95% tile latency of memcached should not exceed 1ms). You can change core-binding and launch sequence of the jobs.
+    Consider the following factors when making your decisions:
     1. memcached always runs on `node-a-8core`.
     2. `parsec-radix` cannot run on the small node with `node-b-4core` label due to memory constraints and should be scheduled on `node-a-8core`.
+    3. The following table shows the normalized execution time of each batch job with each source of interference:
+      | Workload | none | cpu | l1d | l1i | l2 | llc | memBW |
+      | --- | --- | --- | --- | --- | --- | --- | --- |
+      | barnes | 1.00 | 1.48 | 1.75 | 2.05 | 1.83 | 2.29 | 1.61 |
+      | blackscholes | 1.00 | 1.28 | 1.39 | 1.59 | 1.46 | 1.50 | 1.84 |
+      | canneal | 1.00 | 1.31 | 1.64 | 1.54 | 1.67 | 2.09 | 2.21 |
+      | freqmine | 1.00 | 2.04 | 1.40 | 2.11 | 1.39 | 1.87 | 1.60 |
+      | radix | 1.00 | 1.02 | 1.27 | 1.13 | 1.19 | 1.62 | 1.11 |
+      | streamcluster | 1.00 | 1.15 | 1.46 | 1.48 | 1.27 | 1.60 | 1.10 |
+      | vips | 1.00 | 1.60 | 1.98 | 1.80 | 1.74 | 1.96 | 1.59 |
+    4. The following table shows the mean execution time of each batch job without interference:
+      | Benchmark | 1 Thread (s) | 2 Threads (s) | 4 Threads (s) | 8 Threads (s) |
+      | --- | --- | --- | --- | --- |
+      | barnes | 108.48 | 55.15 | 28.57 | 22.42 |
+      | blackscholes | 64.52 | 37.99 | 24.69 | 21.12 |
+      | canneal | 226.32 | 143.29 | 96.80 | 73.95 |
+      | freqmine | 333.34 | 168.82 | 92.35 | 67.17 |
+      | radix | 33.49 | 17.16 | 9.04 | 5.44 |
+      | streamcluster | 444.08 | 244.12 | 145.05 | 106.13 |
+      | vips | 63.44 | 31.67 | 18.13 | 15.16 |
+    5. Hyperthreading is enabled on all nodes, so each physical core corresponds to two logical cores.
   #
   # Alternatively, you can create files containing the prompts, and reference them here, e.g.
   # template_dir: "<path-to-prompt-directory>"

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import glob
 import json
+import logging
 import os
 import re
 import subprocess
@@ -10,6 +11,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from openevolve.evaluation_result import EvaluationResult
+
+
+LOGGER = logging.getLogger("openevolve.evaluator")
 
 
 JOBS = [
@@ -59,11 +63,11 @@ def _parse_all_measurements(path: Path) -> List[Dict[str, Any]]:
 def _slice_measurements(
     all_measurements: List[Dict[str, Any]],
     pods: List[Dict[str, Any]],
-) -> List[Dict[str, Any]]:
+) -> tuple[List[Dict[str, Any]], Optional[Dict[str, Any]]]:
     starts = [p["cstart"] for p in pods if p["job"] in JOBS and p["cstart"]]
     ends = [p["cend"] for p in pods if p["job"] in JOBS and p["cend"]]
     if not starts or not ends:
-        return []
+        return [], None
     window_start = min(starts) * 1e3
     window_end = max(ends) * 1e3
     window_measurements = []
@@ -74,7 +78,25 @@ def _slice_measurements(
             window_measurements.append(measurement)
         elif measurement["ts_start"] <= window_end < measurement["ts_end"]:
             window_measurements.append(measurement)
-    return window_measurements
+    if window_measurements:
+        return (
+            window_measurements,
+            {
+                "window_start": window_start,
+                "window_end": window_end,
+                "window_count": len(window_measurements),
+                "fallback": False,
+            },
+        )
+    return (
+        all_measurements,
+        {
+            "window_start": window_start,
+            "window_end": window_end,
+            "window_count": 0,
+            "fallback": True,
+        },
+    )
 
 
 def _parse_pods(path: Path) -> List[Dict[str, Any]]:
@@ -136,6 +158,29 @@ def _find_latest_results_dir(results_root: Path) -> Optional[Path]:
     return max(candidates, key=lambda p: p.stat().st_mtime)
 
 
+def _load_results_dir_from_latest(
+    results_root: Path, project_root: Path
+) -> tuple[Optional[Path], Optional[str]]:
+    latest_path = results_root / "latest.txt"
+    if not latest_path.exists():
+        return None, "Missing latest.txt in results directory."
+    raw = latest_path.read_text().strip()
+    if not raw:
+        return None, "latest.txt is empty."
+    raw_path = Path(raw)
+    candidates: List[Path] = []
+    if raw_path.is_absolute():
+        candidates.append(raw_path)
+    else:
+        candidates.append(project_root / raw_path)
+        candidates.append(results_root / raw_path)
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate, None
+    candidates_text = ", ".join(str(c) for c in candidates)
+    return None, f"Results directory listed in latest.txt not found. Tried: {candidates_text}"
+
+
 def _load_run_files(results_dir: Path) -> List[Path]:
     return [Path(p) for p in sorted(glob.glob(str(results_dir / "run*.json")))]
 
@@ -152,10 +197,31 @@ def _evaluate_results(results_dir: Path) -> Dict[str, Any]:
     all_measurements = _parse_all_measurements(measurement_path)
     makespans = []
     slo_ratios = []
+    total_pods = 0
+    total_window_measurements = 0
 
     for run_path in run_files:
         pods = _parse_pods(run_path)
-        measurements = _slice_measurements(all_measurements, pods)
+        measurements, window_info = _slice_measurements(all_measurements, pods)
+        total_pods += len(pods)
+        if window_info:
+            total_window_measurements += window_info["window_count"]
+            if window_info.get("fallback"):
+                if all_measurements:
+                    measurement_range = (
+                        all_measurements[0]["ts_start"],
+                        all_measurements[-1]["ts_end"],
+                    )
+                else:
+                    measurement_range = None
+                LOGGER.warning(
+                    "[evaluator] No measurements matched job window; using full set. "
+                    "window_start=%.0f window_end=%.0f measurement_range=%s pods=%d",
+                    window_info["window_start"],
+                    window_info["window_end"],
+                    measurement_range,
+                    len(pods),
+                )
         makespan = _compute_makespan(pods)
         slo_ratio = _compute_slo_violation_ratio(measurements)
         if makespan is not None:
@@ -165,6 +231,17 @@ def _evaluate_results(results_dir: Path) -> Dict[str, Any]:
 
     avg_makespan = _mean(makespans)
     avg_slo_ratio = _mean(slo_ratios)
+    if avg_makespan is None:
+        return {
+            "error": "Failed to compute makespan: no completed job timings found in run files.",
+            "pods_parsed": total_pods,
+        }
+    if avg_slo_ratio is None:
+        return {
+            "error": "Failed to compute SLO violation ratio: no measurements matched the job windows.",
+            "pods_parsed": total_pods,
+            "window_measurements": total_window_measurements,
+        }
     return {
         "avg_makespan": avg_makespan,
         "avg_slo_ratio": avg_slo_ratio,
@@ -175,8 +252,10 @@ def _evaluate_results(results_dir: Path) -> Dict[str, Any]:
 def _compute_combined_score(avg_makespan: Optional[float], avg_slo_ratio: Optional[float]) -> float:
     if avg_makespan is None or avg_slo_ratio is None:
         return 0.0
-    makespan_score = 1.0 / (1.0 + avg_makespan)
-    slo_score = max(0.0, 1.0 - avg_slo_ratio)
+    max_span = 300.0
+    makespan_score = max(0.0, 1.0 - (avg_makespan / max_span))
+    # slo_score = max(0.0, 1.0 - avg_slo_ratio)
+    slo_score = 0.0 if avg_slo_ratio > 0 else 1.0 # strict binary scoring for SLO violations
     return makespan_score * slo_score
 
 
@@ -189,7 +268,7 @@ def evaluate(program_path: str) -> EvaluationResult:
     project_root = Path(__file__).resolve().parents[1]
 
     if not program_file.exists():
-        return EvaluationResult(metrics={"combined_score": 0.0}, artifacts={"error": "Program file not found."})
+        raise FileNotFoundError("Program file not found.")
 
     try:
         completed = subprocess.run(
@@ -202,41 +281,52 @@ def evaluate(program_path: str) -> EvaluationResult:
         run_log = completed.stdout + completed.stderr
     except subprocess.CalledProcessError as exc:
         run_log = (exc.stdout or "") + (exc.stderr or "")
-        return EvaluationResult(
-            metrics={"combined_score": 0.0},
-            artifacts={"error": "Benchmark run failed.", "log": run_log},
-        )
+        raise RuntimeError(f"Benchmark run failed.\n{run_log}")
 
     program_text = program_file.read_text()
     version = _extract_version(program_text)
     results_root = project_root / "openevolve" / "results" / "part3"
-    results_dir = (
-        results_root / f"version{version}"
-        if version
-        else _find_latest_results_dir(results_root)
-    )
+    if version:
+        results_dir = results_root / f"version{version}"
+        latest_error = None
+    else:
+        results_dir, latest_error = _load_results_dir_from_latest(results_root, project_root)
+        if latest_error:
+            LOGGER.warning("[evaluator] %s", latest_error)
+            return EvaluationResult(
+                metrics={"combined_score": 0.0},
+                artifacts={
+                    "error": latest_error,
+                    "log": run_log,
+                },
+            )
 
     if results_dir is None or not results_dir.exists():
-        return EvaluationResult(
-            metrics={"combined_score": 0.0},
-            artifacts={"error": "Results directory not found.", "log": run_log},
-        )
+        raise RuntimeError("Results directory not found.")
+
+    timestamp = datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+    evolved_copy = results_dir / f"evolved_{timestamp}.sh"
+    evolved_copy.write_text(program_text)
+    LOGGER.info("[evaluator] saved evolved program: %s", evolved_copy)
 
     eval_summary = _evaluate_results(results_dir)
     if "error" in eval_summary:
-        return EvaluationResult(
-            metrics={"combined_score": 0.0},
-            artifacts={"error": eval_summary["error"], "log": run_log},
-        )
+        raise RuntimeError(eval_summary["error"])
 
     avg_makespan = eval_summary["avg_makespan"]
     avg_slo_ratio = eval_summary["avg_slo_ratio"]
     combined_score = _compute_combined_score(avg_makespan, avg_slo_ratio)
+    LOGGER.info(
+        "[evaluator] avg_makespan=%.3fs avg_slo_ratio=%.6f combined_score=%.6f",
+        avg_makespan,
+        avg_slo_ratio,
+        combined_score,
+    )
 
     metrics = {
         "combined_score": combined_score,
-        "avg_makespan": avg_makespan or 1e6,
-        "avg_slo_ratio": avg_slo_ratio or 1e6,
+        "avg_makespan": avg_makespan if avg_makespan is not None else 1e6,
+        "avg_slo_ratio": avg_slo_ratio if avg_slo_ratio is not None else 1e6,
         "runs": float(eval_summary["runs"]),
     }
 

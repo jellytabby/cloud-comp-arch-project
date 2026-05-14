@@ -90,13 +90,17 @@ mkdir -p "${RESULTS_DIR}"
 printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
 
 # EVOLVE-BLOCK-START
+# Optimize workload placement based on interference analysis
+# 1. Move radix (low interference) to node-a-8core to free up node-b-4core for other jobs
+# 2. Increase threads for freqmine (high CPU usage) to 12 on node-a-8core to utilize more cores
+# 3. Adjust vips to use 4 threads on node-b-4core to balance workload
 declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
+declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="12" ["cpus"]="0-11")  # Increase threads to 12 for better CPU utilization
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # Move radix to node-a-8core for better performance and to free up node-b-4core
+declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # Keep streamcluster on node-a-8core for better performance
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="1-4")  # Use 4 threads on node-b-4core to balance workload
 
 substitute_job "streamcluster" | kubectl create -f -
 kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &

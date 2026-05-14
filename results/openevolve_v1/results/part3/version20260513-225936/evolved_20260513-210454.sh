@@ -90,32 +90,46 @@ mkdir -p "${RESULTS_DIR}"
 printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
 
 # EVOLVE-BLOCK-START
+# Optimize based on execution time and resource constraints
+# 1. Radix should run on node-a-8core (8 cores) to avoid memory constraints
+# 2. Barnes and Blackscholes are CPU-bound and can use node-b-4core (4 cores)
+# 3. StreamCluster and Vips are memory-bound and can use node-b-4core (4 cores)
+# 4. Freqmine is memory-bound and requires node-a-8core (8 cores)
+# 5. Canneal is CPU-bound and can use node-b-4core (4 cores)
 declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
 declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
-
-substitute_job "streamcluster" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
-substitute_job "freqmine" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
-substitute_job "blackscholes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
-substitute_job "canneal" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
-substitute_job "barnes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
-substitute_job "vips" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
-substitute_job "radix" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+declare -A streamcluster_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Increased threads to 4 for better utilization
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")  # Reduced threads to 3 to avoid overutilization
 # EVOLVE-BLOCK-END
 
-wait
-kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run1.json"
-gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
-kubectl delete job --all
-sleep 5
+for i in {1..1}; do
+
+# EVOLVE-BLOCK-START
+    substitute_job "streamcluster" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+    substitute_job "freqmine" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+    substitute_job "blackscholes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+    substitute_job "canneal" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
+    substitute_job "barnes" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+    substitute_job "vips" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
+    substitute_job "radix" | kubectl create -f -
+    kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+# EVOLVE-BLOCK-END
+
+    wait
+    kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run${i}.json"
+    gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
+    kubectl delete job --all
+    sleep 5
+done
+
+
+

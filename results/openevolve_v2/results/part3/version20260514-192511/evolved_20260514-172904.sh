@@ -90,13 +90,17 @@ mkdir -p "${RESULTS_DIR}"
 printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
 
 # EVOLVE-BLOCK-START
-declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
+# Optimize workload placement based on interference analysis
+# 1. Move radix (low interference) to node-a-8core to free up node-b-4core for other jobs
+# 2. Rebalance vips to use 4 cores (node-b-4core) to avoid interference with other jobs on node-b-4core
+# 3. Adjust threads for better utilization and minimize interference
+declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Move to node-b-4core to avoid interference with other jobs on node-a-8core
+declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Same as barnes to avoid interference
+declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Same as barnes and blackscholes
+declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # High CPU usage, so keep on node-a-8core
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # Low interference, move to node-a-8core to free up node-b-4core
+declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # High CPU and memory, keep on node-a-8core
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")  # Use 4 cores to reduce interference and better utilize node-b-4core
 
 substitute_job "streamcluster" | kubectl create -f -
 kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &

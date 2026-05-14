@@ -90,24 +90,35 @@ mkdir -p "${RESULTS_DIR}"
 printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
 
 # EVOLVE-BLOCK-START
+# Optimize workload placement based on interference and resource constraints
+# 1. Radix is moved to node-a-8core to avoid memory constraints on node-b-4core
+# 2. Streamcluster and Vips are moved to node-b-4core to reduce interference on node-a-8core
+# 3. Barnes and Blackscholes are kept on node-b-4core to balance CPU and memory usage
+# 4. Canneal is moved to node-a-8core to utilize more CPU resources
+# 5. Freqmine is kept on node-a-8core due to its high CPU requirements
 declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
-declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
+declare -A canneal_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
 declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
 declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
-declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
+declare -A streamcluster_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
 declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")
 
-substitute_job "streamcluster" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
-substitute_job "freqmine" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+# Optimize launch sequence to reduce interference and maximize resource utilization
+# 1. Start with low-interference jobs first (Barnes and Blackscholes) to minimize delays
+# 2. Follow with high-CPU jobs (Canneal, Freqmine) to utilize node-a-8core
+# 3. Then run Streamcluster and Vips on node-b-4core to avoid interference
+# 4. Finally, run Radix on node-a-8core after the other jobs are complete
+substitute_job "barnes" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
 substitute_job "blackscholes" | kubectl create -f -
 kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
 substitute_job "canneal" | kubectl create -f -
 kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
-substitute_job "barnes" | kubectl create -f -
-kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+substitute_job "freqmine" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+substitute_job "streamcluster" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
 substitute_job "vips" | kubectl create -f -
 kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
 substitute_job "radix" | kubectl create -f -
