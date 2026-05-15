@@ -1,6 +1,6 @@
 import os
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
 import matplotlib
@@ -131,6 +131,50 @@ def parse_mpstat(filepath):
     cleaned = {ts: vals for ts, vals in samples.items() if all(v is not None for v in vals)}
     return cleaned
 
+def read_scheduler_logs(filepath):
+    if not os.path.exists(filepath):
+        print(f"Warning: {filepath} not found.")
+        return {}
+
+    results = {}
+    with open(filepath, 'r') as f:
+        for line in f:
+            splits = line.strip().split()
+            if len(splits) >= 4 and splits[1] == "update_cores":
+                # expected format: TIMESTAMP update_cores JOBNAME [core_list]
+                ts_str = splits[0]
+                job = splits[2]
+                cores_raw = " ".join(splits[3:]).strip()
+                # cores_raw should look like: [3] or [0,1]
+                cores = []
+                if cores_raw.startswith("[") and cores_raw.endswith("]"):
+                    inner = cores_raw[1:-1].strip()
+                    if inner:
+                        for part in inner.split(','):
+                            try:
+                                cores.append(int(part.strip()))
+                            except ValueError:
+                                continue
+
+                # parse timestamp to epoch seconds (assume UTC if no tz)
+                try:
+                    dt = datetime.fromisoformat(ts_str)
+                    if dt.tzinfo is None:
+                        dt = dt.replace(tzinfo=timezone.utc)
+                    ts = dt.timestamp()
+                except ValueError:
+                    ts = None
+
+                results[ts] = {
+                    "job": job,
+                    "cores": cores,
+                }
+    return results
+
+
+
+
+
 
 def build_plot(
     output_dir: str,
@@ -138,6 +182,7 @@ def build_plot(
     job_times: dict,
     measurements: list,
     cpu_samples: dict,
+    logger_data: dict,
     qps_ylim: Optional[float],
     p95_ylim: Optional[float],
 ) -> None:
@@ -158,25 +203,58 @@ def build_plot(
     fig, axes = plt.subplots(3, 1, figsize=(12, 9), sharex=True, gridspec_kw={"height_ratios": [1, 1, 1]})
 
     # Subplot 1: batch job timeline (stacked by job)
+    # ax0 = axes[0]
+    # bar_h = 0.8
+    # gap = 0.3
+    # for idx, job in enumerate(BATCH_JOBS):
+    #     if job not in job_times:
+    #         continue
+    #     start = job_times[job].get("start")
+    #     end = job_times[job].get("end")
+    #     if start is None or end is None:
+    #         continue
+    #     x0 = start - base_time
+    #     width = max(0.0, end - start)
+    #     y0 = idx * (bar_h + gap)
+    #     rect = mpatches.Rectangle((x0, y0), width, bar_h, color=JOB_COLORS.get(job, "#999999"), alpha=0.9)
+    #     ax0.add_patch(rect)
+    # ax0.set_yticks([i * (bar_h + gap) + bar_h / 2 for i in range(len(BATCH_JOBS))])
+    # ax0.set_yticklabels(BATCH_JOBS)
+    # ax0.set_ylabel("Batch jobs")
+    # ax0.set_title(f"Run {run_idx}: Batch job scheduling timeline")
+    # legend_handles = [mpatches.Patch(color=JOB_COLORS[j], label=j) for j in BATCH_JOBS if j in JOB_COLORS]
+    # ax0.legend(handles=legend_handles, ncol=1, fontsize=7,
+    #            loc="upper right", framealpha=0.95,
+    #            handlelength=1.2, handletextpad=0.4, borderpad=0.4)
+
+    # Subplot 1: core timeline (pointwise measurements -> short horizontal ticks)
     ax0 = axes[0]
-    bar_h = 0.8
-    gap = 0.3
-    for idx, job in enumerate(BATCH_JOBS):
-        if job not in job_times:
-            continue
-        start = job_times[job].get("start")
-        end = job_times[job].get("end")
-        if start is None or end is None:
-            continue
-        x0 = start - base_time
-        width = max(0.0, end - start)
-        y0 = idx * (bar_h + gap)
-        rect = mpatches.Rectangle((x0, y0), width, bar_h, color=JOB_COLORS.get(job, "#999999"), alpha=0.9)
-        ax0.add_patch(rect)
-    ax0.set_yticks([i * (bar_h + gap) + bar_h / 2 for i in range(len(BATCH_JOBS))])
-    ax0.set_yticklabels(BATCH_JOBS)
-    ax0.set_ylabel("Batch jobs")
-    ax0.set_title(f"Run {run_idx}: Batch job scheduling timeline")
+    if logger_data:
+        # logger_data keys are epoch seconds; align to base_time to get relative x
+        entries = sorted(((ts, e) for ts, e in logger_data.items() if ts is not None), key=lambda x: x[0])
+        span = max(1.0, end_time - base_time)
+        # tick width scales with span but stays visible for short runs
+        tick_width = min(2.0, max(0.1, span * 0.002))
+        # determine max core index seen
+        seen_cores = [core for _, e in entries for core in e.get("cores", [])]
+        max_core = int(max(seen_cores)) if seen_cores else 3
+        bar_h = 0.9
+        for ts, entry in entries:
+            x = ts - base_time
+            job = entry.get("job")
+            cores = entry.get("cores", [])
+            color = JOB_COLORS.get(job, "#999999")
+            for core in cores:
+                # draw a filled rectangle centered vertically on the core index
+                rect = mpatches.Rectangle((x - tick_width / 2.0, core - bar_h / 2.0),
+                                          tick_width, bar_h,
+                                          color=color, alpha=0.9)
+                ax0.add_patch(rect)
+        ax0.set_yticks(list(range(max_core + 1)))
+        ax0.set_yticklabels([f"core {i}" for i in range(max_core + 1)])
+        ax0.set_ylim(-0.5, max_core + 0.5)
+    ax0.set_ylabel("CPU cores")
+    ax0.set_title(f"Run {run_idx}: Scheduler core assignments over time")
     legend_handles = [mpatches.Patch(color=JOB_COLORS[j], label=j) for j in BATCH_JOBS if j in JOB_COLORS]
     ax0.legend(handles=legend_handles, ncol=1, fontsize=7,
                loc="upper right", framealpha=0.95,
@@ -301,19 +379,20 @@ if __name__ == "__main__":
     runs = []
     all_qps = []
     all_p95 = []
-    for run_idx in range(1, 6):
+    for run_idx in (1, 3, 5):
         job_times = parse_container_inspect(os.path.join(base_dir, f"container_inspect_{run_idx}.txt"))
         measurements = parse_measurements(os.path.join(base_dir, f"measurements_rep{run_idx}.txt"))
         cpu_samples = parse_mpstat(os.path.join(base_dir, f"mpstat_run{run_idx}.txt"))
-        runs.append((run_idx, job_times, measurements, cpu_samples))
+        logger_data = read_scheduler_logs(os.path.join(base_dir, f"scheduler_log_rep{run_idx}.txt"))
+        runs.append((run_idx, job_times, measurements, cpu_samples, logger_data))
         all_qps.extend([m["qps"] for m in measurements if m.get("qps") is not None])
         all_p95.extend([m["p95"] for m in measurements if m.get("p95") is not None])
 
     qps_ylim = max(all_qps) * 1.05 if all_qps else None
     p95_ylim = max(all_p95) * 1.05 if all_p95 else None
 
-    for run_idx, job_times, measurements, cpu_samples in runs:
-        build_plot(output_dir, run_idx, job_times, measurements, cpu_samples, qps_ylim, p95_ylim)
+    for run_idx, job_times, measurements, cpu_samples, logger_data in runs:
+        build_plot(output_dir, run_idx, job_times, measurements, cpu_samples, logger_data, qps_ylim, p95_ylim)
         durations = compute_job_durations(job_times)
         makespan = compute_makespan(job_times)
         slo_ratio = compute_slo_violation_ratio(measurements, job_times)
