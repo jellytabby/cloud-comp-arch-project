@@ -63,11 +63,11 @@ def _parse_all_measurements(path: Path) -> List[Dict[str, Any]]:
 def _slice_measurements(
     all_measurements: List[Dict[str, Any]],
     pods: List[Dict[str, Any]],
-) -> tuple[List[Dict[str, Any]], Optional[Dict[str, Any]]]:
+) -> List[Dict[str, Any]]:
     starts = [p["cstart"] for p in pods if p["job"] in JOBS and p["cstart"]]
     ends = [p["cend"] for p in pods if p["job"] in JOBS and p["cend"]]
     if not starts or not ends:
-        return [], None
+        return []
     window_start = min(starts) * 1e3
     window_end = max(ends) * 1e3
     window_measurements = []
@@ -78,25 +78,7 @@ def _slice_measurements(
             window_measurements.append(measurement)
         elif measurement["ts_start"] <= window_end < measurement["ts_end"]:
             window_measurements.append(measurement)
-    if window_measurements:
-        return (
-            window_measurements,
-            {
-                "window_start": window_start,
-                "window_end": window_end,
-                "window_count": len(window_measurements),
-                "fallback": False,
-            },
-        )
-    return (
-        all_measurements,
-        {
-            "window_start": window_start,
-            "window_end": window_end,
-            "window_count": 0,
-            "fallback": True,
-        },
-    )
+    return window_measurements
 
 
 def _parse_pods(path: Path) -> List[Dict[str, Any]]:
@@ -202,26 +184,9 @@ def _evaluate_results(results_dir: Path) -> Dict[str, Any]:
 
     for run_path in run_files:
         pods = _parse_pods(run_path)
-        measurements, window_info = _slice_measurements(all_measurements, pods)
+        measurements = _slice_measurements(all_measurements, pods)
         total_pods += len(pods)
-        if window_info:
-            total_window_measurements += window_info["window_count"]
-            if window_info.get("fallback"):
-                if all_measurements:
-                    measurement_range = (
-                        all_measurements[0]["ts_start"],
-                        all_measurements[-1]["ts_end"],
-                    )
-                else:
-                    measurement_range = None
-                LOGGER.warning(
-                    "[evaluator] No measurements matched job window; using full set. "
-                    "window_start=%.0f window_end=%.0f measurement_range=%s pods=%d",
-                    window_info["window_start"],
-                    window_info["window_end"],
-                    measurement_range,
-                    len(pods),
-                )
+        total_window_measurements += len(measurements)
         makespan = _compute_makespan(pods)
         slo_ratio = _compute_slo_violation_ratio(measurements)
         if makespan is not None:

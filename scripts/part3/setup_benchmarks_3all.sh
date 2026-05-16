@@ -60,7 +60,7 @@ echo "==============================================================="
 CLIENT_A_CMD="cd memcache-perf-dynamic && ./mcperf -T 2 -A"
 CLIENT_B_CMD="cd memcache-perf-dynamic && ./mcperf -T 4 -A"
 CLIENT_MEASURE_CMD_LOAD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} --loadonly"
-CLIENT_MEASURE_CMD_RUN="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} -a ${CLIENT_A_INT_IP} -a ${CLIENT_B_INT_IP} --noload -T 6 -C 4 -D 4 -Q 1000 -c 4 -t 10 --scan 30000:30500:5 |& tee ~/measurements.txt"
+CLIENT_MEASURE_CMD_RUN="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} -a ${CLIENT_A_INT_IP} -a ${CLIENT_B_INT_IP} --noload -T 6 -C 4 -D 4 -Q 1000 -c 4 -t 15 --scan 30000:30500:1 |& tee ~/measurements.txt"
 # echo "$CLIENT_MEASURE_CMD"
 
 echo "===========================client A================================="

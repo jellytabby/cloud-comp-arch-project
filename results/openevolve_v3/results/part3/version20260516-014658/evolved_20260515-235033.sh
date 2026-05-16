@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# export KOPS_STATE_STORE=gs://cca-eth-2026-group-071-yizhuy/
+# export PROJECT=cca-eth-2026-group-071
+
+#label nodes since for some reason the kops node labels don't work with kubectl node affinity, so we label them ourselves here based on their hostname label which is set by kops and matches the instance name in GCP
+label_nodes() {
+    local pattern="$1"
+    local label="$2"
+    local nodes
+    nodes=$(kubectl get nodes --no-headers -o custom-columns=NAME:.metadata.name | grep "$pattern" || true)
+    if [[ -z "$nodes" ]]; then
+        echo "node/$pattern not found"
+        return 1
+    fi
+    kubectl label nodes $nodes "cca-project-nodetype=$label" --overwrite
+}
+
+label_nodes "client-agent-a" "client-agent-a"
+label_nodes "client-agent-b" "client-agent-b"
+label_nodes "client-measure" "client-measure"
+label_nodes "node-a-8core" "node-a-8core"
+label_nodes "node-b-4core" "node-b-4core"
+
+# gather relevant node info
+CLIENT_A_NODE=$(kubectl get nodes -l cca-project-nodetype=client-agent-a -o jsonpath="{.items[0].metadata.name}")
+CLIENT_A_EXT_IP=$(kubectl get nodes -l cca-project-nodetype=client-agent-a -o jsonpath="{.items[0].status.addresses[?(@.type=='ExternalIP')].address}")
+CLIENT_A_INT_IP=$(kubectl get nodes -l cca-project-nodetype=client-agent-a -o jsonpath="{.items[0].status.addresses[?(@.type=='InternalIP')].address}")
+CLIENT_B_NODE=$(kubectl get nodes -l cca-project-nodetype=client-agent-b -o jsonpath="{.items[0].metadata.name}")
+CLIENT_B_EXT_IP=$(kubectl get nodes -l cca-project-nodetype=client-agent-b -o jsonpath="{.items[0].status.addresses[?(@.type=='ExternalIP')].address}")
+CLIENT_B_INT_IP=$(kubectl get nodes -l cca-project-nodetype=client-agent-b -o jsonpath="{.items[0].status.addresses[?(@.type=='InternalIP')].address}")
+CLIENT_MEASURE_NODE=$(kubectl get nodes -l cca-project-nodetype=client-measure -o jsonpath="{.items[0].metadata.name}")
+CLIENT_MEASURE_EXT_IP=$(kubectl get nodes -l cca-project-nodetype=client-measure -o jsonpath="{.items[0].status.addresses[?(@.type=='ExternalIP')].address}")
+NODE_A_8CORE=$(kubectl get nodes -l cca-project-nodetype=node-a-8core -o jsonpath="{.items[0].metadata.name}")
+NODE_B_4CORE=$(kubectl get nodes -l cca-project-nodetype=node-b-4core -o jsonpath="{.items[0].metadata.name}")
+echo "==============================================================="
+echo "Client Agent A Node: $CLIENT_A_NODE with external IP: $CLIENT_A_EXT_IP and internal IP: $CLIENT_A_INT_IP"
+echo "Client Agent B Node: $CLIENT_B_NODE with external IP: $CLIENT_B_EXT_IP and internal IP: $CLIENT_B_INT_IP"
+echo "Client Measure Node: $CLIENT_MEASURE_NODE with external IP: $CLIENT_MEASURE_EXT_IP"
+echo "Node A (8-core) Node: $NODE_A_8CORE"
+echo "Node B (4-core) Node: $NODE_B_4CORE"
+echo "==============================================================="
+
+
+ALL_JOBS=(
+  "parsec-barnes"
+  "parsec-blackscholes"
+  "parsec-canneal"
+  "parsec-freqmine"
+  "parsec-radix"
+  "parsec-streamcluster"
+  "parsec-vips"
+)
+
+
+run_after() {
+    local first_job="$1"
+    local second_job="$2"
+    while [ -z "$(kubectl get job/"$first_job" 2>/dev/null)" ]; do
+        # echo "Waiting for $first_job to be ready..."
+        sleep 0.2
+    done
+    kubectl wait --for=condition=complete job/"$first_job" --timeout=6000s
+    echo "$first_job completed, starting $second_job"
+    kubectl create -f "parsec-benchmarks/part3/parsec-${second_job}.yaml"
+    kubectl wait --for=condition=complete job/parsec-"${second_job}" --timeout=6000s
+}
+
+substitute_job() {
+    local job="$1"
+    
+    # Dynamically reference the per-job map
+    local nodetype_var="${job}_map[nodetype]"
+    local threads_var="${job}_map[threads]"
+    local cpus_var="${job}_map[cpus]"
+
+    sed \
+      -e "s/cca-project-nodetype: \".*\"/cca-project-nodetype: \"${!nodetype_var}\"/" \
+      -e "s/taskset -c [^ ]*//" \
+      -e "s/-n [0-9]*/-n ${!threads_var}/" \
+      -e "s/taskset -c [^ ]*/taskset -c ${!cpus_var}/" \
+      "parsec-benchmarks/part3/parsec-${job}.yaml" 
+}
+
+# # Kill any existing mcperf processes on the client measure node
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "pkill -f mcperf"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "rm ~/measurements.txt"
+
+# # Start mcperf
+# MEMCACHED_IP=$(kubectl get pod memcached -o jsonpath="{.status.podIP}")
+# CLIENT_A_INT_IP=$(kubectl get nodes -l cca-project-nodetype=client-agent-a -o jsonpath="{.items[0].status.addresses[?(@.type=='InternalIP')].address}")
+# CLIENT_B_INT_IP=$(kubectl get nodes -l cca-project-nodetype=client-agent-b -o jsonpath="{.items[0].status.addresses[?(@.type=='InternalIP')].address}")
+# if [ -z "$MEMCACHED_IP" ] || [ -z "$CLIENT_A_INT_IP" ] || [ -z "$CLIENT_B_INT_IP" ]; then
+#     exit 1
+# fi
+# CLIENT_MEASURE_CMD_RUN="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} -a ${CLIENT_A_INT_IP} -a ${CLIENT_B_INT_IP} --noload -T 6 -C 4 -D 4 -Q 1000 -c 4 -t 10 --scan 30000:30500:5 |& tee ~/measurements.txt"
+# CLIENT_MEASURE_CMD_LOAD="cd memcache-perf-dynamic && ./mcperf -s ${MEMCACHED_IP} --loadonly"
+
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "${CLIENT_MEASURE_CMD_LOAD}"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "TERM=xterm-256color tmux new-session -d \"bash -c '${CLIENT_MEASURE_CMD_RUN}'\""
+
+
+VERSION=$(date +%Y%m%d-%H%M%S)
+RESULTS_DIR="openevolve/results/part3/version${VERSION}"
+mkdir -p "${RESULTS_DIR}"
+printf "%s\n" "${RESULTS_DIR}" > openevolve/results/part3/latest.txt
+
+# EVOLVE-BLOCK-START
+# Optimize workload placement based on interference analysis
+# 1. Use node-a-8core for parsec-radix (due to memory constraints on node-b-4core)
+# 2. Use node-b-4core for vips (since it's less demanding and can fit on 4 cores)
+# 3. Adjust streamcluster to use 4 threads (reduced from 8) to reduce interference on node-a-8core
+# 4. Use node-b-4core for blackscholes and canneal to avoid interference with other jobs on node-a-8core
+# 5. Keep freqmine on node-a-8core to utilize its 8 cores
+# 
+declare -A barnes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
+declare -A blackscholes_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
+declare -A canneal_map=(["nodetype"]="node-b-4core" ["threads"]="4" ["cpus"]="0-3")
+declare -A freqmine_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")
+declare -A radix_map=(["nodetype"]="node-a-8core" ["threads"]="8" ["cpus"]="0-7")  # Ensure radix is on node-a-8core
+declare -A streamcluster_map=(["nodetype"]="node-a-8core" ["threads"]="4" ["cpus"]="0-3")  # Reduced threads to reduce interference
+declare -A vips_map=(["nodetype"]="node-b-4core" ["threads"]="3" ["cpus"]="1-3")  # Reduced threads for vips to fit on 4 cores
+
+substitute_job "streamcluster" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-streamcluster --timeout=6000s &
+substitute_job "freqmine" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-freqmine --timeout=6000s &
+substitute_job "blackscholes" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-blackscholes --timeout=6000s &
+substitute_job "canneal" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-canneal --timeout=6000s &
+substitute_job "barnes" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-barnes --timeout=6000s &
+substitute_job "vips" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-vips --timeout=6000s &
+substitute_job "radix" | kubectl create -f -
+kubectl wait --for=condition=complete job/parsec-radix --timeout=6000s &
+# EVOLVE-BLOCK-END
+
+wait
+kubectl get pods -o json > "openevolve/results/part3/version${VERSION}/run1.json"
+gcloud compute scp --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}:~/measurements.txt" "./openevolve/results/part3/version${VERSION}/measurements.txt"
+kubectl delete job --all
+sleep 5
+
+# # Kill mcperf (but preserve the pod)
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "pkill -f mcperf"
+# gcloud compute ssh --ssh-key-file ~/.ssh/cloud-computing --zone europe-west1-b "${CLIENT_MEASURE_NODE}" --command "rm ~/measurements.txt"

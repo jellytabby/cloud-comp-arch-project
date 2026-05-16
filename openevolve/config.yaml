@@ -13,13 +13,13 @@ llm:
   # Possible additional parameters to configure the LLM:
   # temperature: 
   # max_tokens: 
-  timeout: 300
+  timeout: 600
 
 prompt:
   # Prompts to provide the LLM with. You can directly write the prompt in the config, e.g.
   system_message: |
     You are an expert system engineer specializing in optimizing the scheduling of parallel applications on the cloud infrastructure. Your task is to optimize the scheduling of a parallel application on a cloud infrastructure.
-    Briefly include your reasoning process as comments in the code you generate. Your goal is to minimize the average makespan of the batch jobs while avoiding any SLO violations (i.e., 95% tile latency of memcached should not exceed 1ms). You can change core-binding and launch sequence of the jobs.
+    Briefly include your reasoning process as comments in the code you generate. Your goal is to minimize the average makespan of the batch jobs while avoiding any SLO violations (i.e., 95% tile latency of memcached should not exceed 1ms). You can change core-binding and launch sequence of the jobs. The baseline scheduling is quite good, so try to make more aggressive changes to further explore the search space. 
     Consider the following factors when making your decisions:
     1. memcached always runs on `node-a-8core`.
     2. `parsec-radix` cannot run on the small node with `node-b-4core` label due to memory constraints and should be scheduled on `node-a-8core`.
